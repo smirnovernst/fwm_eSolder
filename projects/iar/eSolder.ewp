@@ -1354,6 +1354,9 @@
                     <state>$PROJ_DIR$\..\..\modules\Core</state>
                     <state>$PROJ_DIR$\..\..\modules\Core\stm32f427</state>
                     <state>$PROJ_DIR$\..\..\modules\CMSIS</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS\include</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1619,7 +1622,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -1820,7 +1823,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state></state>
+                    <state>C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\IQ\IQmathLib-cm4.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2049,6 +2052,75 @@
     </group>
     <group>
         <name>Drivers</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+        </file>
+    </group>
+    <group>
+        <name>FreeRTOS</name>
+        <group>
+            <name>inc</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\FreeRTOSConfig.h</name>
+            </file>
+        </group>
+        <group>
+            <name>src</name>
+            <group>
+                <name>portable</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\port.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portasm.s</name>
+                </file>
+            </group>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\heap_4.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\stream_buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\FreeRTOS\timers.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
+        <name>hard</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+        </file>
+    </group>
+    <group>
+        <name>IQ</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\IQ\IQmathLib.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\IQ\PID_GRANDO_IQ.h</name>
+        </file>
+    </group>
+    <group>
+        <name>OS</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
     </group>
     <file>
         <name>$PROJ_DIR$\..\..\main.c</name>
