@@ -3,6 +3,7 @@
 #include "hard/hard.h"
 #include "OS/OS.h"
 
+
 void main(void){
     SystemCoreClockUpdate();
     MCU_init();
