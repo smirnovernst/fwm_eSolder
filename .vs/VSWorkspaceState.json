@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\modules",
+    "\\modules\\Drivers",
+    "\\modules\\hard",
+    "\\modules\\hard\\lcd",
+    "\\projects"
   ],
-  "SelectedNode": "\\Makefile",
+  "SelectedNode": "\\modules\\hard\\lcd\\lcd_backlight.c",
   "PreviewInSolutionExplorer": false
 }
