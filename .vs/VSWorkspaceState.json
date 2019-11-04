@@ -3,10 +3,10 @@
     "",
     "\\modules",
     "\\modules\\Drivers",
-    "\\modules\\hard",
-    "\\modules\\hard\\lcd",
+    "\\modules\\FreeRTOS",
+    "\\modules\\OS",
     "\\projects"
   ],
-  "SelectedNode": "\\modules\\hard\\lcd\\lcd_backlight.c",
+  "SelectedNode": "\\modules\\Drivers\\encoders.c",
   "PreviewInSolutionExplorer": false
 }

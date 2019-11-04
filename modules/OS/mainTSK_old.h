@@ -1,22 +1,38 @@
 /*
-*@File      lcd_backlight.h 
+*@File      mainTSK.h 
 *@Author    EricMarina
 *@Version   
-*@Date      10.05.2017
+*@Date      22.05.2017
 *@Breif     
 */
-#ifndef lcd_backlight_h
-#define lcd_backlight_h
+#ifndef mainTSK_h
+#define mainTSK_h
 /*!****************************************************************************
 * Include
 */
+#include "global_inc.h"
 
-#include "Drivers/gpio.h"
-#include "pwm.h"
+#include "stationState.h"
+#include "UI.h"
+#include "keyboard.h"
+#include "enco.h"
+
+
+//FreeRTOS files 
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+
+#include "OSInit.h"
+
 /*!****************************************************************************
 * User define
 */
-
+#define TEMP_STEP       5
+#define TEMP_BIGSTEP    50
+#define FLOW_STEP       5
+#define FLOW_BIGSTEP    10
 /*!****************************************************************************
 * User enum
 */
@@ -32,13 +48,12 @@
 /*!****************************************************************************
 * Macro functions
 */
- 
+
 /*!****************************************************************************
 * Prototypes for the functions
 */
-void lcdBacklight_init();
-void lcdBacklight_bright(uint8_t bright);
-#endif //lcd_backlight_h
+__task void mainTSK(void);
+#endif //mainTSK_h
 
 
 

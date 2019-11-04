@@ -2330,9 +2330,27 @@
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>spi</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.h</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
         </file>
+    </group>
+    <group>
+        <name>environment</name>
     </group>
     <group>
         <name>FreeRTOS</name>
@@ -2381,6 +2399,36 @@
     </group>
     <group>
         <name>hard</name>
+        <group>
+            <name>lcd</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_communication.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</name>
+            </file>
+        </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
         </file>
@@ -2396,6 +2444,9 @@
     </group>
     <group>
         <name>OS</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
         </file>

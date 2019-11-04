@@ -10,25 +10,18 @@
 /*!****************************************************************************
 * Include
 */
-#include "stdint.h"
-#include <stdlib.h>
-#include "global_inc.h"
-#include "GPIO.h"
-#include "spi.h"
+
+
+#include "Drivers/gpio.h"
+
 /*!****************************************************************************
 * User define
 */
-//settings
-#define ILI9341_CSX_PIN    15
-#define ILI9341_CSX_PORT   GPIOA
-#define ILI9341_DCX_PIN    2
-#define ILI9341_DCX_PORT   GPIOD
 
-#define ILI9341_SPI        SPI1
 
 
 #define ILI9341_ORIENTATION_DEFAULT     ILI9341_LANDSCAPE_2
-#define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_GREEN
+#define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_565_BLACK
 
 #define ILI9341_WIDTH   240
 #define ILI9341_HEIGHT  320
@@ -57,30 +50,21 @@ typedef enum
 /*!****************************************************************************
 * Macro functions
 */
-#define ili9341_sleepIn ili9341_WriteCommand(0x10)
-#define ili9341_sleepOut ili9341_WriteCommand(0x11)
-#define ili9341_displayOff ili9341_WriteCommand(0x28)
-#define ili9341_displayOn ili9341_WriteCommand(0x29)
+
 /*!****************************************************************************
 * Prototypes for the functions
 */
-
-
-
-//private
-void ili9341_WriteData(uint8_t Data);
-void ili9341_WriteData_16(uint16_t Data);
-void ili9341_WriteCommand(uint8_t command);
-void ili9341_ReadData(uint8_t* response, int count);
-void ili9341_ColumnAddressSet(uint16_t column_start, uint16_t column_end);
-void ili9341_PageAddressSet(uint16_t page_start, uint16_t page_end);
 
 
 //control
 void ili9341_Init(void);
 void ili9341_DrawBackground(uint16_t color);
 void ili9341_SetOrientation(ili9341_Orientation_t orientation);
-inline void ili9341_Reset(void) {ili9341_WriteCommand(0x01);}
+inline void ili9341_Reset(void);
+inline void ili9341_displayOn(void);
+inline void ili9341_displayOff(void);
+inline void ili9341_displaySleepIn(void);
+inline void ili9341_displayOut(void);
 
 //graph
 void ili9341_SetPixel(uint16_t x, uint16_t y, uint16_t color);

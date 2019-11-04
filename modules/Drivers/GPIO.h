@@ -5,13 +5,13 @@
 * @date    15.04.2016
 * @brief   --
 */
-#ifndef GPIO_h_H
-#define GPIO_h_H
+#ifndef GPIO_H_
+#define GPIO_H_
 
 /*!****************************************************************************
 * Include
 */
-#include "global_inc.h"
+#include "stm32f4xx.h"
 
 /*!****************************************************************************
 * User define
@@ -22,6 +22,27 @@
 */
 typedef enum
 {
+  gpioPin_0 = ((uint16_t)1 << 0),
+  gpioPin_1 = ((uint16_t)1 << 1),
+  gpioPin_2 = ((uint16_t)1 << 2),
+  gpioPin_3 = ((uint16_t)1 << 3),
+  gpioPin_4 = ((uint16_t)1 << 4),
+  gpioPin_5 = ((uint16_t)1 << 5),
+  gpioPin_6 = ((uint16_t)1 << 6),
+  gpioPin_7 = ((uint16_t)1 << 7),
+  gpioPin_8 = ((uint16_t)1 << 8),
+  gpioPin_9 = ((uint16_t)1 << 9),
+  gpioPin_10 = ((uint16_t)1 << 10),
+  gpioPin_11 = ((uint16_t)1 << 11),
+  gpioPin_12 = ((uint16_t)1 << 12),
+  gpioPin_13 = ((uint16_t)1 << 13),
+  gpioPin_14 = ((uint16_t)1 << 14),
+  gpioPin_15 = ((uint16_t) 1 << 15),
+  gpioPin_All = ((uint16_t)0xFFFF),
+} gpioPin_t;
+
+typedef enum
+{
   gpioMode_IN =0,
   gpioMode_OUT,
   gpioMode_AF,
@@ -30,30 +51,40 @@ typedef enum
 
 typedef enum
 {
-  gpioPuPd_NOPULL   = 0,
-  gpioPuPd_PULLUP   = 1,
-  gpioPuPd_PULLDOWN = 2,
-  gpioPuPd_RESERVED = 3
+  gpioPuPd_NOPULL,
+  gpioPuPd_PULLUP,
+  gpioPuPd_PULLDOWN,
 } gpioPuPd_t;
 
 typedef enum
 {
-  gpioType_PUSHPULL = 0,
-  gpioType_OPENDRAIN = 1,
+  gpioType_PUSHPULL,
+  gpioType_OPENDRAIN,
 } gpioType_t;
+
+typedef enum {
+    gpioAF_0 = 0,
+    gpioAF_1,
+    gpioAF_2,
+    gpioAF_3,
+    gpioAF_4,
+    gpioAF_5,
+    gpioAF_6,
+    gpioAF_7,
+    gpioAF_8,
+    gpioAF_9,
+    gpioAF_10,
+    gpioAF_11,
+    gpioAF_12,
+    gpioAF_13,
+    gpioAF_14,
+    gpioAF_15,
+    gpioAF_None
+}gpioAF;
 /*!****************************************************************************
 * User typedef
 */
-typedef struct
-{
-    GPIO_TypeDef *port;
-    uint8_t pinNum;
-    gpioMode_t mode;
-    gpioPuPd_t PuPd;
-    gpioType_t type;
-    uint8_t afNum;
-    uint8_t initState;
-}gpioParam_t;
+
 /*!****************************************************************************
 * Extern viriables
 */
@@ -61,17 +92,15 @@ typedef struct
 /*!****************************************************************************
 * Macro functions
 */
-#define GPIO_PIN_SET(port, pin)        (port->BSRRL |= (1 << pin))
-#define GPIO_PIN_RESET(port, pin)      (port->BSRRH |= (1 << pin))
-#define GPIO_PIN_GET(port, pin)        (port->IDR & (pin))
-#define GPIO_PIN_TOGLE(port, pin)      (port->ODR ^= (pin))
+#define GPIO_PIN_SET(port, pin)        (port->BSRR = (1 << pin))
+#define GPIO_PIN_RESET(port, pin)      (port->BSRR = (1 << pin + 0x10))
+#define GPIO_PIN_GET(port, pin)        (port->IDR & (1 << pin))
+#define GPIO_PIN_TOGGLE(port, pin)     (port->ODR ^= (1 << pin))
 /*!****************************************************************************
 * Prototypes for the functions
 */
-
-void gpioInitTbl(gpioParam_t *gpioParam, uint8_t size);
-void gpioInit (GPIO_TypeDef *port, uint8_t pinNum,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, uint8_t afNum, uint8_t initState);
-void gpioAfInit (GPIO_TypeDef *port, uint8_t pin, uint8_t afNum);
+void gpioInit (GPIO_TypeDef *port, uint8_t  pinNum,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, gpioAF afNum, uint8_t initState);
+void gpioAfInit (GPIO_TypeDef *port, uint8_t pinNum, gpioAF afNum);
  
-#endif //GPIO_h_H
+#endif //GPIO_H_
 /***************** (C) COPYRIGHT ************** END OF FILE ******** ЭрикМарина ****/

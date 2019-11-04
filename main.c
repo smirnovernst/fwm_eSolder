@@ -9,5 +9,6 @@ void main(void){
     MCU_init();
     hard_init();
     OS_init();
+
     while(1);
 }
