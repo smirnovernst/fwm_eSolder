@@ -1,62 +1,53 @@
-#include "GPIO.h"
+#include "Drivers/gpio.h"
 
-
-
-void gpioInit(GPIO_TypeDef *port, uint8_t pinNum,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, uint8_t afNum, uint8_t initState)
+void gpioInit (GPIO_TypeDef *port, gpioPin_t pin,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, gpioAF afNum, uint8_t initState)
 {
-    //Clock enable
-    if(port == GPIOA)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-    else if(port == GPIOB)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
-    else if(port == GPIOC)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
-    else if(port == GPIOD)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
-    else if(port == GPIOE)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN;
-    else if(port == GPIOF)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
-    else if(port == GPIOG)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOGEN;
-    else if(port == GPIOH)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOHEN;
-    else if(port == GPIOI)	 RCC->AHB1ENR |= RCC_AHB1ENR_GPIOIEN;
-    
-    //Set initial value
-    if(initState != 0){
-        GPIO_PIN_SET(port, pinNum);
-    }
-    else{
-        GPIO_PIN_RESET(port, pinNum);
-    }
-    
-    //Clear bit field
-    port->MODER	 &= ~(0x03 << (2 * pinNum));
-    port->OTYPER &= ~(1<<pinNum);
-    port->PUPDR	 &= ~(gpioPuPd_RESERVED << (2 * pinNum));
-    port->AFR[pinNum / 8] &= ~(0x0F << (4 * (pinNum % 8)));
-    
-    //Set number alternate function
-    port->AFR[pinNum / 8] |= afNum << (4 * (pinNum % 8));
-    
+   uint32_t pinpos = 0x00, pos = 0x00 , currentpin = 0x00;
 
-    
-    // Set mode
-    port->PUPDR     |= PuPd << (2 * pinNum);
-    port->MODER	    |= mode << (2 * pinNum);
-    port->OTYPER    |= type << pinNum;
-    port->OSPEEDR	|= 3 << (2 * pinNum);	  //High speed
-    
-    
-    
-    
-    
-    
+ 
+
+  /* ------------------------- Configure the port pins ---------------- */
+  /*-- GPIO mode Configuration --*/
+  for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+  {
+    pos = ((uint32_t)0x01) << pinpos;
+    /* Get the port pins position */
+    currentpin = (pin) & pos;
+
+    if (currentpin == pos)
+    {
+      port->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << ((uint16_t)pinpos * 2));
+      port->PUPDR |= ((PuPd) << (pinpos * 2));
+      
+      port->OTYPER &= ~(GPIO_OTYPER_OT_0 << (uint16_t)pinpos);
+      port->OTYPER |= ((type) << pinpos);
+
+      port->ODR ^= (initState > 0);
+
+      port->MODER &= ~(GPIO_MODER_MODER0 << (pinpos * 2));
+      port->MODER |= (((uint32_t)mode) << (pinpos * 2));
+      if(mode == gpioMode_AF){
+          gpioAfInit(port, pinpos, afNum);
+      }
+    }
+  }
+  port->OSPEEDR = 0xFFFFFFFF;
+  
 }
 
 
-void gpioAfInit (GPIO_TypeDef *port, uint8_t pin, uint8_t afNum)
+void gpioAfInit (GPIO_TypeDef *port, uint8_t pin, gpioAF afNum)
 {
+    if (afNum >= gpioAF_None) return;
+
     uint32_t Low = 0, High = 0;
-    
+ 
     Low = ((uint32_t)(afNum) << ((uint32_t)((uint32_t)pin & (uint32_t)0x07) * 4)) ;
     port->AFR[pin >> 0x03] &= ~((uint32_t)0xF << ((uint32_t)((uint32_t)pin & (uint32_t)0x07) * 4)) ;
     High = port->AFR[pin >> 0x03] | Low;
     port->AFR[pin >> 0x03] = High;
-    
+
 }
 
 
+ 

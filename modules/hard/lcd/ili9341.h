@@ -10,25 +10,18 @@
 /*!****************************************************************************
 * Include
 */
-#include "stdint.h"
-#include <stdlib.h>
-#include "global_inc.h"
+
+
 #include "GPIO.h"
 #include "spi.h"
 /*!****************************************************************************
 * User define
 */
-//settings
-#define ILI9341_CSX_PIN    15
-#define ILI9341_CSX_PORT   GPIOA
-#define ILI9341_DCX_PIN    2
-#define ILI9341_DCX_PORT   GPIOD
 
-#define ILI9341_SPI        SPI1
 
 
 #define ILI9341_ORIENTATION_DEFAULT     ILI9341_LANDSCAPE_2
-#define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_GREEN
+#define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_565_BLACK
 
 #define ILI9341_WIDTH   240
 #define ILI9341_HEIGHT  320
@@ -64,16 +57,6 @@ typedef enum
 /*!****************************************************************************
 * Prototypes for the functions
 */
-
-
-
-//private
-void ili9341_WriteData(uint8_t Data);
-void ili9341_WriteData_16(uint16_t Data);
-void ili9341_WriteCommand(uint8_t command);
-void ili9341_ReadData(uint8_t* response, int count);
-void ili9341_ColumnAddressSet(uint16_t column_start, uint16_t column_end);
-void ili9341_PageAddressSet(uint16_t page_start, uint16_t page_end);
 
 
 //control

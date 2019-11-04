@@ -80,7 +80,7 @@
 
 
     //=========COLORS=========//
-#define UI_COL_INTCONTOUR   (lcd_color_t)0x18E3
+#define UI_COL_INTCONTOUR   (lcdColorRgb565)0x18E3
 /*!****************************************************************************
 * User enum
 */
@@ -96,15 +96,15 @@ typedef enum
  
 typedef struct
 {
-    lcd_color_t    centralPannel;  //Центральная панель и разделитель
-    lcd_color_t    ExtContour;     //Внешний контур обводки панелей
-    lcd_color_t    IntContour;     //Внутренний контур обводки панелей
-    lcd_color_t    PanelOK;        
-    lcd_color_t    PanelFail;
-    lcd_color_t    PanelHeat;
-    lcd_color_t    PanelOff;
-    lcd_color_t    RegulatorSelected;
-    lcd_color_t    Background;
+    lcdColorRgb565    centralPannel;  //Центральная панель и разделитель
+    lcdColorRgb565    ExtContour;     //Внешний контур обводки панелей
+    lcdColorRgb565    IntContour;     //Внутренний контур обводки панелей
+    lcdColorRgb565    PanelOK;        
+    lcdColorRgb565    PanelFail;
+    lcdColorRgb565    PanelHeat;
+    lcdColorRgb565    PanelOff;
+    lcdColorRgb565    RegulatorSelected;
+    lcdColorRgb565    Background;
 }UI_Colors_t;
 
 typedef struct
