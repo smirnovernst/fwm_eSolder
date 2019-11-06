@@ -3,7 +3,7 @@
 #include "queue.h"
 #include "semphr.h"
 
-
+#include "hard/encoderPannel.h"
 
 __task void mainTsk(void) {
 

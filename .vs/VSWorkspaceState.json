@@ -3,10 +3,9 @@
     "",
     "\\modules",
     "\\modules\\Drivers",
-    "\\modules\\FreeRTOS",
+    "\\modules\\hard",
     "\\modules\\OS",
     "\\projects"
   ],
-  "SelectedNode": "\\modules\\Drivers\\encoders.c",
   "PreviewInSolutionExplorer": false
 }
