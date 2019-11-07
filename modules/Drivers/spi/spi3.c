@@ -13,9 +13,9 @@
 
 void spi3Init(void) {
     // -- GPIO-- //
-    gpioInit(SPI3_SCK_PORT,  SPI3_SCK_PIN,  gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, SPI3_SCK_AF,  0);
-    gpioInit(SPI3_MISO_PORT, SPI3_MISO_PIN, gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, SPI3_MISO_AF, 0);
-    gpioInit(SPI3_MOSI_PORT, SPI3_MOSI_PIN, gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, SPI3_MOSI_AF, 0);
+    gpioInit(SPI3_SCK_PORT,  SPI3_SCK_PIN,  gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, (gpioAF)SPI3_SCK_AF,  0);
+    gpioInit(SPI3_MISO_PORT, SPI3_MISO_PIN, gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, (gpioAF)SPI3_MISO_AF, 0);
+    gpioInit(SPI3_MOSI_PORT, SPI3_MOSI_PIN, gpioMode_AF, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, (gpioAF)SPI3_MOSI_AF, 0);
 
     // -- RCC -- //
     RCC->APB1RSTR|= RCC_APB1RSTR_SPI3RST;

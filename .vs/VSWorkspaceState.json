@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\modules",
-    "\\modules\\FreeRTOS",
+    "\\modules\\Drivers",
+    "\\modules\\hard",
     "\\modules\\OS",
     "\\projects"
   ],
-  "SelectedNode": "\\modules\\OS\\mainTSK_old.c",
   "PreviewInSolutionExplorer": false
 }

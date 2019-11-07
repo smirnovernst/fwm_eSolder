@@ -167,3 +167,19 @@ void ili9341_SetRegion (int16_t x1, int16_t x2, int16_t y1, int16_t y2)
     ili9341_PageAddressSet(y1, y2);
     ili9341_WriteCommand(0x2C);
 }
+
+void ili9341_Reset(void) {
+    ili9341_WriteCommand(0x01);
+}
+void ili9341_displayOn(void){
+    ili9341_WriteCommand(0x29);
+}
+void ili9341_displayOff(void){
+    ili9341_WriteCommand(0x28);
+}
+void ili9341_displaySleepIn(void){
+    ili9341_WriteCommand(0x10);
+}
+void ili9341_displayOut(void){
+    ili9341_WriteCommand(0x11);
+}

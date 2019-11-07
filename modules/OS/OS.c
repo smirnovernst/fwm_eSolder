@@ -8,7 +8,7 @@
 
 void OS_init(void){
 
-    xTaskCreate((TaskFunction_t)mainTSK, "mainTSK", 128, NULL, MAIN_TSK_PRIORITY, NULL);
+    xTaskCreate((TaskFunction_t)mainTsk, "mainTSK", 128, NULL, MAIN_TSK_PRIORITY, NULL);
 
     vTaskStartScheduler();  
 }

@@ -8,8 +8,11 @@
 /*!****************************************************************************
 * Include
 */
+#include <stdlib.h>
 #include "lcd.h"
 #include "ili9341.h"
+#include "ili9341_communication.h"
+
 /*!****************************************************************************
 * Memory
 */
@@ -20,13 +23,13 @@
 #define F_DISPLAY_SENDDATA(data)            ili9341_WriteData_16(data) 
 #define F_DISPLAY_SETPIXEL(x, y, color)     ili9341_SetPixel(x, y, color)
 #define F_DISPLAY_SETREGION(x1, x2, y1, y2) ili9341_SetRegion(x1, x2, y1, y2)
-#define lcd_Background                      ili9341_DrawBackground
+#define F_DISPLAY_BACKGROUND(color)         ili9341_DrawBackground(color)
 /*!****************************************************************************
 * @brief Drawing line
 * @param
 * @return  
 */
-void lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, lcdColorRgb565 color)
+void lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)
 {
   
     //инициализация переменных
@@ -67,7 +70,7 @@ void lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, lcdColorRgb565 col
 * @param
 * @return x coordinate the end of symbol
 */
-int16_t lcd_Char(int16_t x, int16_t y, char c, lcdParam_t *param)
+int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdParam_t *param)
 {   
  
     
@@ -122,7 +125,7 @@ int16_t lcd_Char(int16_t x, int16_t y, char c, lcdParam_t *param)
 * @param
 * @return x coordinate the end of last symbol
 */
-int16_t lcd_String(int16_t x, int16_t y, char *s, lcdParam_t *param)
+int16_t lcd_String(int16_t x, int16_t y, char *s,const lcdParam_t *param)
 {
     int16_t end_symbol;
     while(*s != 0)
@@ -161,7 +164,7 @@ void lcd_Image(uint16_t x, uint16_t y,const tImage16 *image)
 * @param
 * @return
 */
-void lcd_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, lcdColorRgb565 color)
+void lcd_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)
 {
     F_DISPLAY_SETREGION(x, x + w - 1, y, y + h -1);    
     for (uint32_t i = 0; i < w*h; i++)
@@ -175,7 +178,7 @@ void lcd_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, lcdColorRgb565 col
 * @param
 * @return
 */
-void lcd_FastVLine(int16_t x, int16_t y, uint16_t h, lcdColorRgb565 color)
+void lcd_FastVLine(int16_t x, int16_t y, uint16_t h, uint16_t color)
 {
     F_DISPLAY_SETREGION(x, x, y, y + h -1);  
     for (; h > 0; h--)
@@ -189,7 +192,7 @@ void lcd_FastVLine(int16_t x, int16_t y, uint16_t h, lcdColorRgb565 color)
 * @param
 * @return
 */
-void lcd_FastHLine(int16_t x, int16_t y, uint16_t w, lcdColorRgb565 color)
+void lcd_FastHLine(int16_t x, int16_t y, uint16_t w, uint16_t color)
 {
     F_DISPLAY_SETREGION(x, x + w - 1, y, y);   
     for (; w > 0; w--)
@@ -203,10 +206,18 @@ void lcd_FastHLine(int16_t x, int16_t y, uint16_t w, lcdColorRgb565 color)
 * @param
 * @return
 */
-void    lcd_Rect(int16_t x, int16_t y, int16_t w, int16_t h, lcdColorRgb565 color)
+void lcd_Rect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)
 {
     lcd_FastHLine(x, y, w, color);
     lcd_FastHLine(x, y+h, w, color);
     lcd_FastVLine(x, y, h, color);
     lcd_FastVLine(x+w, y, h, color);
+}
+/*!****************************************************************************
+* @brief 
+* @param
+* @return
+*/
+void lcd_DrawBackground(uint16_t color){
+    
 }

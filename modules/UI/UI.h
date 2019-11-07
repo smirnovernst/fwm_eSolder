@@ -10,13 +10,11 @@
 /*!****************************************************************************
 * Include
 */
-#include "stdio.h"
-#include "stationState.h"
 
-#include "lcd.h"
+#include "hard/lcd/lcd.h"
 
 //#include "Image.h"
-#include "Fonts.h"
+#include "Fonts/Fonts.h"
 
 /*!****************************************************************************
 * User define
@@ -80,7 +78,7 @@
 
 
     //=========COLORS=========//
-#define UI_COL_INTCONTOUR   (lcdColorRgb565)0x18E3
+#define UI_COL_INTCONTOUR   (uint16_t)0x18E3
 /*!****************************************************************************
 * User enum
 */
@@ -94,35 +92,6 @@ typedef enum
 * User typedef
 */
  
-typedef struct
-{
-    lcdColorRgb565    centralPannel;  //Центральная панель и разделитель
-    lcdColorRgb565    ExtContour;     //Внешний контур обводки панелей
-    lcdColorRgb565    IntContour;     //Внутренний контур обводки панелей
-    lcdColorRgb565    PanelOK;        
-    lcdColorRgb565    PanelFail;
-    lcdColorRgb565    PanelHeat;
-    lcdColorRgb565    PanelOff;
-    lcdColorRgb565    RegulatorSelected;
-    lcdColorRgb565    Background;
-}UI_Colors_t;
-
-typedef struct
-{
-    lcdParam_t  mainFont;
-    lcdParam_t  headFont;
-    lcdParam_t  bigDigitFont;
-    lcdParam_t  smallDigitFont;
-    lcdParam_t  RegulatorSelectedFont;
-    lcdParam_t  menuSelectedFont;
-}UI_Fonts_t; 
-
-typedef struct
-{
-    UI_Fonts_t      fonts;
-    UI_Colors_t     colors; 
-}UI_t;
-
 
 
 typedef struct
@@ -152,12 +121,10 @@ typedef struct
 /*!****************************************************************************
 * Prototypes for the functions
 */
-void UI_DrawBootScreen(void);
-void UI_Update(stationState_t *data);
-void UI_WindowRendering();
+
+
+void UI_MainWindowRendering(void);
 void UI_DrawMenu();
-void UI_updateMenu(UI_menu_t *menu);
-void UI_Init();
 #endif //UI_h
 
 

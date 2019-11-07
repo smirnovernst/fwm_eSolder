@@ -63,7 +63,7 @@ typedef enum
 } gpioType_t;
 
 typedef enum {
-    gpioAF_0,
+    gpioAF_0 = 0,
     gpioAF_1,
     gpioAF_2,
     gpioAF_3,
@@ -92,14 +92,15 @@ typedef enum {
 /*!****************************************************************************
 * Macro functions
 */
-#define GPIO_PIN_SET(port, pin)        (port->BSRRL = (pin))
-#define GPIO_PIN_RESET(port, pin)      (port->BSRRH = (pin))
-#define GPIO_PIN_GET(port, pin)        (port->IDR & (pin))
+#define GPIO_PIN_SET(port, pin)        (port->BSRR = (1 << pin))
+#define GPIO_PIN_RESET(port, pin)      (port->BSRR = (1 << pin + 0x10))
+#define GPIO_PIN_GET(port, pin)        (port->IDR & (1 << pin))
+#define GPIO_PIN_TOGGLE(port, pin)     (port->ODR ^= (1 << pin))
 /*!****************************************************************************
 * Prototypes for the functions
 */
-void gpioInit (GPIO_TypeDef *port, gpioPin_t pin,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, gpioAF afNum, uint8_t initState);
-void gpioAfInit (GPIO_TypeDef *port, uint8_t pin, gpioAF afNum);
+void gpioInit (GPIO_TypeDef *port, uint8_t  pinNum,  gpioMode_t mode, gpioPuPd_t PuPd, gpioType_t type, gpioAF afNum, uint8_t initState);
+void gpioAfInit (GPIO_TypeDef *port, uint8_t pinNum, gpioAF afNum);
  
 #endif //GPIO_H_
 /***************** (C) COPYRIGHT ************** END OF FILE ******** ЭрикМарина ****/

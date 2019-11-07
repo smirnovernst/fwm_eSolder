@@ -5,20 +5,18 @@
 *@Date      15.10.2016
 *@Breif     
 */
-#ifndef ili9341_h
-#define ili9341_h
+#ifndef ILI9351_H_
+#define ILI9351_H_
 /*!****************************************************************************
 * Include
 */
 
 
-#include "GPIO.h"
-#include "spi.h"
+#include "Drivers/gpio.h"
+
 /*!****************************************************************************
 * User define
 */
-
-
 
 #define ILI9341_ORIENTATION_DEFAULT     ILI9341_LANDSCAPE_2
 #define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_565_BLACK
@@ -50,10 +48,7 @@ typedef enum
 /*!****************************************************************************
 * Macro functions
 */
-#define ili9341_sleepIn ili9341_WriteCommand(0x10)
-#define ili9341_sleepOut ili9341_WriteCommand(0x11)
-#define ili9341_displayOff ili9341_WriteCommand(0x28)
-#define ili9341_displayOn ili9341_WriteCommand(0x29)
+
 /*!****************************************************************************
 * Prototypes for the functions
 */
@@ -63,7 +58,11 @@ typedef enum
 void ili9341_Init(void);
 void ili9341_DrawBackground(uint16_t color);
 void ili9341_SetOrientation(ili9341_Orientation_t orientation);
-inline void ili9341_Reset(void) {ili9341_WriteCommand(0x01);}
+void ili9341_Reset(void);
+void ili9341_displayOn(void);
+void ili9341_displayOff(void);
+void ili9341_displaySleepIn(void);
+void ili9341_displayOut(void);
 
 //graph
 void ili9341_SetPixel(uint16_t x, uint16_t y, uint16_t color);
@@ -71,4 +70,4 @@ void ili9341_SetRegion (int16_t x1, int16_t x2, int16_t y1, int16_t y2);
 
 
 
-#endif //ili9341_h
+#endif //!ILI9351_H_

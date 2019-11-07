@@ -1,45 +1,64 @@
 /*
-*@File      Fonts.h 
+*@File      button.h 
 *@Author    EricMarina
 *@Version   
-*@Date      28.01.2017
+*@Date      16.07.2017
 *@Breif     
 */
-#ifndef Fonts_h
-#define Fonts_h
+#ifndef button_h
+#define button_h
 /*!****************************************************************************
 * Include
 */
-#include "lcd.h"
+#include "stm32f4xx.h"
+
 /*!****************************************************************************
 * User define
 */
-
+#define BUTTON_LONG_PRESS_TRESHOLD     5
+#define BUTTON_SHOT_PRESS_TRESHOLD     1
 /*!****************************************************************************
 * User enum
 */
+typedef enum
+{
+    ButtonPressed_NO = 0,
+    ButtonPressed_SHORT,
+    ButtonPressed_LONG,
+    ButtonPressed_NONE //invalid state
+}ButtonPressed_t;
 
 /*!****************************************************************************
 * User typedef
 */
 
+
+typedef struct
+{  
+    GPIO_TypeDef    *port;
+    uint8_t         pin;
+    uint8_t         pressCounter; 
+    ButtonPressed_t pressState;
+}Button_t;
+
+
 /*!****************************************************************************
 * Extern viriables
 */
-extern const tFont Arial;
-extern const tFont DS_Digital;
-extern const tFont DS_Digital_Small;
-extern const tFont specific_symbol;
-extern const tFont Courier_New;
+
 /*!****************************************************************************
 * Macro functions
 */
-
+#define BUTTON_MARK_PROCESSED(button) { button.pressState = ButtonPressed_NO; }
 /*!****************************************************************************
 * Prototypes for the functions
 */
+int buttonScan(Button_t* button);
+void buttonClearPressed(Button_t* button);
+void buttonInit(Button_t *button);
 
-#endif //Fonts_h
+
+#endif //button_h
 
 
 

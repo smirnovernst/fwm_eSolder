@@ -11,7 +11,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>29</version>
+                <version>28</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -44,7 +44,7 @@
                 </option>
                 <option>
                     <name>OGCoreOrChip</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelect</name>
@@ -58,15 +58,15 @@
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state></state>
+                    <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
-                    <state>8.11.2.13604</state>
+                    <state>8.11.1.13270</state>
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.11.2.13604</state>
+                    <state>8.11.1.13270</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -78,15 +78,15 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>Default	None</state>
+                    <state>STM32F427VG	ST STM32F427VG</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -117,7 +117,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -134,21 +134,21 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>Default	None</state>
+                    <state>STM32F427VG	ST STM32F427VG</state>
                 </option>
                 <option>
                     <name>FPU2</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>4</state>
                 </option>
                 <option>
                     <name>NrRegs</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>NEON</name>
@@ -157,7 +157,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -196,10 +196,6 @@
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
                 </option>
-                <option>
-                    <name>DSPExtension</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
@@ -211,7 +207,7 @@
                 <debug>0</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>NDEBUG</state>
+                    <state>STM32F427xx</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -272,7 +268,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>11111110</state>
+                    <state>10010100</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -336,7 +332,14 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\..\modules</state>
+                    <state>$PROJ_DIR$\..\..\modules\CMSIS</state>
+                    <state>$PROJ_DIR$\..\..\modules\Core</state>
+                    <state>$PROJ_DIR$\..\..\modules\Core\stm32f427</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS\include</state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F</state>
+                    <state>$PROJ_DIR$\..\..\modules\environment</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -352,7 +355,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>3</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -361,7 +364,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>3</state>
+                    <state>2</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -403,7 +406,7 @@
                 </option>
                 <option>
                     <name>IccCppInlineSemantics</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IccCmsis</name>
@@ -602,7 +605,7 @@
                 </option>
                 <option>
                     <name>AUserIncludes</name>
-                    <state></state>
+                    <state>$PROJ_DIR$\..\..\modules\FreeRTOS</state>
                 </option>
                 <option>
                     <name>AExtraOptionsCheckV2</name>
@@ -755,7 +758,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>lnk0t.icf</state>
+                    <state>$TOOLKIT_DIR$\config\linker\ST\stm32f427xG.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -815,7 +818,7 @@
                 </option>
                 <option>
                     <name>IlinkProgramEntryLabel</name>
-                    <state></state>
+                    <state>__iar_program_start</state>
                 </option>
                 <option>
                     <name>DoFill</name>
@@ -1025,7 +1028,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>29</version>
+                <version>28</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1076,11 +1079,11 @@
                 </option>
                 <option>
                     <name>OGProductVersion</name>
-                    <state>8.11.2.13604</state>
+                    <state>8.11.1.13270</state>
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.11.2.13604</state>
+                    <state>8.11.1.13270</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -1209,10 +1212,6 @@
                 <option>
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
-                </option>
-                <option>
-                    <name>DSPExtension</name>
-                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -1823,7 +1822,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\IQ\IQmathLib-cm4.a</state>
+                    <state>$PROJ_DIR$\..\..\modules\IQ\IQmathLib-cm4.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2052,8 +2051,53 @@
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>spi</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.h</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+        </file>
+    </group>
+    <group>
+        <name>environment</name>
+    </group>
+    <group>
+        <name>Fonts</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
         </file>
     </group>
     <group>
@@ -2103,8 +2147,54 @@
     </group>
     <group>
         <name>hard</name>
+        <group>
+            <name>lcd</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_communication.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</name>
+                <excluded>
+                    <configuration>Release</configuration>
+                </excluded>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
+                <excluded>
+                    <configuration>Release</configuration>
+                    <configuration>STM32F427_Debug</configuration>
+                </excluded>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_colors.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
         </file>
     </group>
     <group>
@@ -2119,7 +2209,19 @@
     <group>
         <name>OS</name>
         <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+    </group>
+    <group>
+        <name>UI</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
         </file>
     </group>
     <file>

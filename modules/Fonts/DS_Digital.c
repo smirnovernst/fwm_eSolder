@@ -36,8 +36,7 @@
 */
 
 #include <stdint.h>
-#include "ili9341.h"
-
+#include "hard/lcd/lcd.h"
 
 static const uint8_t image_data_DS_Digital_0x25[210] = {
     0xf8, 0x1f, 0xff, 0xf1, 0xe0, 

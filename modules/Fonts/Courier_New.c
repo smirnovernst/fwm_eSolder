@@ -36,8 +36,7 @@
 */
 
 #include <stdint.h>
-#include "ili9341.h"
-
+#include "hard/lcd/lcd.h"
 
 static const uint8_t image_data_Courier_New_0x20[42] = {
     0xff, 0xf8, 

@@ -2330,8 +2330,53 @@
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>spi</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.h</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+        </file>
+    </group>
+    <group>
+        <name>environment</name>
+    </group>
+    <group>
+        <name>Fonts</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
         </file>
     </group>
     <group>
@@ -2381,8 +2426,47 @@
     </group>
     <group>
         <name>hard</name>
+        <group>
+            <name>lcd</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_communication.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_colors.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
         </file>
     </group>
     <group>
@@ -2397,7 +2481,19 @@
     <group>
         <name>OS</name>
         <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+    </group>
+    <group>
+        <name>UI</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
         </file>
     </group>
     <file>
