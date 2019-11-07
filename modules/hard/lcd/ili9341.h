@@ -5,8 +5,8 @@
 *@Date      15.10.2016
 *@Breif     
 */
-#ifndef ili9341_h
-#define ili9341_h
+#ifndef ILI9351_H_
+#define ILI9351_H_
 /*!****************************************************************************
 * Include
 */
@@ -70,4 +70,4 @@ void ili9341_SetRegion (int16_t x1, int16_t x2, int16_t y1, int16_t y2);
 
 
 
-#endif //ili9341_h
+#endif //!ILI9351_H_

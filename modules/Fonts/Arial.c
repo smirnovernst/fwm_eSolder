@@ -36,8 +36,7 @@
 */
 
 #include <stdint.h>
-#include "ili9341.h"
-
+#include "hard/lcd/lcd.h"
 
 static const uint8_t image_data_Arial_0x20[18] = {
     0xf0, 

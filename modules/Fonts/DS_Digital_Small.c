@@ -36,7 +36,7 @@
 */
 
 #include <stdint.h>
-#include "ili9341.h"
+#include "hard/lcd/lcd.h"
 
 
 static const uint8_t image_data_DS_Digital_Small_0x20[70] = {

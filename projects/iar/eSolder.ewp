@@ -1049,11 +1049,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state></state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -1061,7 +1061,7 @@
                 </option>
                 <option>
                     <name>OGCoreOrChip</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GRuntimeLibSelect</name>
@@ -1075,7 +1075,7 @@
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state></state>
+                    <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -1083,7 +1083,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state></state>
+                    <state>8.11.1.13270</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -1095,7 +1095,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state></state>
+                    <state>STM32F427VG	ST STM32F427VG</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -1103,7 +1103,7 @@
                 </option>
                 <option>
                     <name>GEndianModeBE</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>OGBufferedTerminalOutput</name>
@@ -1129,12 +1129,12 @@
                 </option>
                 <option>
                     <name>RTConfigPath2</name>
-                    <state></state>
+                    <state>$TOOLKIT_DIR$\INC\c\DLib_Config_Normal.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -1151,21 +1151,21 @@
                 <option>
                     <name>CoreVariant</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>-</state>
+                    <state>STM32F427VG	ST STM32F427VG</state>
                 </option>
                 <option>
                     <name>FPU2</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>4</state>
                 </option>
                 <option>
                     <name>NrRegs</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>NEON</name>
@@ -1174,7 +1174,7 @@
                 <option>
                     <name>GFPUCoreSlave2</name>
                     <version>25</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGCMSISPackSelectDevice</name>
@@ -1822,7 +1822,7 @@
                 </option>
                 <option>
                     <name>IlinkAdditionalLibs</name>
-                    <state>C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\IQ\IQmathLib-cm4.a</state>
+                    <state>$PROJ_DIR$\..\..\modules\IQ\IQmathLib-cm4.a</state>
                 </option>
                 <option>
                     <name>IlinkOverrideProgramEntryLabel</name>
@@ -2074,6 +2074,27 @@
         <name>environment</name>
     </group>
     <group>
+        <name>Fonts</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
+        </file>
+    </group>
+    <group>
         <name>FreeRTOS</name>
         <group>
             <name>inc</name>
@@ -2150,6 +2171,7 @@
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
                 <excluded>
                     <configuration>Release</configuration>
+                    <configuration>STM32F427_Debug</configuration>
                 </excluded>
             </file>
             <file>

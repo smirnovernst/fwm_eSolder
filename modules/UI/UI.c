@@ -9,19 +9,79 @@
 * Include
 */
 #include "UI.h"
+/*!****************************************************************************
+* Typedef
+*/
+typedef struct{
+    uint16_t    centralPannel;  //Центральная панель и разделитель
+    uint16_t    ExtContour;     //Внешний контур обводки панелей
+    uint16_t    IntContour;     //Внутренний контур обводки панелей
+    uint16_t    PanelOK;
+    uint16_t    PanelFail;
+    uint16_t    PanelHeat;
+    uint16_t    PanelOff;
+    uint16_t    RegulatorSelected;
+    uint16_t    Background;
+}UI_Colors_t;
 
+typedef struct{
+    lcdParam_t  mainFont;
+    lcdParam_t  headFont;
+    lcdParam_t  bigDigitFont;
+    lcdParam_t  smallDigitFont;
+}UI_Fonts_t;
+
+typedef struct{
+    UI_Fonts_t      fonts;
+    UI_Colors_t     colors;
+    uint8_t a;
+}UI_t;
+
+
+/*!****************************************************************************
+* defines
+*/
 
 /*!****************************************************************************
 * Memory
 */
-static UI_t ui;
+ const static UI_t ui = {
+    //----Colors----
+    .colors.centralPannel       = LCD_COLOR_GRAY,
+    .colors.ExtContour          = LCD_COLOR_WHITE,
+    .colors.IntContour          = UI_COL_INTCONTOUR,
+    .colors.PanelFail           = LCD_COLOR_RED,
+    .colors.PanelHeat           = LCD_COLOR_YELLOW,
+    .colors.PanelOff            = LCD_COLOR_BLACK,
+    .colors.PanelOK             = LCD_COLOR_GREEN,
+    .colors.RegulatorSelected   = LCD_COLOR_WHITE,
+    
+    //----Fonts----
+    .fonts.headFont.color           = LCD_COLOR_WHITE,
+    .fonts.headFont.distance        = 1,
+    .fonts.headFont.font            = &Arial,
+    .fonts.headFont.background      = LCD_COLOR_GRAY,
 
+    .fonts.mainFont.background      = LCD_COLOR_BLACK,
+    .fonts.mainFont.color           = LCD_COLOR_WHITE,
+    .fonts.mainFont.distance        = 1,
+    .fonts.mainFont.font            = &Arial,
+    
+    .fonts.bigDigitFont.background  = LCD_COLOR_BLACK,
+    .fonts.bigDigitFont.color       = LCD_COLOR_WHITE,
+    .fonts.bigDigitFont.distance    = 3,
+    .fonts.bigDigitFont.font        = &DS_Digital,
+    
+    .fonts.smallDigitFont.background= LCD_COLOR_BLACK,
+    .fonts.smallDigitFont.color     = LCD_COLOR_WHITE,
+    .fonts.smallDigitFont.distance  = 1,
+    .fonts.smallDigitFont.font      = &DS_Digital_Small,
+};
 /*!****************************************************************************
 * Functions
 */
 
-void UI_WindowRendering()
-{
+void UI_MainWindowRendering(void){
     lcd_DrawBackground(LCD_COLOR_BLACK);
     //****UPPER PANEL***///
     lcd_Rect(UI_UPPER_X, UI_UPPER_Y, UI_UPPER_W, UI_UPPER_H-1, ui.colors.ExtContour);       //контур верхней панели
@@ -200,73 +260,8 @@ void UI_Update(stationState_t *data)
     }
 }
 */
-/*
-void UI_Init()
-{
-    //----Colors----
-    ui.colors.centralPannel = LCD_COLOR_GRAY;
-    ui.colors.ExtContour  = LCD_COLOR_WHITE;
-    ui.colors.IntContour  = UI_COL_INTCONTOUR;
-    
-    ui.colors.PanelFail   = LCD_COLOR_RED;
-    ui.colors.PanelHeat   = LCD_COLOR_YELLOW;
-    ui.colors.PanelOff    = LCD_COLOR_BLACK;
-    ui.colors.PanelOK     = LCD_COLOR_GREEN;
-    
-    ui.colors.RegulatorSelected = LCD_COLOR_WHITE;
-    
-    //----Fonts----
-    ui.fonts.mainFont.background = LCD_COLOR_BLACK;
-    
-    ui.fonts.headFont.color = LCD_COLOR_WHITE;
-    ui.fonts.headFont.distance = 1;
-    ui.fonts.headFont.font = &Arial;
-    ui.fonts.headFont.background = ui.colors.centralPannel;
 
-    ui.fonts.mainFont.background = LCD_COLOR_BLACK;
-    ui.fonts.mainFont.color = LCD_COLOR_WHITE;
-    ui.fonts.mainFont.distance = 1;
-    ui.fonts.mainFont.font = &Arial;
-    
 
-    ui.fonts.bigDigitFont.background    = LCD_COLOR_BLACK;
-    ui.fonts.bigDigitFont.color = LCD_COLOR_WHITE;
-    ui.fonts.bigDigitFont.distance = 3;
-    ui.fonts.bigDigitFont.font = &DS_Digital;
-    
-
-    ui.fonts.smallDigitFont.background    = LCD_COLOR_BLACK;
-    ui.fonts.smallDigitFont.color = LCD_COLOR_WHITE;
-    ui.fonts.smallDigitFont.distance = 1;
-    ui.fonts.smallDigitFont.font = &DS_Digital_Small;
-    
- 
-    ui.fonts.RegulatorSelectedFont.background = LCD_COLOR_WHITE;
-    ui.fonts.RegulatorSelectedFont.color = LCD_COLOR_BLACK;
-    ui.fonts.RegulatorSelectedFont.distance = 1;
-    ui.fonts.RegulatorSelectedFont.font = &Arial;
-    
-    ui.fonts.menuSelectedFont.background = LCD_COLOR_BLACK;
-    ui.fonts.menuSelectedFont.color = LCD_COLOR_RED;
-    ui.fonts.menuSelectedFont.distance = 1;
-    ui.fonts.menuSelectedFont.font = &Arial;
-    
-    now_regulator_select = (dryRegulatorSelected)0;
-}
-*/
-void UI_DrawBootScreen(void)
-{
-    lcdParam_t bootscr_font; 
-    bootscr_font.background = LCD_COLOR_WHITE;
-    bootscr_font.color = LCD_COLOR_BLACK;
-    bootscr_font.distance = 3;
-    bootscr_font.font =  &Arial;
-    
- /*   lcd_Image(40,55,&Logo);
-    lcd_String(40,174, "Powered by", &bootscr_font);
-    lcd_Image(180,170,&FreeRTOS_Logo);*/
-    lcd_String(140,220, UI_VERSION, &bootscr_font);
-}
 void UI_DrawMenu()
 {
     //==========Drawing window=========//
@@ -304,57 +299,4 @@ void UI_DrawMenu()
 
     
 
-}
-
-void UI_updateMenu(UI_menu_t *menu)
-{
-    
-      /* lcd_FillRect(MENU_TEXT_START_X, 
-                 MENU_TEXT_START_Y, 
-                 UI_MENU_PANNEL_W-10,
-                 UI_MENU_PANNEL_H-10, 
-                 LCD_COLOR_BLACK);*/
-    //==========Drawing data==========//
-    
-    
-    uint8_t page = (menu->selectedEl / MENU_STRING_ON_PAGE) ;
-    uint8_t startElement = (page)*MENU_STRING_ON_PAGE;
-    uint8_t endElement;
-    uint8_t restElements = menu->elementsAmount - startElement;
-    if ((restElements) > MENU_STRING_ON_PAGE)
-    {
-        endElement = startElement+MENU_STRING_ON_PAGE;
-    }
-    else 
-    {
-        endElement = restElements;
-    }
-    
-    for (int i=startElement; i < endElement; i++)
-    {
-        //-----NAME------
-        uint8_t textPosition_y = MENU_TEXT_START_Y+MENU_TEXT_HEIGHT*(i-startElement);
-        lcdParam_t  *font;
-        if (i == menu->selectedEl)
-        {
-            font = &ui.fonts.menuSelectedFont;
-        }
-        else
-        {
-            font = &ui.fonts.mainFont;
-        }
-        lcd_String(MENU_TEXT_START_X, textPosition_y, menu->elements[i].name, font);
-        
-        //-------------PARAMETR------
-        if (menu->elements[i].memType == menuElMemType_U8 || menuElMemType_BOOL)
-        {
-            
-            char tempString[MENU_TEXT_LENGTH_PARAM_MAX];
-            
-            sprintf(tempString, "%03u", (*(uint8_t*)menu->elements[i].param));
-            lcd_String(MENU_PARAM_START_X,textPosition_y, tempString, font);             
-        }
-        
-        
-    }
 }

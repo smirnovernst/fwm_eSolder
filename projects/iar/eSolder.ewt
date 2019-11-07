@@ -2353,6 +2353,27 @@
         <name>environment</name>
     </group>
     <group>
+        <name>Fonts</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
+        </file>
+    </group>
+    <group>
         <name>FreeRTOS</name>
         <group>
             <name>inc</name>
