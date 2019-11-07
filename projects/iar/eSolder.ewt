@@ -2428,6 +2428,9 @@
             <file>
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_colors.h</name>
+            </file>
         </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
@@ -2449,6 +2452,15 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+    </group>
+    <group>
+        <name>UI</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
         </file>
     </group>
     <file>

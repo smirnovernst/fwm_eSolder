@@ -18,8 +18,6 @@
 * User define
 */
 
-
-
 #define ILI9341_ORIENTATION_DEFAULT     ILI9341_LANDSCAPE_2
 #define ILI9341_BACKGROUND_DEFAULT      LCD_COLOR_565_BLACK
 
@@ -60,11 +58,11 @@ typedef enum
 void ili9341_Init(void);
 void ili9341_DrawBackground(uint16_t color);
 void ili9341_SetOrientation(ili9341_Orientation_t orientation);
-inline void ili9341_Reset(void);
-inline void ili9341_displayOn(void);
-inline void ili9341_displayOff(void);
-inline void ili9341_displaySleepIn(void);
-inline void ili9341_displayOut(void);
+void ili9341_Reset(void);
+void ili9341_displayOn(void);
+void ili9341_displayOff(void);
+void ili9341_displaySleepIn(void);
+void ili9341_displayOut(void);
 
 //graph
 void ili9341_SetPixel(uint16_t x, uint16_t y, uint16_t color);

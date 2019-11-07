@@ -11,9 +11,9 @@
 * Include
 */
 #include "stdio.h"
-#include "stationState.h"
 
-#include "lcd.h"
+
+#include "hard/lcd/lcd.h"
 
 //#include "Image.h"
 #include "Fonts.h"
@@ -80,7 +80,7 @@
 
 
     //=========COLORS=========//
-#define UI_COL_INTCONTOUR   (lcdColorRgb565)0x18E3
+#define UI_COL_INTCONTOUR   (uint16_t)0x18E3
 /*!****************************************************************************
 * User enum
 */
@@ -96,15 +96,15 @@ typedef enum
  
 typedef struct
 {
-    lcdColorRgb565    centralPannel;  //Центральная панель и разделитель
-    lcdColorRgb565    ExtContour;     //Внешний контур обводки панелей
-    lcdColorRgb565    IntContour;     //Внутренний контур обводки панелей
-    lcdColorRgb565    PanelOK;        
-    lcdColorRgb565    PanelFail;
-    lcdColorRgb565    PanelHeat;
-    lcdColorRgb565    PanelOff;
-    lcdColorRgb565    RegulatorSelected;
-    lcdColorRgb565    Background;
+    uint16_t    centralPannel;  //Центральная панель и разделитель
+    uint16_t    ExtContour;     //Внешний контур обводки панелей
+    uint16_t    IntContour;     //Внутренний контур обводки панелей
+    uint16_t    PanelOK;        
+    uint16_t    PanelFail;
+    uint16_t    PanelHeat;
+    uint16_t    PanelOff;
+    uint16_t    RegulatorSelected;
+    uint16_t    Background;
 }UI_Colors_t;
 
 typedef struct
@@ -153,7 +153,7 @@ typedef struct
 * Prototypes for the functions
 */
 void UI_DrawBootScreen(void);
-void UI_Update(stationState_t *data);
+//void UI_Update(stationState_t *data);
 void UI_WindowRendering();
 void UI_DrawMenu();
 void UI_updateMenu(UI_menu_t *menu);

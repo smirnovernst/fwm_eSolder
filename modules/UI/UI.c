@@ -15,15 +15,14 @@
 * Memory
 */
 static UI_t ui;
-__root static dryRegulatorSelected now_regulator_select;
+
 /*!****************************************************************************
 * Functions
 */
 
 void UI_WindowRendering()
 {
-    lcd_Background(LCD_COLOR_BLACK);
-    //lcd_Rect(0,0, 320, 240, LCD_COLOR_WHITE);
+    lcd_DrawBackground(LCD_COLOR_BLACK);
     //****UPPER PANEL***///
     lcd_Rect(UI_UPPER_X, UI_UPPER_Y, UI_UPPER_W, UI_UPPER_H-1, ui.colors.ExtContour);       //контур верхней панели
      
@@ -65,7 +64,7 @@ void UI_WindowRendering()
     lcd_String(UI_RIGHTPANEL_X+UI_SYMBOLSOFFSET_X, UI_TEXTSET_Y, "SET", &ui.fonts.mainFont);
     lcd_String(UI_RIGHTPANEL_X+UI_SYMBOLSOFFSET_X, UI_TEXTREAL_Y, "REAL", &ui.fonts.mainFont);
 }
-
+/*
 void UI_Update(stationState_t *data)
 {
      
@@ -200,8 +199,8 @@ void UI_Update(stationState_t *data)
         lcd_String(UI_RIGHTPANEL_X + UI_SYMBOLSOFFSET_X, UI_TEXTREAL_Y+UI_VALUEOFFSET_Y, "---'C", &ui.fonts.smallDigitFont);
     }
 }
-
-
+*/
+/*
 void UI_Init()
 {
     //----Colors----
@@ -254,7 +253,7 @@ void UI_Init()
     
     now_regulator_select = (dryRegulatorSelected)0;
 }
-
+*/
 void UI_DrawBootScreen(void)
 {
     lcdParam_t bootscr_font; 
