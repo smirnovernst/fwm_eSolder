@@ -10,36 +10,36 @@
 /*!****************************************************************************
 * Include
 */
-#include "global_inc.h"
-#include "GPIO.h"
+#include "stm32f4xx.h"
+
 /*!****************************************************************************
 * User define
 */
 #define BUTTON_LONG_PRESS_TRESHOLD     5
+#define BUTTON_SHOT_PRESS_TRESHOLD     1
 /*!****************************************************************************
 * User enum
 */
 typedef enum
 {
-    pressType_NON,
-    pressType_SHORT,
-    pressType_LONG,
-}pressType_t;
+    ButtonPressed_NO = 0,
+    ButtonPressed_SHORT,
+    ButtonPressed_LONG,
+    ButtonPressed_NONE //invalid state
+}ButtonPressed_t;
 
 /*!****************************************************************************
 * User typedef
 */
 
-// if val pressCounter - (-1) - button holding in press state
-//                       (0)  - button released
-//                       (>0) - button  pressed
+
 typedef struct
 {  
     GPIO_TypeDef    *port;
     uint8_t         pin;
-    int8_t          pressCounter; 
-    pressType_t     pressType;
-}button_t;
+    uint8_t         pressCounter; 
+    ButtonPressed_t pressState;
+}Button_t;
 
 
 /*!****************************************************************************
@@ -49,14 +49,13 @@ typedef struct
 /*!****************************************************************************
 * Macro functions
 */
-
+#define BUTTON_MARK_PROCESSED(button) { button.pressState = ButtonPressed_NO; }
 /*!****************************************************************************
 * Prototypes for the functions
 */
-uint8_t buttonScan(button_t *button);
-//@TODO: need release for stm32f4
-//inline void buttonInit(button_t *button) { GPIO_Init(button->port, button->pin, GPIO_Mode_InputWithPullDown);}
-inline void buttonInit(button_t *button){}
+int buttonScan(Button_t* button);
+void buttonClearPressed(Button_t* button);
+void buttonInit(Button_t *button);
 
 
 #endif //button_h

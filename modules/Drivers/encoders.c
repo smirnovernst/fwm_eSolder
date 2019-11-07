@@ -6,6 +6,7 @@
 * @date    13-05-2015, 05-11-2019
 * @brief   Средства работы с энкодером
 */
+#include <stddef.h>
 #include "stm32f4xx.h"
 #include "Drivers/encoders.h"
 #include "Drivers/gpio.h"
@@ -20,44 +21,40 @@
 void encoderInit(Encoder* encoder){
     if (NULL == encoder) return;
 
+    
+    gpioInit(encoder->gpioA, encoder->pinA, gpioMode_IN, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinA_AFnum, 1);
+    gpioInit(encoder->gpioB, encoder->pinB, gpioMode_IN, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinB_AFnum, 1);
+    
+    //Настройка таймера               
+    encoder->tim->CCMR1  = TIM_CCMR1_CC2S_0 | TIM_CCMR1_CC1S_0;         //Полярность сигнала для каждого входа
+    encoder->tim->CCER   = TIM_CCER_CC1P | TIM_CCER_CC2P;
+    encoder->tim->CCMR1 |= (TIM_CCMR1_IC2PSC_1 | TIM_CCMR1_IC1PSC_1);   //Capture is done once every 4 events
+    encoder->tim->CCMR1 |= TIM_CCMR1_IC1F | TIM_CCMR1_IC2F;             //Input capture 1 filter fSAMPLING=fDTS/32, N=8
+    encoder->tim->SMCR  = TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1;              //Режим энкодера
+    encoder->tim->ARR   = 0xFFFF;                                       //Значение, до которого считает
+    encoder->tim->SMCR  |=  TIM_SMCR_ETPS_1;
+    encoder->tim->CNT = (0xFFFF / 4) / 2;
+    encoder->tim->CR1   = TIM_CR1_CEN;                                  //Включаем таймер
+    
     encoder->nowControlled = NULL;
-    
-    gpioInit( (encoderInit->gpioA, encoderInit->pinA, GPIO_Mode_InputWithPullUp);  //Вывод GPIOA.8 TIM1_CH1
-    gpioInit()
-    GPIO_Init(encoderInit->gpioB, encoderInit->pinB, GPIO_Mode_InputWithPullUp);  //Вывод GPIOA.9 TIM1_CH2
-
-
-
-    //Настройка таймера
-                             
-    encoderInit->tim->CCMR1  = TIM_CCMR1_CC2S_0 | TIM_CCMR1_CC1S_0;         //Полярность сигнала для каждого входа
-    encoderInit->tim->CCER   = TIM_CCER_CC1P | TIM_CCER_CC2P;
-    encoderInit->tim->CCMR1 |= (TIM_CCMR1_IC2PSC_1 | TIM_CCMR1_IC1PSC_1);   //Capture is done once every 4 events
-    encoderInit->tim->CCMR1 |= TIM_CCMR1_IC1F | TIM_CCMR1_IC2F;             //Input capture 1 filter fSAMPLING=fDTS/32, N=8
-    encoderInit->tim->SMCR  = TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1;              //Режим энкодера
-    encoderInit->tim->ARR   = 0xFFFF;                                       //Значение, до которого считает
-    encoderInit->tim->SMCR  |=  TIM_SMCR_ETPS_1;
-    encoderInit->tim->CNT = (0xFFFF / 4) / 2;
-    encoderInit->tim->CR1   = TIM_CR1_CEN;                                  //Включаем таймер
-    
-    encoder->tim = encoderInit->tim; 
-
 }
 
 /*!****************************************************************************
 * @brief
 */
 uint32_t enReadVal(EncoderControlled *controlled){
-    if ((NULL == controlled) || (NULL == controlled->pVal)) return;
+    if ((NULL == controlled) || (NULL == controlled->pVal)) {
+        return 0;
+    }
 
-    if(encoder->memtype == enU8){
-        return (*(uint8_t*)controlled->pval);
+    if(controlled->memtype == enU8){
+        return (*(uint8_t*)controlled->pVal);
     }
-    else if(encoder->memtype == enU16){
-        return (*(uint16_t*)controlled->pval);
+    else if(controlled->memtype == enU16){
+        return (*(uint16_t*)controlled->pVal);
     }
-    else if(encoder->memtype == enU32){
-        return (*(uint32_t*)controlled->pval);
+    else if(controlled->memtype == enU32){
+        return (*(uint32_t*)controlled->pVal);
     }
     return 0xFFFFFFFF;
 }
@@ -69,13 +66,13 @@ void enWriteVal(EncoderControlled* controlled, int32_t val){
     if ((NULL == controlled)||(NULL == controlled->pVal)) return;
 
     if(controlled->memtype == enU8){
-        (*(uint8_t*)controlled->pval) = val;
+        (*(uint8_t*)controlled->pVal) = val;
     }
-    else if(encoder->memtype == enU16){
-        (*(uint16_t*)controlled->pval) = val;
+    else if(controlled->memtype == enU16){
+        (*(uint16_t*)controlled->pVal) = val;
     }
-    else if(encoder->memtype == enU32){
-        (*(uint32_t*)controlled->pval) = val;
+    else if(controlled->memtype == enU32){
+        (*(uint32_t*)controlled->pVal) = val;
     }
 }
 
@@ -84,7 +81,9 @@ void enWriteVal(EncoderControlled* controlled, int32_t val){
 * @brief  
 */
 enLimType_type encoderUpdate(Encoder* encoder, EncoderControlled *controlled) {
-    if ((NULL == encoder) || (NULL == controlled)) return enNoLim;
+    if ((NULL == encoder) || (NULL == controlled)) {
+        return enNoLim;
+    }
 
     if (encoder->nowControlled != controlled) {
         encoder->nowControlled = controlled;
@@ -126,13 +125,13 @@ enLimType_type encoderUpdate(Encoder* encoder, EncoderControlled *controlled) {
             return enNoLim;
         }
         if (temp2 > controlled->max) {
-            enWriteVal(encoder, controlled->min);
+            enWriteVal(controlled, controlled->min);
             return enNoLim;
         }
     }
     else {
         if (temp2 < controlled->min) {
-            enWriteVal(encoder, controlled->min);
+            enWriteVal(controlled, controlled->min);
             return enLimUp;
         }
         if (temp2 > controlled->max) {
@@ -140,7 +139,16 @@ enLimType_type encoderUpdate(Encoder* encoder, EncoderControlled *controlled) {
             return enLimUp;
         }
     }
-    enWriteVal(controlled, controlled->pVal+temp);
+
+    if(controlled->memtype == enU8){
+        (*(uint8_t*)controlled->pVal) = (*(uint8_t*)controlled->pVal)+temp;
+    }
+    else if(controlled->memtype == enU16){
+        (*(uint16_t*)controlled->pVal) = (*(uint16_t*)controlled->pVal)+temp;
+    }
+    else if(controlled->memtype == enU32){
+        (*(uint32_t*)controlled->pVal) = (*(uint32_t*)controlled->pVal)+temp;
+    }
     return enNoLim;
 }
 

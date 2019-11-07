@@ -2061,6 +2061,12 @@
             </file>
         </group>
         <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
         </file>
         <file>
@@ -2182,7 +2188,13 @@
             </file>
         </group>
         <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
         </file>
     </group>
     <group>

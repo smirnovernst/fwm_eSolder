@@ -9,8 +9,7 @@
 #ifndef ENCODERS_H_
 #define ENCODERS_H_
 
-#include "global_inc.h"
-#include "GPIO.h"
+#include "Drivers/gpio.h"
 /*!****************************************************************************
 * User define
 */
@@ -53,6 +52,8 @@ typedef struct{
     GPIO_TypeDef*       gpioB;
     uint8_t             pinA;
     uint8_t             pinB;
+    uint8_t             pinA_AFnum;
+    uint8_t             pinB_AFnum;
     EncoderControlled   *nowControlled;
 }Encoder;
 

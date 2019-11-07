@@ -1,5 +1,0 @@
-#ifndef ESOLDER_CONSTANTS_H_
-#define ESOLDER_CONSTANTS_H_
-
-
-#endif // !ESOLDER_CONSTANTS_H_
