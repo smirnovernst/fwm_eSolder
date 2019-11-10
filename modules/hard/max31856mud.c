@@ -65,9 +65,9 @@ void max31856mud_read(max31856mud_t *max31856mud, uint8_t addr, uint8_t *buffer,
 {
     uint8_t readNull, ret = 0;
     GPIO_PIN_RESET(max31856mud->portCS, max31856mud->pinCS);
-    ret += spi_tranceive(&spi1, &addr, size+1, MAX31856MUD_TIMEOUT);
-    ret += spi_receive(&spi1, &readNull, 1, MAX31856MUD_TIMEOUT); //first byte receive - not valid
-    ret += spi_receive(&spi1, buffer, size, MAX31856MUD_TIMEOUT);
+    ret += spiTxDma(&spi1, &addr, size+1, MAX31856MUD_TIMEOUT);
+    ret += spiTxRxDma(&spi1, &readNull, 1, MAX31856MUD_TIMEOUT); //first byte receive - not valid
+    ret += spiTxRxDma(&spi1, buffer, size, MAX31856MUD_TIMEOUT);
     GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);
     if (ret != 0) {max31856mud->state = max31856State_ERRCOMM;}
     //else { max31856mud->state = max31856State_OK; }     
@@ -81,7 +81,7 @@ void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data)
     buffer[1] = data; 
     
     GPIO_PIN_RESET(max31856mud->portCS, max31856mud->pinCS);
-    uint8_t ret = spi_tranceive(&spi1, buffer, 2, MAX31856MUD_TIMEOUT);
+    uint8_t ret = spiTxDma(&spi1, buffer, 2, MAX31856MUD_TIMEOUT);
     GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);
     if (ret != 0) {max31856mud->state = max31856State_ERRCOMM;}
     //else { max31856mud->state = max31856State_OK; }

@@ -20,8 +20,7 @@
 /*!****************************************************************************
 * User enum
 */
-typedef enum
-{
+typedef enum{
   gpioPin_0 = ((uint16_t)1 << 0),
   gpioPin_1 = ((uint16_t)1 << 1),
   gpioPin_2 = ((uint16_t)1 << 2),

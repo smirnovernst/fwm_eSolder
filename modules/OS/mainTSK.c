@@ -62,7 +62,7 @@ __task void mainTsk(void) {
 
 
     while(1){
-
+  UI_MainWindowRendering();
         /*=========== Key handling ==========*/
         if (keyboardScan() > 0) {
             if ((ButtonPressed_LONG == keyboard.dryButton.pressState) &&

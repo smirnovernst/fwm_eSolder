@@ -11,7 +11,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>28</version>
+                <version>29</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -195,6 +195,10 @@
                 <option>
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
+                </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>0</state>
                 </option>
             </data>
         </settings>
@@ -1028,7 +1032,7 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>28</version>
+                <version>29</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1083,7 +1087,7 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>8.11.1.13270</state>
+                    <state>8.11.2.13604</state>
                 </option>
                 <option>
                     <name>GeneralEnableMisra</name>
@@ -1212,6 +1216,10 @@
                 <option>
                     <name>GenLocaleDisplayOnly</name>
                     <state></state>
+                </option>
+                <option>
+                    <name>DSPExtension</name>
+                    <state>1</state>
                 </option>
             </data>
         </settings>
@@ -2051,15 +2059,6 @@
     </group>
     <group>
         <name>Drivers</name>
-        <group>
-            <name>spi</name>
-            <file>
-                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</name>
-            </file>
-        </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
         </file>
@@ -2074,6 +2073,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</name>
         </file>
     </group>
     <group>
@@ -2166,6 +2168,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+                <excluded>
+                    <configuration>STM32F427_Debug</configuration>
+                </excluded>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
@@ -2213,6 +2221,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\taskPriority.h</name>
         </file>
     </group>
     <group>

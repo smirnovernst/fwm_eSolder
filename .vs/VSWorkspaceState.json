@@ -4,8 +4,10 @@
     "\\modules",
     "\\modules\\Drivers",
     "\\modules\\hard",
+    "\\modules\\hard\\lcd",
     "\\modules\\OS",
     "\\projects"
   ],
+  "SelectedNode": "\\modules\\hard\\lcd\\ili9341_spi_discovery.c",
   "PreviewInSolutionExplorer": false
 }

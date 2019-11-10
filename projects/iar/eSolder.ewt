@@ -2244,11 +2244,11 @@
                 <debug>1</debug>
                 <option>
                     <name>GenRtcDebugHeap</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcEnableBoundsChecking</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcCheckPtrsNonInstrMem</name>
@@ -2272,7 +2272,7 @@
                 </option>
                 <option>
                     <name>GenRtcIntOverflow</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcIncUnsigned</name>
@@ -2280,7 +2280,7 @@
                 </option>
                 <option>
                     <name>GenRtcIntConversion</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcInclExplicit</name>
@@ -2288,7 +2288,7 @@
                 </option>
                 <option>
                     <name>GenRtcIntShiftOverflow</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcInclUnsignedShiftOverflow</name>
@@ -2296,11 +2296,11 @@
                 </option>
                 <option>
                     <name>GenRtcUnhandledCase</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcDivByZero</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>GenRtcEnable</name>
@@ -2330,15 +2330,6 @@
     </group>
     <group>
         <name>Drivers</name>
-        <group>
-            <name>spi</name>
-            <file>
-                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</name>
-            </file>
-        </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
         </file>
@@ -2353,6 +2344,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</name>
         </file>
     </group>
     <group>
@@ -2444,6 +2438,9 @@
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
             </file>
             <file>
@@ -2485,6 +2482,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\taskPriority.h</name>
         </file>
     </group>
     <group>
