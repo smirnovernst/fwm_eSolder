@@ -8,25 +8,34 @@
 /*!****************************************************************************
 * Include
 */
-#include "lcd_backlight.h"
+
+#include "Drivers/gpio.h"
 
 /*!****************************************************************************
 * Memory
 */
-static pwmChannel_t pwmLcdBacklight;
+
+typedef struct {
+    GPIO_TypeDef *port;
+    uint8_t pinNum;
+}lcdBacklight_t;
+
+lcdBacklight_t backlight = {
+    .port = GPIOB,
+    .pinNum = 8
+};
 /*!****************************************************************************
 * Functions
 */
 
 void lcdBacklight_init()
 {
-    pwmLcdBacklight.tim = TIM5;
-    pwmLcdBacklight.channel = 4;
-    pwm_channelInit(&pwmLcdBacklight, GPIOA, 3);
+    gpioInit(backlight.port, backlight.pinNum,gpioMode_OUT, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_None, 0);
+    GPIO_PIN_SET(backlight.port, backlight.pinNum);
 }
 void lcdBacklight_bright(uint8_t bright)
 {
-    pwm_dutySet(&pwmLcdBacklight, bright);
+ 
 }
 
  

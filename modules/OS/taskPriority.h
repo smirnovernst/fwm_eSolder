@@ -2,6 +2,7 @@
 #define TASK_PRIORITY_H_
 
 
-#define MAIN_TSK_PRIORITY 3
+#define MAIN_TSK_PRIORITY 4
+#define DBG_TSK_PRIORITY 3
 
 #endif // !TASK_PRIORITY_H_

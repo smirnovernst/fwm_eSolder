@@ -2,10 +2,12 @@
 
 #include "hard/lcd/ili9341.h"
 #include "hard/keyboard.h"
+#include "hard/lcd/lcd_backlight.h"
 
 void hard_init(void){
     ili9341_Init();
     keyboardInit();
+    lcdBacklight_init();
 
 
 }

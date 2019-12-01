@@ -8,10 +8,15 @@
 /*!****************************************************************************
 * Include
 */
+
 #include <stdint.h>
 #include "ili9341_communication.h"
 #include "ili9341.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 
 /*!****************************************************************************
 * Memory
@@ -44,6 +49,8 @@ void ili9341_Init(void)
     
     ili9341_Reset();        
 
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+    
     ili9341_WriteCommand(0xC0);	    //Power Control 1
     ili9341_WriteData(0x27);	 
     
@@ -67,7 +74,12 @@ void ili9341_Init(void)
     ili9341_WriteData(0x00);
     ili9341_WriteData(0x18);
     
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+    
     ili9341_WriteCommand(0xB6);     //Display Function Control
+    
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+    
     ili9341_WriteData(0x0A);
     ili9341_WriteData(0x82);
     ili9341_WriteData(0x27);

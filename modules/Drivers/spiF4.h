@@ -53,7 +53,7 @@
 #define SPI5_DmaInterruptPrior  (15)
 #define SPI5_CPOL               (1)
 #define SPI5_CPHA               (1)
-#define SPI5_BR                 (SPI_CR1_BR_1)
+#define SPI5_BR                 (0)
 #define SPI5_DMA_USE            (0)
 
 #define SPI5_DMA_TX             
