@@ -18,3 +18,4 @@
 **/Obj/*.pbi.*  
 /.vs/fwm_eSolder/v16/Browse.VC.opendb
 /.vs/fwm_eSolder
+*.o
