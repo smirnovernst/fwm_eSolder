@@ -8,6 +8,6 @@ void main(void){
     SystemCoreClockUpdate();
     MCU_init();
     OS_init();
-
+    
     while(1);
 }

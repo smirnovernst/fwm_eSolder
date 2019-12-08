@@ -219,5 +219,5 @@ void lcd_Rect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)
 * @return
 */
 void lcd_DrawBackground(uint16_t color){
-    
+    F_DISPLAY_BACKGROUND(color);
 }

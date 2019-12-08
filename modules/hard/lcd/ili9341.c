@@ -51,6 +51,8 @@ void ili9341_Init(void)
 
     vTaskDelay(100 / portTICK_PERIOD_MS);
     
+
+    
     ili9341_WriteCommand(0xC0);	    //Power Control 1
     ili9341_WriteData(0x27);	 
     
@@ -85,6 +87,7 @@ void ili9341_Init(void)
     ili9341_WriteData(0x27);
   
     ili9341_WriteCommand(0x11);
+    ili9341_displayOn();
 }
 
 
