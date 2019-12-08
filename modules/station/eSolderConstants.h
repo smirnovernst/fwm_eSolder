@@ -1,0 +1,10 @@
+#ifndef ESOLDER_CONSTANTS_H_
+#define ESOLDER_CONSTANTS_H_
+
+#define ESOLDER_TEMP_SET_MAX        500
+#define ESOLDER_TEMP_SET_MIN        50
+#define ESOLDER_TEMP_SET_STEP       5
+#define ESOLDER_TEMP_SET_BIGSTEP    10
+
+
+#endif // !ESOLDER_CONSTANTS_H_

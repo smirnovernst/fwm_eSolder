@@ -1,0 +1,2347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>2</fileVersion>
+    <fileChecksum>2316818447</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\Release\Obj\event_groups.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</file>
+            <file>$PROJ_DIR$\..\..\main.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital.o</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\encoders.o</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\UI.c</file>
+            <file>$PROJ_DIR$\Release\Obj\Courier_New.o</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\UI.h</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi_discovery.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_colors.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\OS.c</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\taskPriority.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_communication.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\timers.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\keyboard.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\hard.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\stream_buffer.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\tasks.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\gpio.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427xx.s</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\port.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\button.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\croutine.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\event_groups.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\FreeRTOSConfig.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portasm.s</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\heap_4.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\list.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f427\stm32f427xx.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\queue.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$PROJ_DIR$\Release\Obj\mainTSK.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\lcd.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portmacro.h</file>
+            <file>$PROJ_DIR$\Release\Obj\keyboard.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Release\Obj\specific_symbol.o</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\mainTSK.h</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi_discovery.o</file>
+            <file>$PROJ_DIR$\Release\Obj\encoders.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\UI.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital_Small.o</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\core_cm4.h</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\port.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\croutine.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\Release\Obj\spiF4.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Release\Obj\button.o</file>
+            <file>$PROJ_DIR$\Release\Obj\OS.o</file>
+            <file>$PROJ_DIR$\Release\Obj\stream_buffer.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\mcu.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\Release\Obj\spi3.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\heap_4.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\specific_symbol.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\croutine.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\UI.o</file>
+            <file>$PROJ_DIR$\Release\Obj\keyboard.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\heap_4.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\tasks.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital_Small.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\mainTSK.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\Courier_New.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\spiF4.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\event_groups.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\queue.o</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital_Small.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\event_groups.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\stream_buffer.h</file>
+            <file>$PROJ_DIR$\Release\Obj\list.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\encoderPannel.o</file>
+            <file>$PROJ_DIR$\Release\Obj\Arial.o</file>
+            <file>$PROJ_DIR$\Release\Obj\list.o</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\mpu_wrappers.h</file>
+            <file>$PROJ_DIR$\Release\Obj\hard.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\spiF4.o</file>
+            <file>$PROJ_DIR$\Release\Obj\hard.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\system_stm32f4xx.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\Courier_New.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\queue.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\Arial.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\mcu.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\button.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\timers.h</file>
+            <file>$PROJ_DIR$\Release\Obj\startup_stm32f427xx.o</file>
+            <file>$PROJ_DIR$\Release\Obj\tasks.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\stream_buffer.o</file>
+            <file>$PROJ_DIR$\Release\Obj\mcu.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spiF4.h</file>
+            <file>$PROJ_DIR$\Release\Obj\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\Release\Obj\main.o</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi_discovery.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\task.h</file>
+            <file>$PROJ_DIR$\Release\Exe\eSolder.out</file>
+            <file>$PROJ_DIR$\Release\Obj\encoderPannel.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\portable.h</file>
+            <file>$PROJ_DIR$\Release\Obj\port.o</file>
+            <file>$PROJ_DIR$\Release\Obj\encoders.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\lcd.o</file>
+            <file>$PROJ_DIR$\Release\Obj\DS_Digital.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341.o</file>
+            <file>$PROJ_DIR$\Release\Obj\keyboard.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\croutine.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</file>
+            <file>$PROJ_DIR$\Release\Obj\encoderPannel.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\hard.h</file>
+            <file>$PROJ_DIR$\Release\Obj\button.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\list.h</file>
+            <file>$PROJ_DIR$\Release\Obj\queue.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\list.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\Arial.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\specific_symbol.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\port.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\OS.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\heap_4.o</file>
+            <file>$PROJ_DIR$\..\..\modules\station\eSolderConstants.h</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\OS.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\queue.h</file>
+            <file>$PROJ_DIR$\Release\Obj\lcd.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\Release\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\stack_macros.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\semphr.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\encoders.h</file>
+            <file>$PROJ_DIR$\Release\Obj\mainTSK.o</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\croutine.h</file>
+            <file>$PROJ_DIR$\Release\Obj\hard.o</file>
+            <file>$PROJ_DIR$\Release\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Release\Obj\timers.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\Release\Obj\spi3.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\Release\Obj\UI.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\keyboard.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\projdefs.h</file>
+            <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\system_stm32f4xx.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\portasm.o</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\button.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\encoderPannel.h</file>
+            <file>$PROJ_DIR$\Release\Obj\timers.o</file>
+            <file>$PROJ_DIR$\Release\Obj\event_groups.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Release\Obj\tasks.o</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\deprecated_definitions.h</file>
+            <file>$PROJ_DIR$\Release\Obj\stream_buffer.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\FreeRTOS.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\Release\Obj\timers.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\mcu.h</file>
+            <file>$PROJ_DIR$\Release\Obj\OS.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Release\Obj\spi3.o</file>
+            <file>$PROJ_DIR$\Release\Obj\ili9341_spi.o</file>
+            <file>$PROJ_DIR$\Release\Obj\eSolder.pbd</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 126</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 121 182 118 72 47 170 128 180 57 103 125 141 152 157 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 183 33 185 70 167 120 51 66 188 77 136 22 30 178 166 59 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 153</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 4 188 17 18 33 30 51 66 77 185 167 97 136 183 23</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22 70 167 17 183 185 18 178 33 4 23 72 154 166 59 188 30 51 66 77 136 21 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 55</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 182 118 72 47 170 128 180 57 103 125 141 152 157 18 33 169 174 175 158 14 4 17 37 149</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 123</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 171</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 162</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 186 139 151</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 133</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 10</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 92</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 23 18 33 30 51 66 77 185 167 97 136 183 182 118 72 47 170 128 180 57 103 125 141 152 157</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22 30 125 59 66 18 157 166 51 188 178 23 182 152 70 33 183 97 170 72 57 103 77 185 136 167 118 47 128 180 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 82</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 168</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14 4 188 178 22 70 166 59 17 37</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 124</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 121 182 118 72 47 170 128 180 57 103 125 141 152 157 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 70 183 167 47 22 33 188 125 180 30 121 51 66 157 118 128 141 77 185 136 166 59 97 182 152 170 72 57 103</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 187</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 139 61 20 33 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 182 118 72 47 170 128 180 57 103 125 141 152 157</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\timers.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 184</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 182 118 188 47 170 128 180 57 97 103 125 141 152 113</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128 178 180 152 166 118 22 182 72 154 59 47 188 125 113 70 170 57 103 97 141 21</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 169 174 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 127</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 175 158 33 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 161</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 18 33 169 174 7</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\stream_buffer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 181</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 75</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 119 72 164 182 118 47 170 128 180 57 97 103 125 141 98</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97 128 57 125 178 70 118 103 22 47 119 182 98 166 59 72 164 188 170 180 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\tasks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 115</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 119 164 182 118 188 47 170 128 180 57 97 103 125 141 113 156</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128 22 180 125 156 70 118 119 182 113 47 178 188 21 72 154 166 59 164 170 57 103 97 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 155</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 188 30 183 178 70 167 54 51 66 22 33 77 185 136 166 59 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 172</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 107</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66 22 77 51 188 178 59 183 185 166 30 136 70 167 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 114</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 1</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 132</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 4 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 4 22 70 17 188 166 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 95</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 87</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 4 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 70 4 22 17 188 166 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 145</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 4 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22 17 4 178 70 188 166 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 68</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 97 22 70 166 59 182 118 178 72 188 47 170 128 180 57 103 125 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 103 22 70 125 166 47 57 141 182 59 118 128 97 188 170 72 180</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 144</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 4 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 166 178 59 188 4 22 70 17</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 140</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118 178 22 70 166 59 72 174 30 51 66 188 77 185 167 97 136 183 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 51 22 59 188 33 166 30 66 77 136 174 72 70 183 185 97 118 167</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 108</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 89</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 178 22 70 166 59 4 17</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 166 178 59 188 4 22 70 17</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\croutine.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 81</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 182 118 178 22 70 166 59 72 188 47 170 128 180 57 97 103 125 141 160</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 22 188 72 70 170 178 125 118 47 128 166 59 180 97 182 160 57 103 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 117</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 183 166 33 51 66 188 178 59 97 22 30 77 185 136 70 167</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 11</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 63</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 130</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118 178 22 70 166 59 72 30 51 66 188 77 185 167 97 136 183 158 33</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 33 178 70 188 158 72 22 183 30 166 59 51 66 167 118 77 185 136 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\event_groups.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 177</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 91</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 0</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 182 118 188 47 170 128 180 57 97 103 125 141 113 96</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70 97 113 22 57 182 188 178 103 125 96 170 72 141 21 154 166 59 118 47 128 180</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portasm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 47</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\heap_4.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 148</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 84</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 182 118 188 47 170 128 180 57 97 103 125 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 118 128 178 182 22 70 47 141 125 72 154 166 59 188 170 57 103 21 180 97</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 99</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 182 118 188 47 170 128 180 57 97 103 141</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 59 178 188 97 141 72 154 166 170 22 180 182 70 118 47 128 21 57 103</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 71</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 121 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 182 118 72 47 170 128 180 57 103 125 141 152 157 33 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 183 152 185 54 182 166 188 178 22 33 30 125 157 51 66 77 136 59 97 170 72 57 103 121 70 167 118 47 128 180 141</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 142</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21 178 22 70 166 59 72 154 119 164 182 118 188 47 170 128 180 57 97 103 125 141 152</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 72 22 166 118 180 125 154 128 178 97 59 47 188 119 182 152 70 164 170 57 103 141 21</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi3.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 165</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 51 66 188 178 22 70 166 59 77 185 167 97 136 183 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>STM32F427_Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</file>
+            <file>$PROJ_DIR$\..\..\modules\IQ\IQmathLib.h</file>
+            <file>$PROJ_DIR$\..\..\main.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\UI.c</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\UI.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_colors.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\OS.c</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\taskPriority.h</file>
+            <file>$PROJ_DIR$\..\..\modules\IQ\PID_GRANDO_IQ.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_communication.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\timers.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\keyboard.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\hard.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\stream_buffer.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\tasks.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f4xx.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\gpio.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427xx.s</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\port.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\button.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\croutine.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\event_groups.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\FreeRTOSConfig.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portasm.s</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\heap_4.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\list.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f427\stm32f427xx.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\queue.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portmacro.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\mainTSK.h</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\event_groups.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\stream_buffer.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\mpu_wrappers.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\timers.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spiF4.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\task.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\portable.h</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\hard.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\list.h</file>
+            <file>$PROJ_DIR$\..\..\modules\station\eSolderConstants.h</file>
+            <file>$PROJ_DIR$\..\..\modules\OS\OS.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\queue.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\stack_macros.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\semphr.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\encoders.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\croutine.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\keyboard.h</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\projdefs.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\button.h</file>
+            <file>$PROJ_DIR$\..\..\modules\hard\encoderPannel.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\inc\stm32f4xx_fsmc.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\queue.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_gpio.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\specific_symbol.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\event_groups.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\lcd.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\lcd_backlight.o</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427x.s</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\keyboard.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Courier_New.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\specific_symbol.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Courier_New.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\list.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\heap_4.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\startup_stm32f427x.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\keyboard.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_rcc.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_fmc.o</file>
+            <file>$PROJ_DIR$\..\..\modules\IQ\IQmathLib-cm4.a</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Exe\eSolder.out</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_rcc.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_spi_discovery.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital_Small.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\event_groups.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\timers.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\inc\stm32f4xx_gpio.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_fsmc.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\list.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spiF4.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\queue.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\hard.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\lcd.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\button.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\deprecated_definitions.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Arial.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Arial.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\tasks.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\FreeRTOS\include\FreeRTOS.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\port.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stream_buffer.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\OS.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital_Small.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\mcu.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\List\eSolder.map</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\startup_stm32f427xx.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spiF4.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\croutine.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stream_buffer.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\button.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_fsmc.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital_Small.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f427xG.icf</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\croutine.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\queue.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mainTSK.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_spi_discovery.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\heap_4.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_spi_discovery.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_fsmc.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\system_stm32f4xx.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mainTSK.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\OS.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\tasks.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\eSolder.pbd</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\system_stm32f4xx.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\portasm.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoderPannel.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mcu.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spiF4.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\timers.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\event_groups.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\list.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\hard.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoders.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\button.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_rcc.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mcu.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\specific_symbol.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Courier_New.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoderPannel.o</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fsmc.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\lcd.o</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\inc\stm32f4xx_rcc.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_spi.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mcu.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoders.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\keyboard.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_fsmc.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\heap_4.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\timers.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_fmc.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_gpio.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\croutine.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fmc.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\mainTSK.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\SPL\inc\stm32f4xx_fmc.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoderPannel.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stm32f4xx_gpio.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\encoders.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\OS.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\stream_buffer.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\lcd_backlight.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\gpio.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Arial.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\hard.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\port.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\tasks.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\port.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ili9341_spi.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\DS_Digital.o</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 109 141</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 189</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 217</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 66 130 64 57 44 84 68 126 52 62 67 71 74 77 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132 44 19 134 30 81 130 126 27 66 48 55 140 58 69 53 60 74 64 68 87 71 67 56 82 77 84 57 52 62</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 187</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 122</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 2 140 13 14 30 27 48 55 58 134 82 60 69 132 20</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 27 82 81 140 19 55 134 14 57 75 53 48 2 20 56 13 30 132 58 69 18 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\mainTSK.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 155</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 162</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 201</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 130 64 57 44 84 68 126 52 62 67 71 74 77 14 30 83 85 86 78 11 2 13 34 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 11 48 134 13 77 140 67 83 55 81 87 19 85 27 130 74 14 86 72 132 58 69 53 60 84 57 52 62 78 2 56 82 64 44 68 126 71 30 34</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 105</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 139 70 54 16 30 130 64 57 44 84 68 126 52 62 67 71 74 77 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140 53 68 52 67 87 54 48 58 69 71 70 30 77 55 19 60 64 62 139 16 130 74 73 132 134 81 44 27 56 82 84 57 126</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 174</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 213</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 20 14 30 27 48 55 58 134 82 60 69 132 130 64 57 44 84 68 126 52 62 67 71 74 77</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 27 67 53 55 14 77 81 48 140 87 20 130 74 56 30 132 60 84 57 52 62 58 134 69 82 64 44 68 126 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 194</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 148</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 60 19 27 132 140 53 48 55 81 30 58 134 69 56 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 95</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 208</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 60 19 27 132 140 53 48 55 81 30 58 134 69 56 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 180</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 154</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 11 2 140 87 19 56 81 53 13 34</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13 19 81 2 56 34 140 87 53 11</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 156</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 158</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 111</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 66 130 64 57 44 84 68 126 52 62 67 71 74 77 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 56 132 82 44 19 30 140 67 126 27 66 48 55 77 64 68 71 58 134 69 81 53 60 130 74 84 57 52 62</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 136</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 206</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70 54 16 30 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 130 64 57 44 84 68 126 52 62 67 71 74 77</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 84 126 58 74 69 130 53 16 132 19 60 87 54 30 67 77 27 48 55 140 134 81 57 70 56 82 64 44 68 52 62 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\timers.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 171</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 196</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 115</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 130 64 140 44 84 68 126 52 60 62 67 71 74 63</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68 87 126 74 81 64 19 130 57 75 53 44 140 67 63 56 84 52 62 60 71 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 193</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 104</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 83 85 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 140 58 48 55 87 53 85 27 132 134 81 83 69 56 82 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\encoderPannel.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 185</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 168</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 203</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 86 78 30 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 60 19 27 132 140 53 78 30 48 55 81 86 58 134 69 56 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\hard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 121</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 175</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 211</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 14 30 83 85 6</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132 85 83 81 14 6 48 55 140 87 53 60 19 27 58 134 69 56 82 30</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\stream_buffer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 146</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 207</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 135</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 65 57 80 130 64 44 84 68 126 52 60 62 67 71 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 60 68 52 67 87 56 64 62 19 44 65 130 61 81 53 57 80 140 84 126 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\tasks.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 214</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 65 80 130 64 140 44 84 68 126 52 60 62 67 71 63 76</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 68 19 126 67 76 56 64 65 130 63 44 87 140 18 57 75 81 53 80 84 52 62 60 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 209</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 179</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140 27 132 87 56 82 51 48 55 19 30 58 134 69 81 53 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Core\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 125</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 166</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 161</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 55 19 58 48 140 87 53 132 134 81 27 69 56 82 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 142</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 218</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 191</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 2 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 2 19 56 13 140 81 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 138</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 150</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 2 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 56 2 19 13 140 81 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 183</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 2 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 13 2 87 56 140 81 53</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 216</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 212</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60 19 56 81 53 130 64 87 57 140 44 84 68 126 52 62 67 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 62 19 56 67 81 44 52 71 130 53 64 68 60 140 84 57 126</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 128</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 210</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 127</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 2 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81 87 53 140 2 19 56 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 123</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64 87 19 56 81 53 57 85 27 48 55 140 58 134 82 60 69 132 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87 48 19 53 140 30 81 27 55 58 69 85 57 56 132 134 60 64 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 100</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 87 19 56 81 53 2 13</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 81 87 53 140 2 19 56 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\croutine.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 152</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 199</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 145</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 130 64 87 19 56 81 53 57 140 44 84 68 126 52 60 62 67 71 79</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 140 57 56 84 87 67 64 44 68 81 53 126 60 130 79 52 62 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 169</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 190</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 182</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132 81 30 48 55 140 87 53 60 19 27 58 134 69 56 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 205</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 176</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 192</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64 87 19 56 81 53 57 27 48 55 140 58 134 82 60 69 132 78 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30 87 56 140 78 57 19 132 27 81 53 48 55 82 64 58 134 69 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\event_groups.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 172</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 93</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 130 64 140 44 84 68 126 52 60 62 67 71 63 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56 60 63 19 52 130 140 87 62 67 59 84 57 71 18 75 81 53 64 44 68 126</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\portable\IAR\ARM_CM4F\portasm.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 167</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\heap_4.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 195</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 102</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 130 64 140 44 84 68 126 52 60 62 67 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 64 68 87 130 19 56 44 71 67 57 75 81 53 140 84 52 62 18 126 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 173</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 118</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 130 64 140 44 84 68 126 52 60 62 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53 87 140 60 71 57 75 81 84 19 126 130 56 64 44 68 18 52 62</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 170</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66 27 48 55 140 87 19 56 81 53 58 134 82 60 69 132 130 64 57 44 84 68 126 52 62 67 71 74 77 30 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132 74 134 51 130 81 140 87 19 30 27 67 77 48 55 58 69 53 60 84 57 52 62 66 56 82 64 44 68 126 71</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\FreeRTOS\queue.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 153</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 87 19 56 81 53 57 75 65 80 130 64 140 44 84 68 126 52 60 62 67 71 74</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 57 19 81 64 126 67 75 68 87 60 53 44 140 65 130 74 56 80 84 52 62 71 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Core\stm32f427\iar\startup_stm32f427x.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F427_Debug\Exe\eSolder.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 141</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 151 128 147 184 152 218 113 185 205 114 89 121 157 174 194 97 187 95 101 160 155 169 136 216 167 120 99 170 142 146 125 164 171 143 108 215 124 149 177</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 106</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 27 55 140 87 19 56 81 53 58 134 82 60 69 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 53 132 27 140 87 60 19 55 81 188 58 134 69 56 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fsmc.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 159</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88 27 55 140 87 19 56 81 53 58 134 82 60 69 132 188</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 27 132 58 69 140 188 55 134 56 82 88 87 81 53 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 204</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 91</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 116 27 55 140 87 19 56 81 53 58 134 82 60 69 132 188</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140 19 27 55 58 69 188 132 134 56 82 116 87 81 53 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fmc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 107</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 197</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 202 27 55 140 87 19 56 81 53 58 134 82 60 69 132 188</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 27 132 58 69 140 188 55 134 56 82 202 87 81 53 60</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_fsmc.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fsmc.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

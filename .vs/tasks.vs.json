@@ -1,0 +1,102 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "Build",
+      "appliesTo": "Makefile",
+      "contextType": "build",
+      "type": "default",
+      "command": "\"C:\\Windows\\SySWow64\bash",
+      "args": [
+        "g++ '--version'"
+      ]
+    },
+    {
+      "taskName": "Clean",
+      "appliesTo": "Makefile",
+      "contextType": "clean",
+      "type": "default",
+      "command": "\"C:\\Windows\\SySWow64\\cmd.exe\"",
+      "args": [
+        "bash -l -c 'make -s clean'"
+      ]
+    },
+    {
+      "taskName": "Restart SoC",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s reset'"
+      ]
+    },
+    {
+      "taskName": "Run in RAM",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s runram'"
+      ]
+    },
+    {
+      "taskName": "Run in SDRAM",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s runsdram'"
+      ]
+    },
+    {
+      "taskName": "Read Flash",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "JLink.exe -Device Cortex-M3 -If SWD -Speed 1000 USDK\\flasher\\RTL_FFlash.JLinkScript"
+      ]
+    },
+    {
+      "taskName": "Write OTA",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s flash_OTA'"
+      ]
+    },
+    {
+      "taskName": "Write Boot",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s flash_boot'"
+      ]
+    },
+    {
+      "taskName": "Write Flash_All",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s flash_burn'"
+      ]
+    },
+    {
+      "taskName": "Make and Write WEBFS",
+      "appliesTo": "Makefile",
+      "type": "default",
+      "command": "${env.COMSPEC}",
+      "args": [
+        "bash -l -c 'make -s flash_webfs'"
+      ]
+    },
+    {
+      "taskName": "задача-Makefile",
+      "appliesTo": "Makefile",
+      "type": "launch"
+    }
+  ]
+}
