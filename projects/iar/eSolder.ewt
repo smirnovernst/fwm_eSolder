@@ -2334,6 +2334,9 @@
             <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\clock.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\encoders.c</name>
         </file>
         <file>

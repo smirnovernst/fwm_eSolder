@@ -11,6 +11,7 @@
 #include "task.h"
 #include "queue.h"
 #include "semphr.h"
+#include "Drivers/clock.h"
 
 #include "OS/OS.h"
 
@@ -30,7 +31,7 @@ void OS_init(void){
 
 
 void main(void){
-    SystemCoreClockUpdate();
+    clock_init();
     MCU_init();
     OS_init();
      
