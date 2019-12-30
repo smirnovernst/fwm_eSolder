@@ -87,6 +87,7 @@ void ili9341_Init(void)
     ili9341_WriteData(0x27);
   
     ili9341_WriteCommand(0x11);
+
     ili9341_displayOn();
 }
 
@@ -97,8 +98,11 @@ void ili9341_Init(void)
 static inline void ili9341_ColumnAddressSet(uint16_t column_start, uint16_t column_end)
 {
     ili9341_WriteCommand(0x2A);
-    ili9341_WriteData_16(column_start);
-    ili9341_WriteData_16(column_end);
+    ili9341_WriteData(*((uint8_t*)&column_start+1));
+    ili9341_WriteData(*((uint8_t*)&column_start));
+     ili9341_WriteData(*((uint8_t*)&column_end+1));
+    ili9341_WriteData(*((uint8_t*)&column_end));
+   
 }
 
 /*!****************************************************************************
@@ -107,8 +111,11 @@ static inline void ili9341_ColumnAddressSet(uint16_t column_start, uint16_t colu
 static inline void ili9341_PageAddressSet(uint16_t page_start, uint16_t page_end)
 {
     ili9341_WriteCommand(0x2B);
-    ili9341_WriteData_16(page_start);
-    ili9341_WriteData_16(page_end);
+    ili9341_WriteData(*((uint8_t*)&page_start+1));
+    ili9341_WriteData(*((uint8_t*)&page_start));
+    ili9341_WriteData(*((uint8_t*)&page_end+1));
+    ili9341_WriteData(*((uint8_t*)&page_end));
+    
 }
 
 /*!****************************************************************************
@@ -140,7 +147,7 @@ void ili9341_DrawBackground(uint16_t color)
         ili9341_PageAddressSet(0,ILI9341_WIDTH);
     }  
     ili9341_WriteCommand(0x2C);
-    for (int i=0; i < ILI9341_WIDTH*ILI9341_HEIGHT; i++)
+    for (uint32_t i=0; i < ILI9341_WIDTH*ILI9341_HEIGHT; i++)
     {
         ili9341_WriteData_16(color);
     }
@@ -187,6 +194,7 @@ void ili9341_Reset(void) {
     ili9341_WriteCommand(0x01);
 }
 void ili9341_displayOn(void){
+       ili9341_WriteCommand(0x20);
     ili9341_WriteCommand(0x29);
 }
 void ili9341_displayOff(void){

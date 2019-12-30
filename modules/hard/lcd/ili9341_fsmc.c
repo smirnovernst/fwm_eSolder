@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "Drivers/gpio.h"
 
 #define LCD_DATA    			((uint32_t)0x60200000)    
@@ -29,8 +30,11 @@ void ili9341_InitCommunication(void) {
     gpioInit(GPIOD, 4, gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);  //RD
     gpioInit(GPIOD, 5, gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);  //WR
     gpioInit(GPIOE, 4, gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);  //A20 (LCD D/C)
-    gpioInit(GPIOD, 7, gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);  //NE1 (LCD CS)
+    gpioInit(GPIOD, 7, gpioMode_OUT, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);  //NE1 (LCD CS)
     
+     gpioInit(GPIOD, 3, gpioMode_OUT, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_12, 0);
+     GPIO_PIN_SET(GPIOD, 3);
+     
     FMC_Bank1E->BWTR[0] |= FMC_BWTR1_ADDSET_1;
     FMC_Bank1E->BWTR[0] |= FMC_BWTR1_DATAST_0 | FMC_BWTR1_DATAST_2;
     FMC_Bank1E->BWTR[0] |= FMC_BWTR1_ACCMOD_0; //Access mode - B
@@ -38,18 +42,19 @@ void ili9341_InitCommunication(void) {
     FMC_Bank1->BTCR[0]  &= ~FMC_BCR1_MUXEN;
     FMC_Bank1->BTCR[0]  |= FMC_BCR1_MBKEN;
 }
-void ili9341_WriteData(uint8_t data) {
+void ili9341_WriteData(uint16_t data) {
     *(uint16_t *)(LCD_DATA)= data;
 }
 void ili9341_WriteData_16(uint16_t data) {
-
     *(uint16_t *)(LCD_DATA)= data;
 }
 void ili9341_WriteCommand(uint8_t command) {
-
     *(uint16_t*)(LCD_REG) = command; 
-    
 }
 void ili9341_ReadData(uint8_t* response, int count) {
+    if (NULL == response){
+        return;
+    }
+    
 
 }

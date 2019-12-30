@@ -13,7 +13,8 @@ void gpioInit (GPIO_TypeDef *port, uint8_t pinNum,  gpioMode_t mode, gpioPuPd_t 
     port->OTYPER &= ~(GPIO_OTYPER_OT_0 << (uint16_t)pinNum);
     port->OTYPER |= ((type) << pinNum);
     
-    port->ODR ^= (initState > 0);
+    port->ODR &= ~(1 << pinNum);
+    port->ODR |= ((initState > 0) << pinNum);
     
     port->MODER &= ~(GPIO_MODER_MODER0 << (pinNum * 2));
     port->MODER |= (((uint32_t)mode) << (pinNum * 2));
@@ -21,8 +22,8 @@ void gpioInit (GPIO_TypeDef *port, uint8_t pinNum,  gpioMode_t mode, gpioPuPd_t 
     if(mode == gpioMode_AF){
         gpioAfInit(port, pinNum, afNum);
     }
-    port->OSPEEDR = 0xFFFFFFFF;
     
+    port->OSPEEDR = 0xFFFFFFFF;   
 }
 
 

@@ -57,6 +57,7 @@ __task void mainTsk(void) {
     //TODO: Need release saving/reading from eeprom
 
     UI_MainWindowRendering();
+    
     ili9341_displayOn();
     keyboardClearAllPress();
 

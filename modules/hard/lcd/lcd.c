@@ -32,17 +32,17 @@
 void lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)
 {
   
-    //инициализация переменных
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     int16_t deltaX = abs(x2 - x1);
     int16_t deltaY = abs(y2 - y1);
     int8_t signX = x1 < x2 ? 1 : -1;
     int8_t signY = y1 < y2 ? 1 : -1;
     int16_t error2;
-    //инициализация ошибки 
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ 
     int16_t error = deltaX - deltaY;
-    //вывод последней точки
+    //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     F_DISPLAY_SETPIXEL(x2, y2, color);
-    //основной цикл
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     while(x1 != x2 || y1 != y2)
     {
        
@@ -70,7 +70,7 @@ void lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)
 * @param
 * @return x coordinate the end of symbol
 */
-int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdParam_t *param)
+int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdFontParam_t *param)
 {   
  
     
@@ -125,7 +125,7 @@ int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdParam_t *param)
 * @param
 * @return x coordinate the end of last symbol
 */
-int16_t lcd_String(int16_t x, int16_t y, char *s,const lcdParam_t *param)
+int16_t lcd_String(int16_t x, int16_t y, char *s,const lcdFontParam_t *param)
 {
     int16_t end_symbol;
     while(*s != 0)
