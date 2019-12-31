@@ -51,8 +51,6 @@ void ili9341_Init(void)
 
     vTaskDelay(100 / portTICK_PERIOD_MS);
     
-
-    
     ili9341_WriteCommand(0xC0);	    //Power Control 1
     ili9341_WriteData(0x27);	 
     
@@ -136,6 +134,9 @@ void ili9341_SetPixel(uint16_t x, uint16_t y, uint16_t color)
 */
 void ili9341_DrawBackground(uint16_t color)
 {
+
+    
+
     if ((orientation == 0) || (orientation == 1))
     {
         ili9341_ColumnAddressSet(0, ILI9341_WIDTH);
@@ -147,6 +148,7 @@ void ili9341_DrawBackground(uint16_t color)
         ili9341_PageAddressSet(0,ILI9341_WIDTH);
     }  
     ili9341_WriteCommand(0x2C);
+
     for (uint32_t i=0; i < ILI9341_WIDTH*ILI9341_HEIGHT; i++)
     {
         ili9341_WriteData_16(color);
@@ -194,7 +196,6 @@ void ili9341_Reset(void) {
     ili9341_WriteCommand(0x01);
 }
 void ili9341_displayOn(void){
-       ili9341_WriteCommand(0x20);
     ili9341_WriteCommand(0x29);
 }
 void ili9341_displayOff(void){

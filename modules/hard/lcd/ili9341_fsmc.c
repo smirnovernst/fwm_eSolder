@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "Drivers/gpio.h"
 
 #define LCD_DATA    			((uint32_t)0x60200000)    
@@ -48,6 +49,7 @@ void ili9341_WriteData(uint16_t data) {
 void ili9341_WriteData_16(uint16_t data) {
     *(uint16_t *)(LCD_DATA)= data;
 }
+
 void ili9341_WriteCommand(uint8_t command) {
     *(uint16_t*)(LCD_REG) = command; 
 }

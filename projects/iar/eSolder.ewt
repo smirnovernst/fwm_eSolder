@@ -2353,7 +2353,16 @@
         </file>
     </group>
     <group>
-        <name>environment</name>
+        <name>eSolder</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\eSolder\eSolder.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\eSolder\eSolder.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\eSolder\eSolderConstants.h</name>
+        </file>
     </group>
     <group>
         <name>Fonts</name>
@@ -2493,10 +2502,19 @@
     <group>
         <name>UI</name>
         <file>
-            <name>$PROJ_DIR$\..\..\modules\UI\UI.c</name>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI_constants.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI_mainWindow.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI_private.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\UI_private.h</name>
         </file>
     </group>
     <file>

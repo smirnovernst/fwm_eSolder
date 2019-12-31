@@ -15,9 +15,8 @@
 
 #include "OS/OS.h"
 
-
-
 void initTsk(void){
+
     hard_init();
     xTaskCreate((TaskFunction_t)mainTsk, "mainTSK", 128, NULL, MAIN_TSK_PRIORITY, NULL);
     vTaskDelete( NULL );

@@ -5,7 +5,7 @@
 #include "hard/lcd/lcd_backlight.h"
 
 void hard_init(void){
-     lcdBacklight_init();
+    lcdBacklight_init();
     ili9341_Init();
     keyboardInit();
    

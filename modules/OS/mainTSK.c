@@ -9,7 +9,7 @@
 #include "hard/keyboard.h"
 #include "hard/encoderPannel.h"
 #include "UI/UI.h"
-#include "station/eSolderConstants.h"
+#include "eSolder/eSolder.h"
 
 typedef enum {
     EncoderControlled_SOLDER_TEMP = 0,
@@ -17,10 +17,11 @@ typedef enum {
     EncoderControlled_DRY_FLOW,
     EncoderControlled_END,
 }EncoderControlledMain;
+
 EncoderControlled encControlledMain[EncoderControlled_END] = {
     {
         // EncoderControlled_SOLDER_TEMP
-        .pVal = NULL, //TODO; add
+        .pVal = &eSolder.solderTempSet,
         .min = ESOLDER_TEMP_SET_MIN,
         .max = ESOLDER_TEMP_SET_MAX,
         .step = ESOLDER_TEMP_SET_STEP,
@@ -28,27 +29,26 @@ EncoderControlled encControlledMain[EncoderControlled_END] = {
         .mode = enNONCIRC,
         .memtype = enU16
     },
-     {
-         // EncoderControlled_DRY_TEMP
-         .pVal = NULL, //TODO; add
-         .min = ESOLDER_TEMP_SET_MIN,
-         .max = ESOLDER_TEMP_SET_MAX,
-         .step = ESOLDER_TEMP_SET_STEP,
-         .bigStep = ESOLDER_TEMP_SET_BIGSTEP,
-         .mode = enNONCIRC,
-         .memtype = enU16
-     },
-      {
-          // EncoderControlled_DRY_FLOW
-          .pVal = NULL, //TODO; add
-          .min = ESOLDER_TEMP_SET_MIN,
-          .max = ESOLDER_TEMP_SET_MAX,
-          .step = ESOLDER_TEMP_SET_STEP,
-          .bigStep = ESOLDER_TEMP_SET_BIGSTEP,
-          .mode = enNONCIRC,
-          .memtype = enU16
-      },
-
+    {
+        // EncoderControlled_DRY_TEMP
+        .pVal = &eSolder.dryTempSet, 
+        .min = ESOLDER_TEMP_SET_MIN,
+        .max = ESOLDER_TEMP_SET_MAX,
+        .step = ESOLDER_TEMP_SET_STEP,
+        .bigStep = ESOLDER_TEMP_SET_BIGSTEP,
+        .mode = enNONCIRC,
+        .memtype = enU16
+    },
+    {
+        // EncoderControlled_DRY_FLOW
+        .pVal =  &eSolder.dryFlowSet, 
+        .min = ESOLDER_FLOW_SET_MIN,
+        .max = ESOLDER_FLOW_SET_MAX,
+        .step = ESOLDER_FLOW_SET_STEP,
+        .bigStep = ESOLDER_FLOW_SET_BIGSTEP,
+        .mode = enNONCIRC,
+        .memtype = enU16
+    }
 };
 
 __task void mainTsk(void) {
@@ -63,7 +63,8 @@ __task void mainTsk(void) {
 
 
     while(1){
-  UI_MainWindowRendering();
+    
+        
         /*=========== Key handling ==========*/
         if (keyboardScan() > 0) {
             if ((ButtonPressed_LONG == keyboard.dryButton.pressState) &&
