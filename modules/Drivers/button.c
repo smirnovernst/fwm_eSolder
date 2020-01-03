@@ -23,8 +23,13 @@ void buttonInit(Button_t *button) {
     if (NULL == button) {
         return;
     }
+    gpioPuPd_t buttonPuPd = gpioPuPd_PULLDOWN;
+    
+    if (button->inverted >= ButtonInverted_YES){
+        buttonPuPd = gpioPuPd_PULLUP;
+    }
 
-    gpioInit(button->port, button->pin, gpioMode_IN, gpioPuPd_PULLDOWN, gpioType_PUSHPULL, (gpioAF)0, 0);
+    gpioInit(button->port, button->pin, gpioMode_IN, buttonPuPd, gpioType_PUSHPULL, (gpioAF)0, 0);
     buttonClearPressed(button);
 }
 
@@ -38,7 +43,9 @@ int buttonScan(Button_t *button){
         return -1;
     }
 
-    if (GPIO_PIN_GET(button->port, button->pin)){
+    uint8_t releasedLevel = (button->inverted >= ButtonInverted_YES); 
+
+    if (releasedLevel ^ (GPIO_PIN_GET(button->port, button->pin) > 0)){
         if (button->pressCounter > BUTTON_LONG_PRESS_TRESHOLD) {
             //key pressed, holding, and NOT was released
             return 0;

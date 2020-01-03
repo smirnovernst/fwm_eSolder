@@ -27,6 +27,11 @@ typedef enum
     ButtonPressed_LONG,
     ButtonPressed_NONE //invalid state
 }ButtonPressed_t;
+typedef enum
+{
+    ButtonInverted_NO = 0,
+    ButtonInverted_YES
+}ButtonInverted_t;
 
 /*!****************************************************************************
 * User typedef
@@ -35,10 +40,11 @@ typedef enum
 
 typedef struct
 {  
-    GPIO_TypeDef    *port;
-    uint8_t         pin;
-    uint8_t         pressCounter; 
-    ButtonPressed_t pressState;
+    GPIO_TypeDef        *port;
+    uint8_t             pin;
+    ButtonInverted_t    inverted;
+    uint8_t             pressCounter; 
+    ButtonPressed_t     pressState;
 }Button_t;
 
 

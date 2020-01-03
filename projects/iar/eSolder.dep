@@ -1343,6 +1343,10 @@
                     <file> 122</file>
                 </tool>
                 <tool>
+                    <name>ICCARM</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
                     <name>__cstat</name>
                     <file> 69</file>
                 </tool>

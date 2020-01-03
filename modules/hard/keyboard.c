@@ -3,11 +3,11 @@
 Keyboard_t keyboard = {
     .buttons = {
         //KeyboardButton_DRY
-        { GPIOD, 12},
+        { GPIOD, 12, ButtonInverted_NO},
         //KeyboardButton_SOLDER
-        { GPIOD, 11},
+        { GPIOD, 11, ButtonInverted_NO},
         //KeyboardButton_ENCODER
-        { GPIOC, 11}
+        { GPIOC, 8, ButtonInverted_YES}
     }
 };
 

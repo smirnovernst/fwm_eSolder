@@ -20,7 +20,7 @@
         <Sort>4 0</Sort>
     </SfrWindow>
     <DebugChecksum>
-        <Checksum>2015267037</Checksum>
+        <Checksum>519834969</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -147,8 +147,10 @@
     </DisassembleMode>
     <Breakpoints2>
         <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\OS\mainTSK.c}.56.5" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\hard\keyboard.c}.26.5" 0 0 1 "" 0 "" 0</Bp1>
-        <Count>2</Count>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\OS\mainTSK.c}.75.17" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\OS\mainTSK.c}.79.17" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\OS\mainTSK.c}.67.13" 0 0 1 "" 0 "" 0</Bp3>
+        <Count>4</Count>
     </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
