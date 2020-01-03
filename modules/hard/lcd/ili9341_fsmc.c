@@ -42,6 +42,8 @@ void ili9341_InitCommunication(void) {
     
     FMC_Bank1->BTCR[0]  &= ~FMC_BCR1_MUXEN;
     FMC_Bank1->BTCR[0]  |= FMC_BCR1_MBKEN;
+
+    FMC_Bank1->BTCR[0] = 0;
 }
 void ili9341_WriteData(uint16_t data) {
     *(uint16_t *)(LCD_DATA)= data;

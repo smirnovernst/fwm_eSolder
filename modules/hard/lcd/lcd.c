@@ -125,7 +125,7 @@ int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdFontParam_t *param)
 * @param
 * @return x coordinate the end of last symbol
 */
-int16_t lcd_String(int16_t x, int16_t y, char *s,const lcdFontParam_t *param)
+int16_t lcd_String(int16_t x, int16_t y,const char *s,const lcdFontParam_t *param)
 {
     int16_t end_symbol;
     while(*s != 0)

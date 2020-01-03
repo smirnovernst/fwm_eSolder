@@ -17,7 +17,13 @@
 /*!****************************************************************************
 * User enum
 */
-
+typedef enum {
+    
+    mainTskEncoderSelected_SOLDER_TEMP = 0,
+    mainTskEncoderSelected_DRY_TEMP,
+    mainTskEncoderSelected_DRY_FLOW,
+    mainTskEncoderSelected_END,
+}mainTskEncoderSelected_t;
 /*!****************************************************************************
 * User typedef
 */
@@ -33,6 +39,8 @@
 /*!****************************************************************************
 * Prototypes for the functions
 */
+mainTskEncoderSelected_t mainTsk_GetEncoderSelected(void);
+
 __task void mainTsk(void);
 #endif //MAINTSK_H_
 

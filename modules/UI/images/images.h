@@ -5,13 +5,13 @@
 *@Date      18.11.2016
 *@Breif     
 */
-#ifndef Image_h
-#define Image_h
+#ifndef IMAGES_H_
+#define IMAGES_H_
 /*!****************************************************************************
 * Include
 */
 #include <stdint.h>
-#include "lcd.h"
+#include "hard/lcd/lcd.h"
 
 /*!****************************************************************************
 * User define
@@ -28,9 +28,10 @@
 /*!****************************************************************************
 * Extern viriables
 */
-/*
-extern const tImage16 FreeRTOS_Logo;
-extern const tImage16 Logo;*/
+extern const tImage16 solderingIron;
+extern const tImage16 solderingIronDisconnected;
+extern const tImage16 solderingDry;
+extern const tImage16 solderingDryDisconnected;
 /*!****************************************************************************
 * Macro functions
 */
@@ -39,7 +40,7 @@ extern const tImage16 Logo;*/
 * Prototypes for the functions
 */
 
-#endif //Image_h
+#endif //!IMAGES_H_
 
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>1896373454</fileChecksum>
+    <fileChecksum>3480123790</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
@@ -1296,15 +1296,25 @@
             <file>$PROJ_DIR$\..\..\modules\Drivers\spiF4.h</file>
             <file>$PROJ_DIR$\..\..\modules\hard\hard.h</file>
             <file>$PROJ_DIR$\..\..\modules\Drivers\button.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDryDisconnected.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDryDisconnected.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_mainWindow.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_private.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_private.h</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_constants.h</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\dry.c</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\solderingDryDisconnected.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\dry.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\dry.__cstat.et</file>
             <file>$PROJ_DIR$\..\..\modules\eSolder\eSolder.c</file>
             <file>$PROJ_DIR$\..\..\modules\eSolder\eSolder.h</file>
             <file>$PROJ_DIR$\..\..\modules\eSolder\eSolderConstants.h</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\eSolder.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\eSolder.o</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\images.h</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\soldering-iron.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\soldering-iron.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\soldering-iron.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI_private.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI_mainWindow.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\UI_private.__cstat.et</file>
@@ -1333,7 +1343,7 @@
                 </tool>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 196 207 188 22 218 215 198 201 202 222 214 199 205 37 19 189 225 212 213 6 231 232</file>
+                    <file> 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 196 207 188 22 218 215 198 201 202 222 214 199 205 37 19 189 225 212 213 6 237 238</file>
                 </tool>
             </inputs>
         </file>
@@ -2333,7 +2343,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 114 134 125 179 52 158 168 136 109 51 234 155 183 145 157 133 86 185 81 79 91 102 110 104 149 184 78 162 94 129 84 128 140 113 105 238 235 139 164 154 80 65</file>
+                    <file> 114 134 125 179 52 158 234 168 136 109 51 240 155 183 145 157 133 86 185 81 79 91 102 110 104 149 184 78 162 243 226 94 129 84 128 140 113 105 248 245 139 164 154 80 65</file>
                 </tool>
             </inputs>
         </file>
@@ -2374,17 +2384,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 238</file>
+                    <file> 248</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 236</file>
+                    <file> 246</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 228 6 229 0 48 190 209 50 204 191 220 23</file>
+                    <file> 230 6 231 0 48 190 209 50 204 191 220 23 241</file>
                 </tool>
             </inputs>
         </file>
@@ -2393,17 +2403,55 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 235</file>
+                    <file> 245</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 237</file>
+                    <file> 247</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 228 6 229 0 48 190 209 50 204 191 220 23</file>
+                    <file> 230 6 231 0 48 190 209 50 204 191 220 23 241</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\dry.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 234</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 235</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 241 190 209 50 204 191 220 48 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\solderingDryDisconnected.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 226</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 227</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 241 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2412,17 +2460,36 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 234</file>
+                    <file> 240</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 233</file>
+                    <file> 239</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 231 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 232</file>
+                    <file> 237 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 238</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\soldering-iron.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 243</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 244</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 241 48 0</file>
                 </tool>
             </inputs>
         </file>

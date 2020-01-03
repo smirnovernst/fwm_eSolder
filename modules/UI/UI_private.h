@@ -8,8 +8,8 @@
 #include "UI.h"
 #include "UI_constants.h"
 #include "hard/lcd/lcd.h"
-//#include "Image.h"
 #include "Fonts/Fonts.h"
+#include "images/images.h"
 
 /*!****************************************************************************
 * User define
@@ -33,14 +33,14 @@ typedef struct{
 }UI_Colors_t;
 
 typedef struct{
-    lcdFontParam_t  mainFont;
-    lcdFontParam_t  bigDigitFont;
-    lcdFontParam_t  smallDigitFont;
+    const tFont *mainFont;
+    const tFont *bigDigitFont;
+    const tFont *smallDigitFont;
 }UI_Fonts_t;
 
 typedef struct{
-    UI_Fonts_t      fonts;
-    UI_Colors_t     colors;
+    const UI_Fonts_t    fonts;
+    const UI_Colors_t   colors;
 }UI_t;
 /*!****************************************************************************
 * Extern viriables
@@ -52,5 +52,7 @@ extern const UI_t ui;
 /*!****************************************************************************
 * Prototypes for the functions
 */
+
+void UI_prvt_drawCross(uint16_t x, uint16_t y, uint16_t len);
 
 #endif //!UI_PRIVATE_H_

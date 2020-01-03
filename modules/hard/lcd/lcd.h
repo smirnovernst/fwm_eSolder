@@ -71,8 +71,8 @@ typedef struct
 */
 void    lcd_SetPixel(int16_t x, int16_t y, uint16_t color);
 void    lcd_Line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
-int16_t lcd_Char(int16_t x, int16_t y, char c,const lcdFontParam_t *param );
-int16_t lcd_String(int16_t x, int16_t y, char *s,const lcdFontParam_t *param);
+int16_t lcd_Char(int16_t x, int16_t y,char c,const lcdFontParam_t *param );
+int16_t lcd_String(int16_t x, int16_t y,const char *s,const lcdFontParam_t *param);
 void    lcd_Image(uint16_t x, uint16_t y,const tImage16 *image);
 void    lcd_Rect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
 void    lcd_FillRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);

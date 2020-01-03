@@ -2501,6 +2501,21 @@
     </group>
     <group>
         <name>UI</name>
+        <group>
+            <name>images</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\dry.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\images.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\soldering-iron.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\solderingDryDisconnected.c</name>
+            </file>
+        </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\UI.h</name>
         </file>

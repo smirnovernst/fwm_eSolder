@@ -5,23 +5,20 @@
 #include "queue.h"
 #include "semphr.h"
 
+#include "mainTsk.h"
+
 #include "hard/lcd/ili9341.h"
 #include "hard/keyboard.h"
 #include "hard/encoderPannel.h"
 #include "UI/UI.h"
 #include "eSolder/eSolder.h"
 
-typedef enum {
-    EncoderControlled_SOLDER_TEMP = 0,
-    EncoderControlled_DRY_TEMP,
-    EncoderControlled_DRY_FLOW,
-    EncoderControlled_END,
-}EncoderControlledMain;
 
-EncoderControlled encControlledMain[EncoderControlled_END] = {
+
+EncoderControlled encControlledMain[mainTskEncoderSelected_END] = {
     {
         // EncoderControlled_SOLDER_TEMP
-        .pVal = &eSolder.solderTempSet,
+        .pVal = &eSolder.solder.tempSet,
         .min = ESOLDER_TEMP_SET_MIN,
         .max = ESOLDER_TEMP_SET_MAX,
         .step = ESOLDER_TEMP_SET_STEP,
@@ -31,7 +28,7 @@ EncoderControlled encControlledMain[EncoderControlled_END] = {
     },
     {
         // EncoderControlled_DRY_TEMP
-        .pVal = &eSolder.dryTempSet, 
+        .pVal = &eSolder.dry.tempSet, 
         .min = ESOLDER_TEMP_SET_MIN,
         .max = ESOLDER_TEMP_SET_MAX,
         .step = ESOLDER_TEMP_SET_STEP,
@@ -41,7 +38,7 @@ EncoderControlled encControlledMain[EncoderControlled_END] = {
     },
     {
         // EncoderControlled_DRY_FLOW
-        .pVal =  &eSolder.dryFlowSet, 
+        .pVal =  &eSolder.dry.flowSet, 
         .min = ESOLDER_FLOW_SET_MIN,
         .max = ESOLDER_FLOW_SET_MAX,
         .step = ESOLDER_FLOW_SET_STEP,
@@ -51,10 +48,10 @@ EncoderControlled encControlledMain[EncoderControlled_END] = {
     }
 };
 
+mainTskEncoderSelected_t mainTskEncoderSelected = (mainTskEncoderSelected_t)0;
+ 
 __task void mainTsk(void) {
-
-    EncoderControlled *encoderNowControlled = EncoderControlled_SOLDER_TEMP;
-    //TODO: Need release saving/reading from eeprom
+    //TODO: need implemented reading from eeprom mainTskEncoderSelected
 
     UI_MainWindowRendering();
     
@@ -85,17 +82,22 @@ __task void mainTsk(void) {
             }
             if (ButtonPressed_SHORT == keyboard.encoderButton.pressState) {
                 //--- switching selected for encoder ---//
-                encoderNowControlled++;
-                /*if (encoderNowControlled >= ) {
-                    encoderNowControlled = 
-                }*/
+                mainTskEncoderSelected++;
+                if (mainTskEncoderSelected >= mainTskEncoderSelected_END) {
+                    mainTskEncoderSelected = (mainTskEncoderSelected_t)0;
+                }
                 BUTTON_MARK_PROCESSED(keyboard.encoderButton);
             }
         }
         /*=========== Encoder update ==========*/
-        encoderUpdate(&encoderPannel, encoderNowControlled);
+        encoderUpdate(&encoderPannel, &encControlledMain[mainTskEncoderSelected]);
         
 
 
     }
+}
+
+mainTskEncoderSelected_t mainTsk_GetEncoderSelected(void)
+{
+    return mainTskEncoderSelected;
 }

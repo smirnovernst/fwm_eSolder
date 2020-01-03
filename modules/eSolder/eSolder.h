@@ -4,16 +4,28 @@
 #include "stm32f4xx.h"
 #include "eSolderConstants.h"
 
+typedef struct solder_t
+{
+    uint16_t tempSet;
+    uint16_t tempReal;
+    uint8_t  enabled;
+    uint8_t  connected;
+}solder_t;
+
+typedef struct dry_t
+{
+    uint16_t tempSet;
+    uint16_t tempReal;
+    uint8_t  flowSet;
+    uint8_t  enabled;
+    uint8_t  connected;
+}dry_t;
+
+
 typedef struct eSolder_t
 {
-    uint16_t solderTempSet;
-    uint16_t solderTempReal;
-    uint8_t  solderEnabled;
-
-    uint16_t dryTempSet;
-    uint16_t dryTempReal;
-    uint8_t dryFlowSet;
-    uint8_t dryEnabled;
+    solder_t solder;
+    dry_t   dry;
 }eSolder_t;
 
 typedef struct eSolderStoreParam_t

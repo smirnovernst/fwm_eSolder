@@ -19,5 +19,12 @@
         .mainColor = LCD_COLOR_WHITE,
         .selectColor = LCD_COLOR_CYAN,
         .disableColor = LCD_COLOR_GRAY
-     } 
+     }
+    
 };
+
+void UI_prvt_drawCross(uint16_t x, uint16_t y, uint16_t len)
+{
+    lcd_Line(x, y, x+len, y+len, UI_CROSS_COLOR);
+    lcd_Line(x+len, y, x, y+len, UI_CROSS_COLOR);
+}
