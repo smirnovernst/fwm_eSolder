@@ -24,4 +24,6 @@ void MCU_init(void){
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
     
     RCC->APB1ENR |= RCC_APB1ENR_SPI3EN;
+    
+    RCC->APB2ENR |= RCC_APB2ENR_TIM8EN;
 }

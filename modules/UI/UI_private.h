@@ -28,7 +28,7 @@
 typedef struct{
     uint16_t    mainColor;
     uint16_t    selectColor;
-    uint16_t    disableColor;
+    uint16_t    disconnectedColor;
     uint16_t    background;
 }UI_Colors_t;
 
@@ -52,7 +52,5 @@ extern const UI_t ui;
 /*!****************************************************************************
 * Prototypes for the functions
 */
-
-void UI_prvt_drawCross(uint16_t x, uint16_t y, uint16_t len);
 
 #endif //!UI_PRIVATE_H_

@@ -28,6 +28,7 @@
 */
 
 void UI_MainWindowRendering(void);
+void UI_MainWindowUpdate(void);
 void UI_DrawMenu();
 
 #endif //!UI_h

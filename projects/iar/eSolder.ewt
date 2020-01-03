@@ -2365,27 +2365,6 @@
         </file>
     </group>
     <group>
-        <name>Fonts</name>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\Arial.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\Courier_New.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital_Small.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\Fonts.h</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</name>
-        </file>
-    </group>
-    <group>
         <name>FreeRTOS</name>
         <group>
             <name>inc</name>
@@ -2502,18 +2481,42 @@
     <group>
         <name>UI</name>
         <group>
-            <name>images</name>
+            <name>Fonts</name>
             <file>
-                <name>$PROJ_DIR$\..\..\modules\UI\images\dry.c</name>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\Arial.c</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\Courier_New.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\DS_Digital.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\DS_Digital_Small.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\Fonts.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\Fonts\specific_symbol.c</name>
+            </file>
+        </group>
+        <group>
+            <name>images</name>
             <file>
                 <name>$PROJ_DIR$\..\..\modules\UI\images\images.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\modules\UI\images\soldering-iron.c</name>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\solderingDry.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\modules\UI\images\solderingDryDisconnected.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\solderingIron.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\solderingIronDisconnected.c</name>
             </file>
         </group>
         <file>

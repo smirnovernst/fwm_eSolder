@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.11.2.13589/W32 for ARM                02/Jan/2020  17:06:56
+# IAR ELF Linker V8.11.2.13589/W32 for ARM                04/Jan/2020  00:49:21
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,13 +8,12 @@
 #    Map file     =  
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\List\eSolder.map
 #    Command line =  
-#        -f C:\Users\Ernst\AppData\Local\Temp\EWC37.tmp
+#        -f C:\Users\Ernst\AppData\Local\Temp\EWC3FF.tmp
 #        (C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\Arial.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\button.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\clock.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\Courier_New.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\croutine.o
-#        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\dry.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\DS_Digital.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\DS_Digital_Small.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\encoderPannel.o
@@ -37,8 +36,10 @@
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\port.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\portasm.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\queue.o
-#        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\soldering-iron.o
+#        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\solderingDry.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\solderingDryDisconnected.o
+#        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\solderingIron.o
+#        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\solderingIronDisconnected.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\specific_symbol.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\spiF4.o
 #        C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj\startup_stm32f427xx.o
@@ -99,212 +100,563 @@ initialize by copy { rw };
   .intvec            ro code  0x08000000   0x1ac  startup_stm32f427xx.o [1]
                             - 0x080001ac   0x1ac
 
-"P1":                                     0x4028
+"P1":                                     0x8a1c
   .text              ro code  0x080001ac   0xa98  tasks.o [1]
   .text              ro code  0x08000c44   0x25c  heap_4.o [1]
   .text              ro code  0x08000ea0    0x66  ABImemset.o [5]
   .text              ro code  0x08000f06    0x98  list.o [1]
-  .text              ro code  0x08000fa0   0x284  port.o [1]
-  .text              ro code  0x08001224   0x448  timers.o [1]
-  CODE               ro code  0x0800166c    0xb0  portasm.o [1]
-  .text              ro code  0x0800171c   0x752  queue.o [1]
-  .text              ro code  0x08001e70    0xa6  ABImemcpy.o [5]
-  .rodata            const    0x08001f18   0x800  dry.o [1]
-  .rodata            const    0x08002718   0x800  soldering-iron.o [1]
-  .text              ro code  0x08002f18   0x29e  ili9341_fsmc.o [1]
-  .text              ro code  0x080031b8   0x13c  gpio.o [1]
-  .text              ro code  0x080032f4    0x24  ABIassert.o [6]
-  .text              ro code  0x08003318     0x6  abort.o [3]
-  .text              ro code  0x08003320    0x14  exit.o [6]
-  .text              ro code  0x08003334   0x210  ili9341.o [1]
-  .text              ro code  0x08003544   0x178  encoders.o [1]
-  .text              ro code  0x080036bc   0x134  clock.o [1]
-  .text              ro code  0x080037f0   0x118  system_stm32f4xx.o [1]
-  .text              ro code  0x08003908   0x110  spiF4.o [1]
-  .text              ro code  0x08003a18    0xf4  mcu.o [1]
-  .text              ro code  0x08003b0c    0x98  keyboard.o [1]
-  .text              ro code  0x08003ba4    0x8e  button.o [1]
-  .text              ro code  0x08003c34    0x80  mainTSK.o [1]
-  .text              ro code  0x08003cb4    0x80  UI_mainWindow.o [1]
-  .text              ro code  0x08003d34    0x7c  lcd.o [1]
-  .text              ro code  0x08003db0    0x64  main.o [1]
-  .text              ro code  0x08003e14    0x10  hard.o [1]
-  .text              ro code  0x08003e24    0x34  lcd_backlight.o [1]
-  .rodata            const    0x08003e58    0x58  gpio.o [1]
-  .text              ro code  0x08003eb0    0x40  zero_init3.o [5]
-  .rodata            const    0x08003ef0    0x2c  UI_private.o [1]
-  .text              ro code  0x08003f1c    0x2c  copy_init3.o [5]
-  .text              ro code  0x08003f48    0x28  data_init.o [5]
-  .text              ro code  0x08003f70    0x22  fpinit_M.o [4]
-  .iar.init_table    const    0x08003f94    0x24  - Linker created -
-  .text              ro code  0x08003fb8    0x1a  cmain.o [5]
-  .text              ro code  0x08003fd2     0x4  low_level_init.o [3]
-  .text              ro code  0x08003fd6     0x4  exit.o [3]
-  .text              ro code  0x08003fdc     0xa  cexit.o [5]
-  .rodata            const    0x08003fe8    0x10  system_stm32f4xx.o [1]
-  .text              ro code  0x08003ff8    0x10  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004008     0xc  cstartup_M.o [5]
-  .rodata            const    0x08004014     0x8  dry.o [1]
-  .rodata            const    0x0800401c     0x8  gpio.o [1]
-  .rodata            const    0x08004024     0x8  main.o [1]
-  .rodata            const    0x0800402c     0x8  main.o [1]
-  .rodata            const    0x08004034     0x8  soldering-iron.o [1]
-  .rodata            const    0x0800403c     0x8  tasks.o [1]
-  .rodata            const    0x08004044     0x8  timers.o [1]
-  .rodata            const    0x0800404c     0x8  timers.o [1]
-  .rodata            const    0x08004054     0x4  heap_4.o [1]
-  .rodata            const    0x08004058     0x4  port.o [1]
-  .text              ro code  0x0800405c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004060     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004064     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004068     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800406c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004070     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004074     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004078     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800407c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004080     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004084     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004088     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800408c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004090     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004094     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004098     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800409c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040a0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040a4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040a8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040ac     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040b0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040b4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040b8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040bc     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040c0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040c4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040c8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040cc     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040d0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040d4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040d8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040dc     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040e0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040e4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040e8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040ec     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040f0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040f4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040f8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080040fc     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004100     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004104     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004108     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800410c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004110     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004114     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004118     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800411c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004120     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004124     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004128     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800412c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004130     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004134     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004138     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800413c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004140     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004144     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004148     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800414c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004150     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004154     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004158     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800415c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004160     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004164     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004168     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800416c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004170     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004174     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004178     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800417c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004180     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004184     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004188     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800418c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004190     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004194     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x08004198     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x0800419c     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041a0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041a4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041a8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041ac     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041b0     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041b4     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041b8     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041bc     0x4  startup_stm32f427xx.o [1]
-  .text              ro code  0x080041c0     0x4  startup_stm32f427xx.o [1]
-  .rodata            const    0x080041c4     0x0  zero_init3.o [5]
-  .rodata            const    0x080041c4     0x0  copy_init3.o [5]
-  Initializer bytes  const    0x080041c4    0x10  <for P4 s0>
-                            - 0x080041d4  0x4028
+  .text              ro code  0x08000f9e     0xa  xsprout.o [3]
+  .text              ro code  0x08000fa8   0x284  port.o [1]
+  .text              ro code  0x0800122c   0x448  timers.o [1]
+  CODE               ro code  0x08001674    0xb0  portasm.o [1]
+  .text              ro code  0x08001724   0x752  queue.o [1]
+  .text              ro code  0x08001e78    0xa6  ABImemcpy.o [5]
+  .rodata            const    0x08001f20   0x800  solderingDry.o [1]
+  .rodata            const    0x08002720   0x800  solderingDryDisconnected.o [1]
+  .rodata            const    0x08002f20   0x800  solderingIron.o [1]
+  .rodata            const    0x08003720   0x800  solderingIronDisconnected.o [1]
+  .text              ro code  0x08003f20   0x4e0  xprintfsmall_nomb.o [3]
+  .text              ro code  0x08004400    0x16  strchr.o [5]
+  .text              ro code  0x08004418    0x44  xfail_s.o [3]
+  .text              ro code  0x0800445c    0x36  strlen.o [5]
+  .text              ro code  0x08004494    0x58  memchr.o [5]
+  .text              ro code  0x080044ec     0x6  abort.o [3]
+  .text              ro code  0x080044f4    0x14  exit.o [6]
+  .rodata            const    0x08004508   0x2f8  Arial.o [1]
+  .text              ro code  0x08004800   0x29e  ili9341_fsmc.o [1]
+  .text              ro code  0x08004aa0   0x13c  gpio.o [1]
+  .text              ro code  0x08004bdc    0x24  ABIassert.o [6]
+  .text              ro code  0x08004c00   0x210  UI_mainWindow.o [1]
+  .text              ro code  0x08004e10   0x1aa  lcd.o [1]
+  .text              ro code  0x08004fbc    0x40  sprintf.o [3]
+  .text              ro code  0x08004ffc    0xa0  mainTSK.o [1]
+  .text              ro code  0x0800509c   0x1e4  ili9341.o [1]
+  .text              ro code  0x08005280    0x68  keyboard.o [1]
+  .text              ro code  0x080052e8   0x20c  encoders.o [1]
+  .text              ro code  0x080054f4    0x8e  button.o [1]
+  .text              ro code  0x08005584   0x134  clock.o [1]
+  .text              ro code  0x080056b8   0x118  system_stm32f4xx.o [1]
+  .rodata            const    0x080057d0   0x120  DS_Digital_Small.o [1]
+  .text              ro code  0x080058f0   0x110  spiF4.o [1]
+  .text              ro code  0x08005a00   0x104  mcu.o [1]
+  .rodata            const    0x08005b04    0xf8  DS_Digital.o [1]
+  .rodata            const    0x08005bfc    0xd4  DS_Digital.o [1]
+  .rodata            const    0x08005cd0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08005d70    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08005e10    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08005eb0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08005f50    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08005ff0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006090    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006130    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080061d0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006270    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006310    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080063b0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006450    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080064f0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006590    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006630    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080066d0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006770    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006810    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080068b0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006950    0xa0  DS_Digital.o [1]
+  .rodata            const    0x080069f0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006a90    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006b30    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006bd0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006c70    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006d10    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006db0    0xa0  DS_Digital.o [1]
+  .rodata            const    0x08006e50    0xa0  DS_Digital.o [1]
+  .text              ro code  0x08006ef0    0x64  main.o [1]
+  .text              ro code  0x08006f54    0x14  hard.o [1]
+  .text              ro code  0x08006f68    0x34  lcd_backlight.o [1]
+  .text              ro code  0x08006f9c    0x40  encoderPannel.o [1]
+  .rodata            const    0x08006fdc    0x58  gpio.o [1]
+  .rodata            const    0x08007034    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007080    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x080070cc    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007118    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007164    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x080071b0    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x080071fc    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007248    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007294    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x080072e0    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x0800732c    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007378    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x080073c4    0x4c  DS_Digital_Small.o [1]
+  .rodata            const    0x08007410    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x08007458    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x080074a0    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x080074e8    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x08007530    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x08007578    0x48  DS_Digital_Small.o [1]
+  .rodata            const    0x080075c0    0x48  DS_Digital_Small.o [1]
+  .text              ro code  0x08007608    0x40  zero_init3.o [5]
+  .rodata            const    0x08007648    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x0800767c    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x080076b0    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x080076e4    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x08007718    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x0800774c    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x08007780    0x34  DS_Digital_Small.o [1]
+  .rodata            const    0x080077b4    0x34  DS_Digital_Small.o [1]
+  .text              ro code  0x080077e8    0x2c  copy_init3.o [5]
+  .text              ro code  0x08007814    0x28  data_init.o [5]
+  .rodata            const    0x0800783c    0x24  Arial.o [1]
+  .rodata            const    0x08007860    0x24  Arial.o [1]
+  .rodata            const    0x08007884    0x24  Arial.o [1]
+  .rodata            const    0x080078a8    0x24  Arial.o [1]
+  .rodata            const    0x080078cc    0x24  Arial.o [1]
+  .rodata            const    0x080078f0    0x24  Arial.o [1]
+  .rodata            const    0x08007914    0x24  Arial.o [1]
+  .rodata            const    0x08007938    0x24  Arial.o [1]
+  .rodata            const    0x0800795c    0x24  Arial.o [1]
+  .rodata            const    0x08007980    0x24  Arial.o [1]
+  .rodata            const    0x080079a4    0x24  Arial.o [1]
+  .rodata            const    0x080079c8    0x24  Arial.o [1]
+  .rodata            const    0x080079ec    0x24  Arial.o [1]
+  .rodata            const    0x08007a10    0x24  Arial.o [1]
+  .rodata            const    0x08007a34    0x24  Arial.o [1]
+  .rodata            const    0x08007a58    0x24  Arial.o [1]
+  .rodata            const    0x08007a7c    0x24  Arial.o [1]
+  .rodata            const    0x08007aa0    0x24  Arial.o [1]
+  .rodata            const    0x08007ac4    0x24  Arial.o [1]
+  .rodata            const    0x08007ae8    0x24  Arial.o [1]
+  .rodata            const    0x08007b0c    0x24  Arial.o [1]
+  .rodata            const    0x08007b30    0x24  Arial.o [1]
+  .rodata            const    0x08007b54    0x24  Arial.o [1]
+  .rodata            const    0x08007b78    0x24  Arial.o [1]
+  .rodata            const    0x08007b9c    0x24  Arial.o [1]
+  .rodata            const    0x08007bc0    0x24  Arial.o [1]
+  .rodata            const    0x08007be4    0x24  Arial.o [1]
+  .rodata            const    0x08007c08    0x24  Arial.o [1]
+  .rodata            const    0x08007c2c    0x24  Arial.o [1]
+  .rodata            const    0x08007c50    0x24  Arial.o [1]
+  .rodata            const    0x08007c74    0x24  Arial.o [1]
+  .rodata            const    0x08007c98    0x24  Arial.o [1]
+  .rodata            const    0x08007cbc    0x24  Arial.o [1]
+  .rodata            const    0x08007ce0    0x24  Arial.o [1]
+  .rodata            const    0x08007d04    0x24  Arial.o [1]
+  .rodata            const    0x08007d28    0x24  Arial.o [1]
+  .rodata            const    0x08007d4c    0x24  Arial.o [1]
+  .rodata            const    0x08007d70    0x24  Arial.o [1]
+  .rodata            const    0x08007d94    0x24  Arial.o [1]
+  .rodata            const    0x08007db8    0x24  Arial.o [1]
+  .rodata            const    0x08007ddc    0x24  Arial.o [1]
+  .rodata            const    0x08007e00    0x24  Arial.o [1]
+  .rodata            const    0x08007e24    0x24  Arial.o [1]
+  .rodata            const    0x08007e48    0x24  Arial.o [1]
+  .rodata            const    0x08007e6c    0x24  Arial.o [1]
+  .rodata            const    0x08007e90    0x24  Arial.o [1]
+  .rodata            const    0x08007eb4    0x24  Arial.o [1]
+  .rodata            const    0x08007ed8    0x24  Arial.o [1]
+  .rodata            const    0x08007efc    0x24  Arial.o [1]
+  .rodata            const    0x08007f20    0x24  Arial.o [1]
+  .rodata            const    0x08007f44    0x24  Arial.o [1]
+  .rodata            const    0x08007f68    0x24  Arial.o [1]
+  .rodata            const    0x08007f8c    0x24  Arial.o [1]
+  .rodata            const    0x08007fb0    0x24  Arial.o [1]
+  .rodata            const    0x08007fd4    0x24  Arial.o [1]
+  .rodata            const    0x08007ff8    0x24  Arial.o [1]
+  .text              ro code  0x0800801c    0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x08008040    0x24  - Linker created -
+  .text              ro code  0x08008064    0x1a  cmain.o [5]
+  .text              ro code  0x0800807e     0x4  low_level_init.o [3]
+  .text              ro code  0x08008082     0x4  exit.o [3]
+  .text              ro code  0x08008088     0xa  cexit.o [5]
+  .rodata            const    0x08008094    0x18  DS_Digital_Small.o [1]
+  .rodata            const    0x080080ac    0x18  DS_Digital_Small.o [1]
+  .rodata            const    0x080080c4    0x14  Arial.o [1]
+  .rodata            const    0x080080d8    0x14  Arial.o [1]
+  .rodata            const    0x080080ec    0x14  Arial.o [1]
+  .rodata            const    0x08008100    0x14  Arial.o [1]
+  .rodata            const    0x08008114    0x14  Arial.o [1]
+  .rodata            const    0x08008128    0x14  Arial.o [1]
+  .rodata            const    0x0800813c    0x14  Arial.o [1]
+  .rodata            const    0x08008150    0x14  Arial.o [1]
+  .rodata            const    0x08008164    0x14  Arial.o [1]
+  .rodata            const    0x08008178    0x14  Arial.o [1]
+  .rodata            const    0x0800818c    0x14  Arial.o [1]
+  .rodata            const    0x080081a0    0x14  Arial.o [1]
+  .rodata            const    0x080081b4    0x14  Arial.o [1]
+  .rodata            const    0x080081c8    0x14  Arial.o [1]
+  .rodata            const    0x080081dc    0x14  Arial.o [1]
+  .rodata            const    0x080081f0    0x14  Arial.o [1]
+  .rodata            const    0x08008204    0x14  Arial.o [1]
+  .rodata            const    0x08008218    0x14  Arial.o [1]
+  .rodata            const    0x0800822c    0x14  Arial.o [1]
+  .rodata            const    0x08008240    0x14  Arial.o [1]
+  .rodata            const    0x08008254    0x14  Arial.o [1]
+  .rodata            const    0x08008268    0x14  Arial.o [1]
+  .rodata            const    0x0800827c    0x14  Arial.o [1]
+  .rodata            const    0x08008290    0x14  Arial.o [1]
+  .rodata            const    0x080082a4    0x14  Arial.o [1]
+  .rodata            const    0x080082b8    0x14  Arial.o [1]
+  .rodata            const    0x080082cc    0x14  Arial.o [1]
+  .rodata            const    0x080082e0    0x14  Arial.o [1]
+  .rodata            const    0x080082f4    0x14  Arial.o [1]
+  .rodata            const    0x08008308    0x14  Arial.o [1]
+  .rodata            const    0x0800831c    0x14  Arial.o [1]
+  .rodata            const    0x08008330    0x14  Arial.o [1]
+  .rodata            const    0x08008344    0x14  Arial.o [1]
+  .rodata            const    0x08008358    0x14  Arial.o [1]
+  .rodata            const    0x0800836c    0x14  Arial.o [1]
+  .rodata            const    0x08008380    0x14  Arial.o [1]
+  .rodata            const    0x08008394    0x14  Arial.o [1]
+  .rodata            const    0x080083a8    0x14  Arial.o [1]
+  .rodata            const    0x080083bc    0x14  Arial.o [1]
+  .rodata            const    0x080083d0    0x14  UI_private.o [1]
+  .rodata            const    0x080083e4    0x10  system_stm32f4xx.o [1]
+  .text              ro code  0x080083f4    0x10  startup_stm32f427xx.o [1]
+  .rodata            const    0x08008404     0xc  UI_mainWindow.o [1]
+  .rodata            const    0x08008410     0xc  UI_mainWindow.o [1]
+  .text              ro code  0x0800841c     0xc  cstartup_M.o [5]
+  .rodata            const    0x08008428     0x8  Arial.o [1]
+  .rodata            const    0x08008430     0x8  Arial.o [1]
+  .rodata            const    0x08008438     0x8  Arial.o [1]
+  .rodata            const    0x08008440     0x8  Arial.o [1]
+  .rodata            const    0x08008448     0x8  Arial.o [1]
+  .rodata            const    0x08008450     0x8  Arial.o [1]
+  .rodata            const    0x08008458     0x8  Arial.o [1]
+  .rodata            const    0x08008460     0x8  Arial.o [1]
+  .rodata            const    0x08008468     0x8  Arial.o [1]
+  .rodata            const    0x08008470     0x8  Arial.o [1]
+  .rodata            const    0x08008478     0x8  Arial.o [1]
+  .rodata            const    0x08008480     0x8  Arial.o [1]
+  .rodata            const    0x08008488     0x8  Arial.o [1]
+  .rodata            const    0x08008490     0x8  Arial.o [1]
+  .rodata            const    0x08008498     0x8  Arial.o [1]
+  .rodata            const    0x080084a0     0x8  Arial.o [1]
+  .rodata            const    0x080084a8     0x8  Arial.o [1]
+  .rodata            const    0x080084b0     0x8  Arial.o [1]
+  .rodata            const    0x080084b8     0x8  Arial.o [1]
+  .rodata            const    0x080084c0     0x8  Arial.o [1]
+  .rodata            const    0x080084c8     0x8  Arial.o [1]
+  .rodata            const    0x080084d0     0x8  Arial.o [1]
+  .rodata            const    0x080084d8     0x8  Arial.o [1]
+  .rodata            const    0x080084e0     0x8  Arial.o [1]
+  .rodata            const    0x080084e8     0x8  Arial.o [1]
+  .rodata            const    0x080084f0     0x8  Arial.o [1]
+  .rodata            const    0x080084f8     0x8  Arial.o [1]
+  .rodata            const    0x08008500     0x8  Arial.o [1]
+  .rodata            const    0x08008508     0x8  Arial.o [1]
+  .rodata            const    0x08008510     0x8  Arial.o [1]
+  .rodata            const    0x08008518     0x8  Arial.o [1]
+  .rodata            const    0x08008520     0x8  Arial.o [1]
+  .rodata            const    0x08008528     0x8  Arial.o [1]
+  .rodata            const    0x08008530     0x8  Arial.o [1]
+  .rodata            const    0x08008538     0x8  Arial.o [1]
+  .rodata            const    0x08008540     0x8  Arial.o [1]
+  .rodata            const    0x08008548     0x8  Arial.o [1]
+  .rodata            const    0x08008550     0x8  Arial.o [1]
+  .rodata            const    0x08008558     0x8  Arial.o [1]
+  .rodata            const    0x08008560     0x8  Arial.o [1]
+  .rodata            const    0x08008568     0x8  Arial.o [1]
+  .rodata            const    0x08008570     0x8  Arial.o [1]
+  .rodata            const    0x08008578     0x8  Arial.o [1]
+  .rodata            const    0x08008580     0x8  Arial.o [1]
+  .rodata            const    0x08008588     0x8  Arial.o [1]
+  .rodata            const    0x08008590     0x8  Arial.o [1]
+  .rodata            const    0x08008598     0x8  Arial.o [1]
+  .rodata            const    0x080085a0     0x8  Arial.o [1]
+  .rodata            const    0x080085a8     0x8  Arial.o [1]
+  .rodata            const    0x080085b0     0x8  Arial.o [1]
+  .rodata            const    0x080085b8     0x8  Arial.o [1]
+  .rodata            const    0x080085c0     0x8  Arial.o [1]
+  .rodata            const    0x080085c8     0x8  Arial.o [1]
+  .rodata            const    0x080085d0     0x8  Arial.o [1]
+  .rodata            const    0x080085d8     0x8  Arial.o [1]
+  .rodata            const    0x080085e0     0x8  Arial.o [1]
+  .rodata            const    0x080085e8     0x8  Arial.o [1]
+  .rodata            const    0x080085f0     0x8  Arial.o [1]
+  .rodata            const    0x080085f8     0x8  Arial.o [1]
+  .rodata            const    0x08008600     0x8  Arial.o [1]
+  .rodata            const    0x08008608     0x8  Arial.o [1]
+  .rodata            const    0x08008610     0x8  Arial.o [1]
+  .rodata            const    0x08008618     0x8  Arial.o [1]
+  .rodata            const    0x08008620     0x8  Arial.o [1]
+  .rodata            const    0x08008628     0x8  Arial.o [1]
+  .rodata            const    0x08008630     0x8  Arial.o [1]
+  .rodata            const    0x08008638     0x8  Arial.o [1]
+  .rodata            const    0x08008640     0x8  Arial.o [1]
+  .rodata            const    0x08008648     0x8  Arial.o [1]
+  .rodata            const    0x08008650     0x8  Arial.o [1]
+  .rodata            const    0x08008658     0x8  Arial.o [1]
+  .rodata            const    0x08008660     0x8  Arial.o [1]
+  .rodata            const    0x08008668     0x8  Arial.o [1]
+  .rodata            const    0x08008670     0x8  Arial.o [1]
+  .rodata            const    0x08008678     0x8  Arial.o [1]
+  .rodata            const    0x08008680     0x8  Arial.o [1]
+  .rodata            const    0x08008688     0x8  Arial.o [1]
+  .rodata            const    0x08008690     0x8  Arial.o [1]
+  .rodata            const    0x08008698     0x8  Arial.o [1]
+  .rodata            const    0x080086a0     0x8  Arial.o [1]
+  .rodata            const    0x080086a8     0x8  Arial.o [1]
+  .rodata            const    0x080086b0     0x8  Arial.o [1]
+  .rodata            const    0x080086b8     0x8  Arial.o [1]
+  .rodata            const    0x080086c0     0x8  Arial.o [1]
+  .rodata            const    0x080086c8     0x8  Arial.o [1]
+  .rodata            const    0x080086d0     0x8  Arial.o [1]
+  .rodata            const    0x080086d8     0x8  Arial.o [1]
+  .rodata            const    0x080086e0     0x8  Arial.o [1]
+  .rodata            const    0x080086e8     0x8  Arial.o [1]
+  .rodata            const    0x080086f0     0x8  Arial.o [1]
+  .rodata            const    0x080086f8     0x8  Arial.o [1]
+  .rodata            const    0x08008700     0x8  Arial.o [1]
+  .rodata            const    0x08008708     0x8  Arial.o [1]
+  .rodata            const    0x08008710     0x8  Arial.o [1]
+  .rodata            const    0x08008718     0x8  Arial.o [1]
+  .rodata            const    0x08008720     0x8  Arial.o [1]
+  .rodata            const    0x08008728     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008730     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008738     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008740     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008748     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008750     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008758     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008760     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008768     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008770     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008778     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008780     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008788     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008790     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008798     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087a0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087a8     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087b0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087b8     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087c0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087c8     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087d0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087d8     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087e0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087e8     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087f0     0x8  DS_Digital.o [1]
+  .rodata            const    0x080087f8     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008800     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008808     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008810     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008818     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008820     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008828     0x8  DS_Digital.o [1]
+  .rodata            const    0x08008830     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008838     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008840     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008848     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008850     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008858     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008860     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008868     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008870     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008878     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008880     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008888     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008890     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008898     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088a0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088a8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088b0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088b8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088c0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088c8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088d0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088d8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088e0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088e8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088f0     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x080088f8     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008900     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008908     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008910     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008918     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008920     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008928     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008930     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008938     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008940     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008948     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008950     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008958     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008960     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008968     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008970     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008978     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008980     0x8  DS_Digital_Small.o [1]
+  .rodata            const    0x08008988     0x8  gpio.o [1]
+  .rodata            const    0x08008990     0x8  main.o [1]
+  .rodata            const    0x08008998     0x8  main.o [1]
+  .rodata            const    0x080089a0     0x8  solderingDry.o [1]
+  .rodata            const    0x080089a8     0x8  solderingDryDisconnected.o [1]
+  .rodata            const    0x080089b0     0x8  solderingIron.o [1]
+  .rodata            const    0x080089b8     0x8  solderingIronDisconnected.o [1]
+  .rodata            const    0x080089c0     0x8  tasks.o [1]
+  .rodata            const    0x080089c8     0x8  timers.o [1]
+  .rodata            const    0x080089d0     0x8  timers.o [1]
+  .rodata            const    0x080089d8     0x8  UI_mainWindow.o [1]
+  .rodata            const    0x080089e0     0x8  UI_mainWindow.o [1]
+  .rodata            const    0x080089e8     0x8  UI_mainWindow.o [1]
+  .rodata            const    0x080089f0     0x4  heap_4.o [1]
+  .rodata            const    0x080089f4     0x4  port.o [1]
+  .text              ro code  0x080089f8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x080089fc     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a00     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a04     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a08     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a0c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a10     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a14     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a18     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a1c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a20     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a24     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a28     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a2c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a30     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a34     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a38     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a3c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a40     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a44     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a48     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a4c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a50     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a54     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a58     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a5c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a60     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a64     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a68     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a6c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a70     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a74     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a78     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a7c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a80     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a84     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a88     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a8c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a90     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a94     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a98     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008a9c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008aa0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008aa4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008aa8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008aac     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ab0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ab4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ab8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008abc     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ac0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ac4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ac8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008acc     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ad0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ad4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ad8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008adc     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ae0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ae4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008ae8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008aec     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008af0     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008af4     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008af8     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008afc     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b00     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b04     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b08     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b0c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b10     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b14     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b18     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b1c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b20     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b24     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b28     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b2c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b30     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b34     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b38     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b3c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b40     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b44     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b48     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b4c     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b50     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b54     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b58     0x4  startup_stm32f427xx.o [1]
+  .text              ro code  0x08008b5c     0x4  startup_stm32f427xx.o [1]
+  .rodata            const    0x08008b60     0x0  zero_init3.o [5]
+  .rodata            const    0x08008b60     0x0  copy_init3.o [5]
+  Initializer bytes  const    0x08008b60    0x68  <for P4 s0>
+                            - 0x08008bc8  0x8a1c
 
 "P3":                                     0x2000
   CSTACK                      0x10000000  0x2000  <Block>
     CSTACK           uninit   0x10000000  0x2000  <Block tail>
                             - 0x10002000  0x2000
 
-"P4", part 1 of 2:                          0x10
-  P4 s0                       0x20000000    0x10  <Init block>
-    .data            inited   0x20000000     0x8  lcd_backlight.o [1]
-    .data            inited   0x20000008     0x4  port.o [1]
-    .data            inited   0x2000000c     0x4  system_stm32f4xx.o [1]
-                            - 0x20000010    0x10
+"P4", part 1 of 2:                          0x68
+  P4 s0                       0x20000000    0x68  <Init block>
+    .data            inited   0x20000000    0x30  mainTSK.o [1]
+    .data            inited   0x20000030    0x18  keyboard.o [1]
+    .data            inited   0x20000048    0x10  eSolder.o [1]
+    .data            inited   0x20000058     0x8  lcd_backlight.o [1]
+    .data            inited   0x20000060     0x4  port.o [1]
+    .data            inited   0x20000064     0x4  system_stm32f4xx.o [1]
+                            - 0x20000068    0x68
 
-"P4", part 2 of 2:                        0x1604
-  .bss               zero     0x20000010  0x1400  heap_4.o [1]
-  .bss               zero     0x20001410    0x64  tasks.o [1]
-  .bss               zero     0x20001474    0x40  queue.o [1]
-  .bss               zero     0x200014b4    0x1c  spiF4.o [1]
-  .bss               zero     0x200014d0    0x1c  spiF4.o [1]
-  .bss               zero     0x200014ec    0x18  keyboard.o [1]
-  .bss               zero     0x20001504    0x14  encoderPannel.o [1]
-  .bss               zero     0x20001518    0x14  tasks.o [1]
-  .bss               zero     0x2000152c    0x14  tasks.o [1]
-  .bss               zero     0x20001540    0x14  tasks.o [1]
-  .bss               zero     0x20001554    0x14  tasks.o [1]
-  .bss               zero     0x20001568    0x14  tasks.o [1]
-  .bss               zero     0x2000157c    0x14  timers.o [1]
-  .bss               zero     0x20001590    0x14  timers.o [1]
-  .bss               zero     0x200015a4     0x8  heap_4.o [1]
-  .bss               zero     0x200015ac     0x4  heap_4.o [1]
-  .bss               zero     0x200015b0     0x4  heap_4.o [1]
-  .bss               zero     0x200015b4     0x4  heap_4.o [1]
-  .bss               zero     0x200015b8     0x4  heap_4.o [1]
-  .bss               zero     0x200015bc     0x4  port.o [1]
-  .bss               zero     0x200015c0     0x4  tasks.o [1]
-  .bss               zero     0x200015c4     0x4  tasks.o [1]
-  .bss               zero     0x200015c8     0x4  tasks.o [1]
-  .bss               zero     0x200015cc     0x4  tasks.o [1]
-  .bss               zero     0x200015d0     0x4  tasks.o [1]
-  .bss               zero     0x200015d4     0x4  tasks.o [1]
-  .bss               zero     0x200015d8     0x4  tasks.o [1]
-  .bss               zero     0x200015dc     0x4  tasks.o [1]
-  .bss               zero     0x200015e0     0x4  tasks.o [1]
-  .bss               zero     0x200015e4     0x4  tasks.o [1]
-  .bss               zero     0x200015e8     0x4  tasks.o [1]
-  .bss               zero     0x200015ec     0x4  tasks.o [1]
-  .bss               zero     0x200015f0     0x4  tasks.o [1]
-  .bss               zero     0x200015f4     0x4  tasks.o [1]
-  .bss               zero     0x200015f8     0x4  tasks.o [1]
-  .bss               zero     0x200015fc     0x4  timers.o [1]
-  .bss               zero     0x20001600     0x4  timers.o [1]
-  .bss               zero     0x20001604     0x4  timers.o [1]
-  .bss               zero     0x20001608     0x4  timers.o [1]
-  .bss               zero     0x2000160c     0x4  timers.o [1]
-  .bss               zero     0x20001610     0x1  ili9341.o [1]
-  .bss               zero     0x20001611     0x1  port.o [1]
-                            - 0x20001612  0x1602
+"P4", part 2 of 2:                        0x15f0
+  .bss               zero     0x20000068  0x1400  heap_4.o [1]
+  .bss               zero     0x20001468    0x64  tasks.o [1]
+  .bss               zero     0x200014cc    0x40  queue.o [1]
+  .bss               zero     0x2000150c    0x1c  spiF4.o [1]
+  .bss               zero     0x20001528    0x1c  spiF4.o [1]
+  .bss               zero     0x20001544    0x14  encoderPannel.o [1]
+  .bss               zero     0x20001558    0x14  tasks.o [1]
+  .bss               zero     0x2000156c    0x14  tasks.o [1]
+  .bss               zero     0x20001580    0x14  tasks.o [1]
+  .bss               zero     0x20001594    0x14  tasks.o [1]
+  .bss               zero     0x200015a8    0x14  tasks.o [1]
+  .bss               zero     0x200015bc    0x14  timers.o [1]
+  .bss               zero     0x200015d0    0x14  timers.o [1]
+  .bss               zero     0x200015e4     0x8  heap_4.o [1]
+  .bss               zero     0x200015ec     0x4  heap_4.o [1]
+  .bss               zero     0x200015f0     0x4  heap_4.o [1]
+  .bss               zero     0x200015f4     0x4  heap_4.o [1]
+  .bss               zero     0x200015f8     0x4  heap_4.o [1]
+  .bss               zero     0x200015fc     0x4  port.o [1]
+  .bss               zero     0x20001600     0x4  tasks.o [1]
+  .bss               zero     0x20001604     0x4  tasks.o [1]
+  .bss               zero     0x20001608     0x4  tasks.o [1]
+  .bss               zero     0x2000160c     0x4  tasks.o [1]
+  .bss               zero     0x20001610     0x4  tasks.o [1]
+  .bss               zero     0x20001614     0x4  tasks.o [1]
+  .bss               zero     0x20001618     0x4  tasks.o [1]
+  .bss               zero     0x2000161c     0x4  tasks.o [1]
+  .bss               zero     0x20001620     0x4  tasks.o [1]
+  .bss               zero     0x20001624     0x4  tasks.o [1]
+  .bss               zero     0x20001628     0x4  tasks.o [1]
+  .bss               zero     0x2000162c     0x4  tasks.o [1]
+  .bss               zero     0x20001630     0x4  tasks.o [1]
+  .bss               zero     0x20001634     0x4  tasks.o [1]
+  .bss               zero     0x20001638     0x4  tasks.o [1]
+  .bss               zero     0x2000163c     0x4  timers.o [1]
+  .bss               zero     0x20001640     0x4  timers.o [1]
+  .bss               zero     0x20001644     0x4  timers.o [1]
+  .bss               zero     0x20001648     0x4  timers.o [1]
+  .bss               zero     0x2000164c     0x4  timers.o [1]
+  .bss               zero     0x20001650     0x4  xfail_s.o [3]
+  .bss               zero     0x20001654     0x1  ili9341.o [1]
+  .bss               zero     0x20001655     0x1  mainTSK.o [1]
+  .bss               zero     0x20001656     0x1  port.o [1]
+                            - 0x20001657  0x15ef
 
 
 *******************************************************************************
@@ -314,14 +666,14 @@ initialize by copy { rw };
           Address     Size
           -------     ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x1602:
-          0x20000010  0x1602
+    1 destination range, total size 0x15ef:
+          0x20000068  0x15ef
 
 Copy (__iar_copy_init3)
-    1 source range, total size 0x10:
-          0x080041c4    0x10
-    1 destination range, total size 0x10:
-          0x20000000    0x10
+    1 source range, total size 0x68:
+          0x08008b60    0x68
+    1 destination range, total size 0x68:
+          0x20000000    0x68
 
 
 
@@ -329,78 +681,91 @@ Copy (__iar_copy_init3)
 *** MODULE SUMMARY
 ***
 
-    Module                 ro code  ro data  rw data
-    ------                 -------  -------  -------
+    Module                       ro code  ro data  rw data
+    ------                       -------  -------  -------
 C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj: [1]
-    UI_mainWindow.o            128
-    UI_private.o                         44
-    button.o                   142
-    clock.o                    308
-    dry.o                             2 056
-    encoderPannel.o                               20
-    encoders.o                 376
-    gpio.o                     316       96
-    hard.o                      16
-    heap_4.o                   604        4    5 144
-    ili9341.o                  528                 1
-    ili9341_fsmc.o             670
-    keyboard.o                 152                24
-    lcd.o                      124
-    lcd_backlight.o             52        8        8
-    list.o                     152
-    main.o                     100       16
-    mainTSK.o                  128
-    mcu.o                      244
-    port.o                     644        8        9
-    portasm.o                  176
-    queue.o                  1 874                64
-    soldering-iron.o                  2 056
-    spiF4.o                    272                56
-    startup_stm32f427xx.o      804
-    system_stm32f4xx.o         280       20        4
-    tasks.o                  2 712        8      260
-    timers.o                 1 096       16       60
-    ------------------------------------------------
-    Total:                  11 898    4 332    5 650
+    Arial.o                                 4 324
+    DS_Digital.o                            5 364
+    DS_Digital_Small.o                      2 588
+    UI_mainWindow.o                  528       48
+    UI_private.o                               20
+    button.o                         142
+    clock.o                          308
+    eSolder.o                                  16       16
+    encoderPannel.o                   64                20
+    encoders.o                       524
+    gpio.o                           316       96
+    hard.o                            20
+    heap_4.o                         604        4    5 144
+    ili9341.o                        484                 1
+    ili9341_fsmc.o                   670
+    keyboard.o                       104       24       24
+    lcd.o                            426
+    lcd_backlight.o                   52        8        8
+    list.o                           152
+    main.o                           100       16
+    mainTSK.o                        160       48       49
+    mcu.o                            260
+    port.o                           644        8        9
+    portasm.o                        176
+    queue.o                        1 874                64
+    solderingDry.o                          2 056
+    solderingDryDisconnected.o              2 056
+    solderingIron.o                         2 056
+    solderingIronDisconnected.o             2 056
+    spiF4.o                          272                56
+    startup_stm32f427xx.o            804
+    system_stm32f4xx.o               280       20        4
+    tasks.o                        2 712        8      260
+    timers.o                       1 096       16       60
+    ------------------------------------------------------
+    Total:                        12 772   20 832    5 715
 
 command line: [2]
-    ------------------------------------------------
+    ------------------------------------------------------
     Total:
 
 dl7M_tln.a: [3]
-    abort.o                      6
-    exit.o                       4
-    low_level_init.o             4
-    ------------------------------------------------
-    Total:                      14
+    abort.o                            6
+    exit.o                             4
+    low_level_init.o                   4
+    sprintf.o                         64
+    xfail_s.o                         68                 4
+    xprintfsmall_nomb.o            1 248
+    xsprout.o                         10
+    ------------------------------------------------------
+    Total:                         1 404                 4
 
 m7M_tls.a: [4]
-    fpinit_M.o                  34
-    ------------------------------------------------
-    Total:                      34
+    fpinit_M.o                        34
+    ------------------------------------------------------
+    Total:                            34
 
 rt7M_tl.a: [5]
-    ABImemcpy.o                166
-    ABImemset.o                102
-    cexit.o                     10
-    cmain.o                     26
-    copy_init3.o                44
-    cstartup_M.o                12
-    data_init.o                 40
-    zero_init3.o                64
-    ------------------------------------------------
-    Total:                     464
+    ABImemcpy.o                      166
+    ABImemset.o                      102
+    cexit.o                           10
+    cmain.o                           26
+    copy_init3.o                      44
+    cstartup_M.o                      12
+    data_init.o                       40
+    memchr.o                          88
+    strchr.o                          22
+    strlen.o                          54
+    zero_init3.o                      64
+    ------------------------------------------------------
+    Total:                           628
 
 shb_l.a: [6]
-    ABIassert.o                 36
-    exit.o                      20
-    ------------------------------------------------
-    Total:                      56
+    ABIassert.o                       36
+    exit.o                            20
+    ------------------------------------------------------
+    Total:                            56
 
-    Gaps                        12        6
-    Linker created                       36    8 192
-----------------------------------------------------
-    Grand Total:            12 478    4 374   13 842
+    Gaps                              16        6
+    Linker created                             36    8 192
+----------------------------------------------------------
+    Grand Total:                  14 910   20 874   13 911
 
 
 *******************************************************************************
@@ -409,177 +774,606 @@ shb_l.a: [6]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.iar.init_table$$Base   0x08003f94           --   Gb  - Linker created -
-.iar.init_table$$Limit  0x08003fb8           --   Gb  - Linker created -
-?main                   0x08003fb9          Code  Gb  cmain.o [5]
-AHBPrescTable           0x08003fe8    0x10  Data  Gb  system_stm32f4xx.o [1]
+.iar.init_table$$Base   0x08008040           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08008064           --   Gb  - Linker created -
+?main                   0x08008065          Code  Gb  cmain.o [5]
+AHBPrescTable           0x080083e4    0x10  Data  Gb  system_stm32f4xx.o [1]
+Arial                   0x08008720     0x8  Data  Gb  Arial.o [1]
+Arial_0x20              0x08008428     0x8  Data  Lc  Arial.o [1]
+Arial_0x21              0x08008430     0x8  Data  Lc  Arial.o [1]
+Arial_0x22              0x08008438     0x8  Data  Lc  Arial.o [1]
+Arial_0x23              0x08008440     0x8  Data  Lc  Arial.o [1]
+Arial_0x24              0x08008448     0x8  Data  Lc  Arial.o [1]
+Arial_0x25              0x08008450     0x8  Data  Lc  Arial.o [1]
+Arial_0x26              0x08008458     0x8  Data  Lc  Arial.o [1]
+Arial_0x27              0x08008460     0x8  Data  Lc  Arial.o [1]
+Arial_0x28              0x08008468     0x8  Data  Lc  Arial.o [1]
+Arial_0x29              0x08008470     0x8  Data  Lc  Arial.o [1]
+Arial_0x2a              0x08008478     0x8  Data  Lc  Arial.o [1]
+Arial_0x2b              0x08008480     0x8  Data  Lc  Arial.o [1]
+Arial_0x2c              0x08008488     0x8  Data  Lc  Arial.o [1]
+Arial_0x2d              0x08008490     0x8  Data  Lc  Arial.o [1]
+Arial_0x2e              0x08008498     0x8  Data  Lc  Arial.o [1]
+Arial_0x2f              0x080084a0     0x8  Data  Lc  Arial.o [1]
+Arial_0x30              0x080084a8     0x8  Data  Lc  Arial.o [1]
+Arial_0x31              0x080084b0     0x8  Data  Lc  Arial.o [1]
+Arial_0x32              0x080084b8     0x8  Data  Lc  Arial.o [1]
+Arial_0x33              0x080084c0     0x8  Data  Lc  Arial.o [1]
+Arial_0x34              0x080084c8     0x8  Data  Lc  Arial.o [1]
+Arial_0x35              0x080084d0     0x8  Data  Lc  Arial.o [1]
+Arial_0x36              0x080084d8     0x8  Data  Lc  Arial.o [1]
+Arial_0x37              0x080084e0     0x8  Data  Lc  Arial.o [1]
+Arial_0x38              0x080084e8     0x8  Data  Lc  Arial.o [1]
+Arial_0x39              0x080084f0     0x8  Data  Lc  Arial.o [1]
+Arial_0x3a              0x080084f8     0x8  Data  Lc  Arial.o [1]
+Arial_0x3b              0x08008500     0x8  Data  Lc  Arial.o [1]
+Arial_0x3c              0x08008508     0x8  Data  Lc  Arial.o [1]
+Arial_0x3d              0x08008510     0x8  Data  Lc  Arial.o [1]
+Arial_0x3e              0x08008518     0x8  Data  Lc  Arial.o [1]
+Arial_0x3f              0x08008520     0x8  Data  Lc  Arial.o [1]
+Arial_0x40              0x08008528     0x8  Data  Lc  Arial.o [1]
+Arial_0x41              0x08008530     0x8  Data  Lc  Arial.o [1]
+Arial_0x42              0x08008538     0x8  Data  Lc  Arial.o [1]
+Arial_0x43              0x08008540     0x8  Data  Lc  Arial.o [1]
+Arial_0x44              0x08008548     0x8  Data  Lc  Arial.o [1]
+Arial_0x45              0x08008550     0x8  Data  Lc  Arial.o [1]
+Arial_0x46              0x08008558     0x8  Data  Lc  Arial.o [1]
+Arial_0x47              0x08008560     0x8  Data  Lc  Arial.o [1]
+Arial_0x48              0x08008568     0x8  Data  Lc  Arial.o [1]
+Arial_0x49              0x08008570     0x8  Data  Lc  Arial.o [1]
+Arial_0x4a              0x08008578     0x8  Data  Lc  Arial.o [1]
+Arial_0x4b              0x08008580     0x8  Data  Lc  Arial.o [1]
+Arial_0x4c              0x08008588     0x8  Data  Lc  Arial.o [1]
+Arial_0x4d              0x08008590     0x8  Data  Lc  Arial.o [1]
+Arial_0x4e              0x08008598     0x8  Data  Lc  Arial.o [1]
+Arial_0x4f              0x080085a0     0x8  Data  Lc  Arial.o [1]
+Arial_0x50              0x080085a8     0x8  Data  Lc  Arial.o [1]
+Arial_0x51              0x080085b0     0x8  Data  Lc  Arial.o [1]
+Arial_0x52              0x080085b8     0x8  Data  Lc  Arial.o [1]
+Arial_0x53              0x080085c0     0x8  Data  Lc  Arial.o [1]
+Arial_0x54              0x080085c8     0x8  Data  Lc  Arial.o [1]
+Arial_0x55              0x080085d0     0x8  Data  Lc  Arial.o [1]
+Arial_0x56              0x080085d8     0x8  Data  Lc  Arial.o [1]
+Arial_0x57              0x080085e0     0x8  Data  Lc  Arial.o [1]
+Arial_0x58              0x080085e8     0x8  Data  Lc  Arial.o [1]
+Arial_0x59              0x080085f0     0x8  Data  Lc  Arial.o [1]
+Arial_0x5a              0x080085f8     0x8  Data  Lc  Arial.o [1]
+Arial_0x5b              0x08008600     0x8  Data  Lc  Arial.o [1]
+Arial_0x5c              0x08008608     0x8  Data  Lc  Arial.o [1]
+Arial_0x5d              0x08008610     0x8  Data  Lc  Arial.o [1]
+Arial_0x5e              0x08008618     0x8  Data  Lc  Arial.o [1]
+Arial_0x5f              0x08008620     0x8  Data  Lc  Arial.o [1]
+Arial_0x60              0x08008628     0x8  Data  Lc  Arial.o [1]
+Arial_0x61              0x08008630     0x8  Data  Lc  Arial.o [1]
+Arial_0x62              0x08008638     0x8  Data  Lc  Arial.o [1]
+Arial_0x63              0x08008640     0x8  Data  Lc  Arial.o [1]
+Arial_0x64              0x08008648     0x8  Data  Lc  Arial.o [1]
+Arial_0x65              0x08008650     0x8  Data  Lc  Arial.o [1]
+Arial_0x66              0x08008658     0x8  Data  Lc  Arial.o [1]
+Arial_0x67              0x08008660     0x8  Data  Lc  Arial.o [1]
+Arial_0x68              0x08008668     0x8  Data  Lc  Arial.o [1]
+Arial_0x69              0x08008670     0x8  Data  Lc  Arial.o [1]
+Arial_0x6a              0x08008678     0x8  Data  Lc  Arial.o [1]
+Arial_0x6b              0x08008680     0x8  Data  Lc  Arial.o [1]
+Arial_0x6c              0x08008688     0x8  Data  Lc  Arial.o [1]
+Arial_0x6d              0x08008690     0x8  Data  Lc  Arial.o [1]
+Arial_0x6e              0x08008698     0x8  Data  Lc  Arial.o [1]
+Arial_0x6f              0x080086a0     0x8  Data  Lc  Arial.o [1]
+Arial_0x70              0x080086a8     0x8  Data  Lc  Arial.o [1]
+Arial_0x71              0x080086b0     0x8  Data  Lc  Arial.o [1]
+Arial_0x72              0x080086b8     0x8  Data  Lc  Arial.o [1]
+Arial_0x73              0x080086c0     0x8  Data  Lc  Arial.o [1]
+Arial_0x74              0x080086c8     0x8  Data  Lc  Arial.o [1]
+Arial_0x75              0x080086d0     0x8  Data  Lc  Arial.o [1]
+Arial_0x76              0x080086d8     0x8  Data  Lc  Arial.o [1]
+Arial_0x77              0x080086e0     0x8  Data  Lc  Arial.o [1]
+Arial_0x78              0x080086e8     0x8  Data  Lc  Arial.o [1]
+Arial_0x79              0x080086f0     0x8  Data  Lc  Arial.o [1]
+Arial_0x7a              0x080086f8     0x8  Data  Lc  Arial.o [1]
+Arial_0x7b              0x08008700     0x8  Data  Lc  Arial.o [1]
+Arial_0x7c              0x08008708     0x8  Data  Lc  Arial.o [1]
+Arial_0x7d              0x08008710     0x8  Data  Lc  Arial.o [1]
+Arial_0x7e              0x08008718     0x8  Data  Lc  Arial.o [1]
+Arial_array             0x08004508   0x2f8  Data  Lc  Arial.o [1]
 CSTACK$$Base            0x10000000           --   Gb  - Linker created -
 CSTACK$$Limit           0x10002000           --   Gb  - Linker created -
 DMA2_Stream0_IRQHandler
-                        0x08003931    0x1c  Code  Gb  spiF4.o [1]
+                        0x08005919    0x1c  Code  Gb  spiF4.o [1]
 DMA2_Stream3_IRQHandler
-                        0x08003915    0x1c  Code  Gb  spiF4.o [1]
-MCU_init                0x08003a19    0xf4  Code  Gb  mcu.o [1]
-OS_init                 0x08003dd5    0x1e  Code  Gb  main.o [1]
-PendSV_Handler          0x0800166d          Code  Gb  portasm.o [1]
-Region$$Table$$Base     0x08003f94           --   Gb  - Linker created -
-Region$$Table$$Limit    0x08003fb8           --   Gb  - Linker created -
-SPI1_IRQHandler         0x08003909     0xc  Code  Gb  spiF4.o [1]
-SPI5_IRQHandler         0x0800394d     0xc  Code  Gb  spiF4.o [1]
-SVC_Handler             0x080016c5          Code  Gb  portasm.o [1]
-SysTick_Handler         0x08001147    0x28  Code  Gb  port.o [1]
-SystemCoreClock         0x2000000c     0x4  Data  Gb  system_stm32f4xx.o [1]
-SystemCoreClockUpdate   0x0800383d    0x9a  Code  Gb  system_stm32f4xx.o [1]
-SystemInit              0x080037f1    0x4c  Code  Gb  system_stm32f4xx.o [1]
-UI_MainWindowRendering  0x08003cb5    0x74  Code  Gb  UI_mainWindow.o [1]
-__aeabi_assert          0x080032f5    0x24  Code  Gb  ABIassert.o [6]
-__aeabi_memcpy          0x08001e71          Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy4         0x08001e91          Code  Gb  ABImemcpy.o [5]
-__aeabi_memcpy8         0x08001e91          Code  Gb  ABImemcpy.o [5]
+                        0x080058fd    0x1c  Code  Gb  spiF4.o [1]
+DS_Digital              0x08008828     0x8  Data  Gb  DS_Digital.o [1]
+DS_Digital_0x25         0x08008728     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x26         0x08008730     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x27         0x08008740     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x28         0x08008748     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x29         0x08008750     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2a         0x08008758     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2b         0x08008760     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2c         0x08008768     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2d         0x08008770     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2e         0x08008778     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x2f         0x08008780     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x30         0x08008788     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x31         0x08008790     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x32         0x08008798     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x33         0x080087a0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x34         0x080087a8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x35         0x080087b0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x36         0x080087b8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x37         0x080087c0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x38         0x080087c8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x39         0x080087d0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3a         0x080087d8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3b         0x080087e0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3c         0x080087e8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3d         0x080087f0     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3e         0x080087f8     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x3f         0x08008800     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x40         0x08008808     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x41         0x08008810     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x42         0x08008818     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_0x43         0x08008820     0x8  Data  Lc  DS_Digital.o [1]
+DS_Digital_Small        0x08008980     0x8  Data  Gb  DS_Digital_Small.o [1]
+DS_Digital_Small_0x20   0x08008830     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x21   0x08008838     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x22   0x08008840     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x23   0x08008848     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x24   0x08008850     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x25   0x08008858     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x26   0x08008860     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x27   0x08008870     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x28   0x08008880     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x29   0x08008890     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2a   0x080088a0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2b   0x080088b0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2c   0x080088c0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2d   0x080088c8     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2e   0x080088d0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x2f   0x080088d8     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x30   0x080088e0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x31   0x080088e8     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x32   0x080088f0     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x33   0x080088f8     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x34   0x08008900     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x35   0x08008908     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x36   0x08008910     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x37   0x08008918     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x38   0x08008920     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x39   0x08008928     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3a   0x08008930     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3b   0x08008938     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3c   0x08008940     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3d   0x08008948     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3e   0x08008950     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x3f   0x08008958     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x40   0x08008960     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x41   0x08008968     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x42   0x08008970     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_0x43   0x08008978     0x8  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_Small_array  0x080057d0   0x120  Data  Lc  DS_Digital_Small.o [1]
+DS_Digital_array        0x08005b04    0xf8  Data  Lc  DS_Digital.o [1]
+EncoderPannelInit       0x08006f9d    0x40  Code  Gb  encoderPannel.o [1]
+LoadInt                 0x0800414f    0x56  Code  Lc  xprintfsmall_nomb.o [3]
+MCU_init                0x08005a01   0x104  Code  Gb  mcu.o [1]
+OS_init                 0x08006f15    0x1e  Code  Gb  main.o [1]
+PendSV_Handler          0x08001675          Code  Gb  portasm.o [1]
+Region$$Table$$Base     0x08008040           --   Gb  - Linker created -
+Region$$Table$$Limit    0x08008064           --   Gb  - Linker created -
+SPI1_IRQHandler         0x080058f1     0xc  Code  Gb  spiF4.o [1]
+SPI5_IRQHandler         0x08005935     0xc  Code  Gb  spiF4.o [1]
+SVC_Handler             0x080016cd          Code  Gb  portasm.o [1]
+SysTick_Handler         0x0800114f    0x28  Code  Gb  port.o [1]
+SystemCoreClock         0x20000064     0x4  Data  Gb  system_stm32f4xx.o [1]
+SystemCoreClockUpdate   0x08005705    0x9a  Code  Gb  system_stm32f4xx.o [1]
+SystemInit              0x080056b9    0x4c  Code  Gb  system_stm32f4xx.o [1]
+UI_MainWindowRendering  0x08004c01    0x40  Code  Gb  UI_mainWindow.o [1]
+UI_MainWindowUpdate     0x08004d31    0xae  Code  Gb  UI_mainWindow.o [1]
+_LitobSmallNoMb         0x080042e1    0xce  Code  Lc  xprintfsmall_nomb.o [3]
+_PrintfSmallNoMb        0x08003f21   0x224  Code  Gb  xprintfsmall_nomb.o [3]
+_PutcharsSmallNoMb      0x080043af    0x2e  Code  Lc  xprintfsmall_nomb.o [3]
+_PutfldSmallNoMb        0x080041a5   0x13c  Code  Lc  xprintfsmall_nomb.o [3]
+_SProut                 0x08000f9f     0xa  Code  Gb  xsprout.o [3]
+__aeabi_assert          0x08004bdd    0x24  Code  Gb  ABIassert.o [6]
+__aeabi_memcpy          0x08001e79          Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy4         0x08001e99          Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8         0x08001e99          Code  Gb  ABImemcpy.o [5]
 __aeabi_memset          0x08000ea1          Code  Gb  ABImemset.o [5]
-__cmain                 0x08003fb9          Code  Gb  cmain.o [5]
-__exit                  0x08003321    0x14  Code  Gb  exit.o [6]
+__cmain                 0x08008065          Code  Gb  cmain.o [5]
+__exit                  0x080044f5    0x14  Code  Gb  exit.o [6]
+__iar_Fail_s            0x08004419    0x1e  Code  Gb  xfail_s.o [3]
+__iar_Memchr            0x08004495          Code  Gb  memchr.o [5]
 __iar_Memset            0x08000ea1          Code  Gb  ABImemset.o [5]
 __iar_Memset_word       0x08000ea9          Code  Gb  ABImemset.o [5]
-__iar_copy_init3        0x08003f1d    0x2c  Code  Gb  copy_init3.o [5]
-__iar_data_init3        0x08003f49    0x28  Code  Gb  data_init.o [5]
-__iar_init_vfp          0x08003f71          Code  Gb  fpinit_M.o [4]
-__iar_program_start     0x08004009          Code  Gb  cstartup_M.o [5]
+__iar_Strchr            0x08004401          Code  Gb  strchr.o [5]
+__iar_copy_init3        0x080077e9    0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x08007815    0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x0800801d          Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x0800841d          Code  Gb  cstartup_M.o [5]
 __iar_systems$$module {Abs}
                         0x00000001          Data  Gb  command line/config [2]
-__iar_zero_init3        0x08003eb1    0x40  Code  Gb  zero_init3.o [5]
-__low_level_init        0x08003fd3     0x4  Code  Gb  low_level_init.o [3]
+__iar_zero_init3        0x08007609    0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x0800807f     0x4  Code  Gb  low_level_init.o [3]
 __vector_table          0x08000000          Data  Gb  startup_stm32f427xx.o [1]
-_call_main              0x08003fc5          Code  Gb  cmain.o [5]
-_exit                   0x08003fdd          Code  Gb  cexit.o [5]
-_main                   0x08003fcf          Code  Gb  cmain.o [5]
-abort                   0x08003319     0x6  Code  Gb  abort.o [3]
-backlight               0x20000000     0x8  Data  Gb  lcd_backlight.o [1]
-buttonClearPressed      0x08003c25     0xe  Code  Gb  button.o [1]
-buttonInit              0x08003ba5    0x2a  Code  Gb  button.o [1]
-buttonScan              0x08003bcf    0x56  Code  Gb  button.o [1]
-clock_init              0x080036bd   0x134  Code  Gb  clock.o [1]
-enReadVal               0x08003545    0x38  Code  Gb  encoders.o [1]
-enWriteVal              0x0800357d    0x30  Code  Gb  encoders.o [1]
-encoderPannel           0x20001504    0x14  Data  Gb  encoderPannel.o [1]
-encoderUpdate           0x080035ad   0x10c  Code  Gb  encoders.o [1]
-exit                    0x08003fd7     0x4  Code  Gb  exit.o [3]
-gpioAfInit              0x0800326b    0x80  Code  Gb  gpio.o [1]
-gpioInit                0x080031b9    0xb2  Code  Gb  gpio.o [1]
-hard_init               0x08003e15    0x10  Code  Gb  hard.o [1]
+_call_main              0x08008071          Code  Gb  cmain.o [5]
+_exit                   0x08008089          Code  Gb  cexit.o [5]
+_main                   0x0800807b          Code  Gb  cmain.o [5]
+abort                   0x080044ed     0x6  Code  Gb  abort.o [3]
+backlight               0x20000058     0x8  Data  Gb  lcd_backlight.o [1]
+buttonClearPressed      0x08005575     0xe  Code  Gb  button.o [1]
+buttonInit              0x080054f5    0x2a  Code  Gb  button.o [1]
+buttonScan              0x0800551f    0x56  Code  Gb  button.o [1]
+clock_init              0x08005585   0x134  Code  Gb  clock.o [1]
+drawTempReal            0x08004cc1    0x70  Code  Gb  UI_mainWindow.o [1]
+drawTempSet             0x08004c41    0x80  Code  Gb  UI_mainWindow.o [1]
+eSolder                 0x20000048    0x10  Data  Gb  eSolder.o [1]
+enReadVal               0x0800537d    0x38  Code  Gb  encoders.o [1]
+enWriteVal              0x080053b5    0x30  Code  Gb  encoders.o [1]
+encControlledMain       0x20000000    0x30  Data  Gb  mainTSK.o [1]
+encoderInit             0x080052e9    0x94  Code  Gb  encoders.o [1]
+encoderPannel           0x20001544    0x14  Data  Gb  encoderPannel.o [1]
+encoderUpdate           0x080053e5   0x10c  Code  Gb  encoders.o [1]
+exit                    0x08008083     0x4  Code  Gb  exit.o [3]
+gpioAfInit              0x08004b53    0x80  Code  Gb  gpio.o [1]
+gpioInit                0x08004aa1    0xb2  Code  Gb  gpio.o [1]
+hard_init               0x08006f55    0x14  Code  Gb  hard.o [1]
 ili9341_ColumnAddressSet
-                        0x080033d5    0x34  Code  Lc  ili9341.o [1]
-ili9341_DrawBackground  0x08003469    0x64  Code  Gb  ili9341.o [1]
-ili9341_Init            0x08003335    0xa0  Code  Gb  ili9341.o [1]
+                        0x0800513d    0x34  Code  Lc  ili9341.o [1]
+ili9341_DrawBackground  0x080051a5    0x64  Code  Gb  ili9341.o [1]
+ili9341_Init            0x0800509d    0xa0  Code  Gb  ili9341.o [1]
 ili9341_InitCommunication
-                        0x08002f19   0x26a  Code  Gb  ili9341_fsmc.o [1]
-ili9341_PageAddressSet  0x08003409    0x34  Code  Lc  ili9341.o [1]
-ili9341_Reset           0x08003531     0xa  Code  Gb  ili9341.o [1]
-ili9341_SetOrientation  0x080034d1    0x3e  Code  Gb  ili9341.o [1]
-ili9341_SetPixel        0x0800343d    0x2c  Code  Gb  ili9341.o [1]
-ili9341_SetRegion       0x0800350f    0x22  Code  Gb  ili9341.o [1]
-ili9341_WriteCommand    0x080031ad     0xa  Code  Gb  ili9341_fsmc.o [1]
-ili9341_WriteData       0x08003183     0x6  Code  Gb  ili9341_fsmc.o [1]
-ili9341_WriteData_16    0x08003189     0x6  Code  Gb  ili9341_fsmc.o [1]
-ili9341_displayOn       0x0800353b     0xa  Code  Gb  ili9341.o [1]
-image_data_dry          0x08001f18   0x800  Data  Lc  dry.o [1]
+                        0x08004801   0x26a  Code  Gb  ili9341_fsmc.o [1]
+ili9341_PageAddressSet  0x08005171    0x34  Code  Lc  ili9341.o [1]
+ili9341_Reset           0x0800526d     0xa  Code  Gb  ili9341.o [1]
+ili9341_SetOrientation  0x0800520d    0x3e  Code  Gb  ili9341.o [1]
+ili9341_SetRegion       0x0800524b    0x22  Code  Gb  ili9341.o [1]
+ili9341_WriteCommand    0x08004a95     0xa  Code  Gb  ili9341_fsmc.o [1]
+ili9341_WriteData       0x08004a6b     0x6  Code  Gb  ili9341_fsmc.o [1]
+ili9341_WriteData_16    0x08004a71     0x6  Code  Gb  ili9341_fsmc.o [1]
+ili9341_displayOn       0x08005277     0xa  Code  Gb  ili9341.o [1]
+image_data_Arial_0x20   0x080080c4    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x21   0x080080d8    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x22   0x080080ec    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x23   0x0800783c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x24   0x08007860    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x25   0x08007884    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x26   0x080078a8    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x27   0x08008100    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x28   0x08008114    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x29   0x08008128    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x2a   0x0800813c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x2b   0x080078cc    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x2c   0x08008150    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x2d   0x08008164    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x2e   0x08008178    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x2f   0x0800818c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x30   0x080078f0    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x31   0x08007914    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x32   0x08007938    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x33   0x0800795c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x34   0x08007980    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x35   0x080079a4    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x36   0x080079c8    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x37   0x080079ec    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x38   0x08007a10    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x39   0x08007a34    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x3a   0x080081a0    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x3b   0x080081b4    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x3c   0x08007a58    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x3d   0x08007a7c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x3e   0x08007aa0    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x3f   0x08007ac4    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x40   0x08007ae8    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x41   0x08007b0c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x42   0x08007b30    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x43   0x08007b54    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x44   0x08007b78    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x45   0x08007b9c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x46   0x08007bc0    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x47   0x08007be4    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x48   0x08007c08    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x49   0x080081c8    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x4a   0x080081dc    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x4b   0x08007c2c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x4c   0x08007c50    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x4d   0x08007c74    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x4e   0x08007c98    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x4f   0x08007cbc    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x50   0x08007ce0    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x51   0x08007d04    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x52   0x08007d28    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x53   0x08007d4c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x54   0x08007d70    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x55   0x08007d94    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x56   0x08007db8    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x57   0x08007ddc    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x58   0x08007e00    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x59   0x08007e24    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x5a   0x08007e48    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x5b   0x080081f0    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x5c   0x08008204    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x5d   0x08008218    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x5e   0x0800822c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x5f   0x08007e6c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x60   0x08008240    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x61   0x08007e90    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x62   0x08007eb4    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x63   0x08008254    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x64   0x08007ed8    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x65   0x08007efc    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x66   0x08008268    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x67   0x08007f20    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x68   0x0800827c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x69   0x08008290    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x6a   0x080082a4    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x6b   0x080082b8    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x6c   0x080082cc    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x6d   0x08007f44    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x6e   0x080082e0    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x6f   0x08007f68    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x70   0x08007f8c    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x71   0x08007fb0    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x72   0x080082f4    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x73   0x08008308    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x74   0x0800831c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x75   0x08008330    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x76   0x08008344    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x77   0x08007fd4    0x24  Data  Lc  Arial.o [1]
+image_data_Arial_0x78   0x08008358    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x79   0x0800836c    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x7a   0x08008380    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x7b   0x08008394    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x7c   0x080083a8    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x7d   0x080083bc    0x14  Data  Lc  Arial.o [1]
+image_data_Arial_0x7e   0x08007ff8    0x24  Data  Lc  Arial.o [1]
+image_data_DS_Digital_0x25
+                        0x08005bfc    0xd4  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x26
+                        0x08005cd0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x27
+                        0x08008738     0x8  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x28
+                        0x08005d70    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x29
+                        0x08005e10    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2a
+                        0x08005eb0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2b
+                        0x08005f50    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2c
+                        0x08005ff0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2d
+                        0x08006090    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2e
+                        0x08006130    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x2f
+                        0x080061d0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x30
+                        0x08006270    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x31
+                        0x08006310    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x32
+                        0x080063b0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x33
+                        0x08006450    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x34
+                        0x080064f0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x35
+                        0x08006590    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x36
+                        0x08006630    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x37
+                        0x080066d0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x38
+                        0x08006770    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x39
+                        0x08006810    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3a
+                        0x080068b0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3b
+                        0x08006950    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3c
+                        0x080069f0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3d
+                        0x08006a90    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3e
+                        0x08006b30    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x3f
+                        0x08006bd0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x40
+                        0x08006c70    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x41
+                        0x08006d10    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x42
+                        0x08006db0    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_0x43
+                        0x08006e50    0xa0  Data  Lc  DS_Digital.o [1]
+image_data_DS_Digital_Small_0x20
+                        0x08007410    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x21
+                        0x08007458    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x22
+                        0x080074a0    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x23
+                        0x080074e8    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x24
+                        0x08007530    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x25
+                        0x08007578    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x26
+                        0x080075c0    0x48  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x27
+                        0x08008868     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x28
+                        0x08008878     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x29
+                        0x08008888     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2a
+                        0x08008898     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2b
+                        0x080088a8     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2c
+                        0x080088b8     0x8  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2d
+                        0x08007034    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2e
+                        0x08008094    0x18  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x2f
+                        0x080080ac    0x18  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x30
+                        0x08007080    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x31
+                        0x080070cc    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x32
+                        0x08007118    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x33
+                        0x08007164    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x34
+                        0x080071b0    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x35
+                        0x080071fc    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x36
+                        0x08007248    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x37
+                        0x08007294    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x38
+                        0x080072e0    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x39
+                        0x0800732c    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3a
+                        0x08007378    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3b
+                        0x080073c4    0x4c  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3c
+                        0x08007648    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3d
+                        0x0800767c    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3e
+                        0x080076b0    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x3f
+                        0x080076e4    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x40
+                        0x08007718    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x41
+                        0x0800774c    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x42
+                        0x08007780    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_DS_Digital_Small_0x43
+                        0x080077b4    0x34  Data  Lc  DS_Digital_Small.o [1]
+image_data_dry          0x08001f20   0x800  Data  Lc  solderingDry.o [1]
+image_data_solderingDryDisconnected
+                        0x08002720   0x800  Data  Lc  solderingDryDisconnected.o [1]
+image_data_solderingIronDisconnected
+                        0x08003720   0x800  Data  Lc  solderingIronDisconnected.o [1]
 image_data_solderingiron
-                        0x08002718   0x800  Data  Lc  soldering-iron.o [1]
-initTsk                 0x08003db1    0x24  Code  Gb  main.o [1]
-keyboard                0x200014ec    0x18  Data  Gb  keyboard.o [1]
-keyboardClearAllPress   0x08003b47    0x16  Code  Gb  keyboard.o [1]
-keyboardInit            0x08003b0d    0x3a  Code  Gb  keyboard.o [1]
-keyboardScan            0x08003b5d    0x34  Code  Gb  keyboard.o [1]
-lcdBacklight_init       0x08003e25    0x30  Code  Gb  lcd_backlight.o [1]
-lcd_DrawBackground      0x08003d99     0xa  Code  Gb  lcd.o [1]
-lcd_FastHLine           0x08003d6b    0x2e  Code  Gb  lcd.o [1]
-lcd_Image               0x08003d35    0x36  Code  Gb  lcd.o [1]
-lcd_SetPixel            0x08003da3     0xe  Code  Gb  lcd.o [1]
-main                    0x08003e05    0x10  Code  Gb  main.o [1]
-mainTsk                 0x08003c35    0x80  Code  Gb  mainTSK.o [1]
-orientation             0x20001610     0x1  Data  Gb  ili9341.o [1]
+                        0x08002f20   0x800  Data  Lc  solderingIron.o [1]
+initTsk                 0x08006ef1    0x24  Code  Gb  main.o [1]
+keyboard                0x20000030    0x18  Data  Gb  keyboard.o [1]
+keyboardClearAllPress   0x0800529d    0x1c  Code  Gb  keyboard.o [1]
+keyboardInit            0x08005281    0x1c  Code  Gb  keyboard.o [1]
+keyboardScan            0x080052b9    0x2a  Code  Gb  keyboard.o [1]
+lcdBacklight_init       0x08006f69    0x30  Code  Gb  lcd_backlight.o [1]
+lcd_Char                0x08004e11   0x110  Code  Gb  lcd.o [1]
+lcd_DrawBackground      0x08004fb1     0xa  Code  Gb  lcd.o [1]
+lcd_FastHLine           0x08004f83    0x2e  Code  Gb  lcd.o [1]
+lcd_Image               0x08004f4d    0x36  Code  Gb  lcd.o [1]
+lcd_String              0x08004f21    0x2c  Code  Gb  lcd.o [1]
+main                    0x08006f45    0x10  Code  Gb  main.o [1]
+mainTsk                 0x08004ffd    0x8a  Code  Gb  mainTSK.o [1]
+mainTskEncoderSelected  0x20001655     0x1  Data  Gb  mainTSK.o [1]
+mainTsk_GetEncoderSelected
+                        0x08005087     0x6  Code  Gb  mainTSK.o [1]
+memchr                  0x08004495          Code  Gb  memchr.o [5]
+orientation             0x20001654     0x1  Data  Gb  ili9341.o [1]
 pcInterruptPriorityRegisters
-                        0x08004058     0x4  Data  Lc  port.o [1]
+                        0x080089f4     0x4  Data  Lc  port.o [1]
 prvAddCurrentTaskToDelayedList
                         0x08000b8d    0x7c  Code  Lc  tasks.o [1]
 prvAddNewTaskToReadyList
                         0x080002d9    0xc2  Code  Lc  tasks.o [1]
 prvCheckForValidListAndQueue
-                        0x080015f9    0x4c  Code  Lc  timers.o [1]
+                        0x08001601    0x4c  Code  Lc  timers.o [1]
 prvCheckTasksWaitingTermination
                         0x08000a07    0x48  Code  Lc  tasks.o [1]
-prvCopyDataFromQueue    0x08001d2b    0x2a  Code  Lc  queue.o [1]
-prvCopyDataToQueue      0x08001ca5    0x86  Code  Lc  queue.o [1]
+prvCopyDataFromQueue    0x08001d33    0x2a  Code  Lc  queue.o [1]
+prvCopyDataToQueue      0x08001cad    0x86  Code  Lc  queue.o [1]
 prvDeleteTCB            0x08000a4f    0x12  Code  Lc  tasks.o [1]
-prvGetNextExpireTime    0x080013d7    0x26  Code  Lc  timers.o [1]
+prvGetNextExpireTime    0x080013df    0x26  Code  Lc  timers.o [1]
 prvHeapInit             0x08000dc9    0x62  Code  Lc  heap_4.o [1]
 prvIdleTask             0x08000981    0x24  Code  Lc  tasks.o [1]
-prvInitialiseNewQueue   0x080017fd    0x22  Code  Lc  queue.o [1]
+prvInitialiseNewQueue   0x08001805    0x22  Code  Lc  queue.o [1]
 prvInitialiseNewTask    0x08000217    0xc2  Code  Lc  tasks.o [1]
 prvInitialiseTaskLists  0x080009ad    0x5a  Code  Lc  tasks.o [1]
 prvInsertBlockIntoFreeList
                         0x08000e2b    0x58  Code  Lc  heap_4.o [1]
 prvInsertTimerInActiveList
-                        0x08001425    0x3e  Code  Lc  timers.o [1]
-prvIsQueueEmpty         0x08001dc3    0x1c  Code  Lc  queue.o [1]
-prvIsQueueFull          0x08001ddf    0x1e  Code  Lc  queue.o [1]
-prvProcessExpiredTimer  0x080012e1    0x6c  Code  Lc  timers.o [1]
+                        0x0800142d    0x3e  Code  Lc  timers.o [1]
+prvIsQueueEmpty         0x08001dcb    0x1c  Code  Lc  queue.o [1]
+prvIsQueueFull          0x08001de7    0x1e  Code  Lc  queue.o [1]
+prvProcessExpiredTimer  0x080012e9    0x6c  Code  Lc  timers.o [1]
 prvProcessReceivedCommands
-                        0x08001463   0x116  Code  Lc  timers.o [1]
+                        0x0800146b   0x116  Code  Lc  timers.o [1]
 prvProcessTimerOrBlockTask
-                        0x08001365    0x72  Code  Lc  timers.o [1]
+                        0x0800136d    0x72  Code  Lc  timers.o [1]
 prvResetNextTaskUnblockTime
                         0x08000a61    0x28  Code  Lc  tasks.o [1]
-prvSampleTimeNow        0x080013fd    0x28  Code  Lc  timers.o [1]
+prvSampleTimeNow        0x08001405    0x28  Code  Lc  timers.o [1]
 prvSampleTimeNow::xLastTime
-                        0x2000160c     0x4  Data  Lc  timers.o [1]
-prvSwitchTimerLists     0x08001579    0x80  Code  Lc  timers.o [1]
-prvTaskExitError        0x08000fc9    0x2a  Code  Lc  port.o [1]
-prvTimerTask            0x08001351    0x14  Code  Lc  timers.o [1]
-prvUnlockQueue          0x08001d55    0x6e  Code  Lc  queue.o [1]
+                        0x2000164c     0x4  Data  Lc  timers.o [1]
+prvSwitchTimerLists     0x08001581    0x80  Code  Lc  timers.o [1]
+prvTaskExitError        0x08000fd1    0x2a  Code  Lc  port.o [1]
+prvTimerTask            0x08001359    0x14  Code  Lc  timers.o [1]
+prvUnlockQueue          0x08001d5d    0x6e  Code  Lc  queue.o [1]
 pvPortMalloc            0x08000c45   0x10e  Code  Gb  heap_4.o [1]
-pxCurrentTCB            0x200015c0     0x4  Data  Gb  tasks.o [1]
-pxCurrentTimerList      0x200015fc     0x4  Data  Lc  timers.o [1]
-pxDelayedTaskList       0x200015c4     0x4  Data  Lc  tasks.o [1]
-pxEnd                   0x200015ac     0x4  Data  Lc  heap_4.o [1]
+pxCurrentTCB            0x20001600     0x4  Data  Gb  tasks.o [1]
+pxCurrentTimerList      0x2000163c     0x4  Data  Lc  timers.o [1]
+pxDelayedTaskList       0x20001604     0x4  Data  Lc  tasks.o [1]
+pxEnd                   0x200015ec     0x4  Data  Lc  heap_4.o [1]
 pxOverflowDelayedTaskList
-                        0x200015c8     0x4  Data  Lc  tasks.o [1]
-pxOverflowTimerList     0x20001600     0x4  Data  Lc  timers.o [1]
-pxPortInitialiseStack   0x08000fa1    0x28  Code  Gb  port.o [1]
-pxReadyTasksLists       0x20001410    0x64  Data  Lc  tasks.o [1]
-solderingDry            0x08004014     0x8  Data  Gb  dry.o [1]
-solderingIron           0x08004034     0x8  Data  Gb  soldering-iron.o [1]
-spi1                    0x200014b4    0x1c  Data  Gb  spiF4.o [1]
-spi5                    0x200014d0    0x1c  Data  Gb  spiF4.o [1]
-spi_DmaTxIrqHandler     0x08003959    0x3e  Code  Gb  spiF4.o [1]
-spi_IrqHandler          0x08003997    0x72  Code  Gb  spiF4.o [1]
-ucHeap                  0x20000010  0x1400  Data  Lc  heap_4.o [1]
-ucMaxSysCallPriority    0x20001611     0x1  Data  Lc  port.o [1]
-ui                      0x08003ef0    0x2c  Data  Gb  UI_private.o [1]
-ulMaxPRIGROUPValue      0x200015bc     0x4  Data  Lc  port.o [1]
-uxCriticalNesting       0x20000008     0x4  Data  Lc  port.o [1]
-uxCurrentNumberOfTasks  0x200015d0     0x4  Data  Lc  tasks.o [1]
+                        0x20001608     0x4  Data  Lc  tasks.o [1]
+pxOverflowTimerList     0x20001640     0x4  Data  Lc  timers.o [1]
+pxPortInitialiseStack   0x08000fa9    0x28  Code  Gb  port.o [1]
+pxReadyTasksLists       0x20001468    0x64  Data  Lc  tasks.o [1]
+sec_hand                0x20001650     0x4  Data  Lc  xfail_s.o [3]
+solderingDry            0x080089a0     0x8  Data  Gb  solderingDry.o [1]
+solderingDryDisconnected
+                        0x080089a8     0x8  Data  Gb  solderingDryDisconnected.o [1]
+solderingIron           0x080089b0     0x8  Data  Gb  solderingIron.o [1]
+solderingIronDisconnected
+                        0x080089b8     0x8  Data  Gb  solderingIronDisconnected.o [1]
+spi1                    0x2000150c    0x1c  Data  Gb  spiF4.o [1]
+spi5                    0x20001528    0x1c  Data  Gb  spiF4.o [1]
+spi_DmaTxIrqHandler     0x08005941    0x3e  Code  Gb  spiF4.o [1]
+spi_IrqHandler          0x0800597f    0x72  Code  Gb  spiF4.o [1]
+sprintf                 0x08004fbd    0x40  Code  Gb  sprintf.o [3]
+strchr                  0x08004401          Code  Gb  strchr.o [5]
+strlen                  0x0800445d          Code  Gb  strlen.o [5]
+ucHeap                  0x20000068  0x1400  Data  Lc  heap_4.o [1]
+ucMaxSysCallPriority    0x20001656     0x1  Data  Lc  port.o [1]
+ui                      0x080083d0    0x14  Data  Gb  UI_private.o [1]
+ulMaxPRIGROUPValue      0x200015fc     0x4  Data  Lc  port.o [1]
+uxCriticalNesting       0x20000060     0x4  Data  Lc  port.o [1]
+uxCurrentNumberOfTasks  0x20001610     0x4  Data  Lc  tasks.o [1]
 uxDeletedTasksWaitingCleanUp
-                        0x200015cc     0x4  Data  Lc  tasks.o [1]
+                        0x2000160c     0x4  Data  Lc  tasks.o [1]
 uxListRemove            0x08000f79    0x26  Code  Gb  list.o [1]
-uxPendedTicks           0x200015e0     0x4  Data  Lc  tasks.o [1]
-uxSchedulerSuspended    0x200015f8     0x4  Data  Lc  tasks.o [1]
-uxTaskNumber            0x200015ec     0x4  Data  Lc  tasks.o [1]
-uxTopReadyPriority      0x200015d8     0x4  Data  Lc  tasks.o [1]
+uxPendedTicks           0x20001620     0x4  Data  Lc  tasks.o [1]
+uxSchedulerSuspended    0x20001638     0x4  Data  Lc  tasks.o [1]
+uxTaskNumber            0x2000162c     0x4  Data  Lc  tasks.o [1]
+uxTopReadyPriority      0x20001618     0x4  Data  Lc  tasks.o [1]
 vListInitialise         0x08000f07    0x1e  Code  Gb  list.o [1]
 vListInitialiseItem     0x08000f25     0x6  Code  Gb  list.o [1]
 vListInsert             0x08000f43    0x36  Code  Gb  list.o [1]
 vListInsertEnd          0x08000f2b    0x18  Code  Gb  list.o [1]
-vPortEnableVFP          0x08001701          Code  Gb  portasm.o [1]
-vPortEnterCritical      0x080010db    0x3a  Code  Gb  port.o [1]
-vPortExitCritical       0x08001115    0x32  Code  Gb  port.o [1]
+vPortEnableVFP          0x08001709          Code  Gb  portasm.o [1]
+vPortEnterCritical      0x080010e3    0x3a  Code  Gb  port.o [1]
+vPortExitCritical       0x0800111d    0x32  Code  Gb  port.o [1]
 vPortFree               0x08000d53    0x76  Code  Gb  heap_4.o [1]
-vPortStartFirstTask     0x080016e1          Code  Gb  portasm.o [1]
+vPortStartFirstTask     0x080016e9          Code  Gb  portasm.o [1]
 vPortValidateInterruptPriority
-                        0x08001171    0x4a  Code  Gb  port.o [1]
-vQueueAddToRegistry     0x08001dfd    0x24  Code  Gb  queue.o [1]
+                        0x08001179    0x4a  Code  Gb  port.o [1]
+vQueueAddToRegistry     0x08001e05    0x24  Code  Gb  queue.o [1]
 vQueueWaitForMessageRestricted
-                        0x08001e25    0x4a  Code  Gb  queue.o [1]
+                        0x08001e2d    0x4a  Code  Gb  queue.o [1]
 vTaskDelay              0x0800047b    0x4c  Code  Gb  tasks.o [1]
 vTaskDelete             0x0800039b    0xe0  Code  Gb  tasks.o [1]
 vTaskInternalSetTimeOutState
@@ -591,31 +1385,31 @@ vTaskPlaceOnEventListRestricted
 vTaskStartScheduler     0x080004c7    0x6e  Code  Gb  tasks.o [1]
 vTaskSuspendAll         0x08000535    0x10  Code  Gb  tasks.o [1]
 vTaskSwitchContext      0x0800075d    0x6e  Code  Gb  tasks.o [1]
-xActiveTimerList1       0x2000157c    0x14  Data  Lc  timers.o [1]
-xActiveTimerList2       0x20001590    0x14  Data  Lc  timers.o [1]
-xBlockAllocatedBit      0x200015b8     0x4  Data  Lc  heap_4.o [1]
-xDelayedTaskList1       0x20001518    0x14  Data  Lc  tasks.o [1]
-xDelayedTaskList2       0x2000152c    0x14  Data  Lc  tasks.o [1]
-xFreeBytesRemaining     0x200015b0     0x4  Data  Lc  heap_4.o [1]
-xHeapStructSize         0x08004054     0x4  Data  Lc  heap_4.o [1]
-xIdleTaskHandle         0x200015f4     0x4  Data  Lc  tasks.o [1]
+xActiveTimerList1       0x200015bc    0x14  Data  Lc  timers.o [1]
+xActiveTimerList2       0x200015d0    0x14  Data  Lc  timers.o [1]
+xBlockAllocatedBit      0x200015f8     0x4  Data  Lc  heap_4.o [1]
+xDelayedTaskList1       0x20001558    0x14  Data  Lc  tasks.o [1]
+xDelayedTaskList2       0x2000156c    0x14  Data  Lc  tasks.o [1]
+xFreeBytesRemaining     0x200015f0     0x4  Data  Lc  heap_4.o [1]
+xHeapStructSize         0x080089f0     0x4  Data  Lc  heap_4.o [1]
+xIdleTaskHandle         0x20001634     0x4  Data  Lc  tasks.o [1]
 xMinimumEverFreeBytesRemaining
-                        0x200015b4     0x4  Data  Lc  heap_4.o [1]
-xNextTaskUnblockTime    0x200015f0     0x4  Data  Lc  tasks.o [1]
-xNumOfOverflows         0x200015e8     0x4  Data  Lc  tasks.o [1]
-xPendingReadyList       0x20001540    0x14  Data  Lc  tasks.o [1]
-xPortStartScheduler     0x08000ff3    0xe8  Code  Gb  port.o [1]
-xQueueGenericCreate     0x080017b3    0x4a  Code  Gb  queue.o [1]
-xQueueGenericReset      0x0800171d    0x96  Code  Gb  queue.o [1]
-xQueueGenericSend       0x0800181f   0x196  Code  Gb  queue.o [1]
+                        0x200015f4     0x4  Data  Lc  heap_4.o [1]
+xNextTaskUnblockTime    0x20001630     0x4  Data  Lc  tasks.o [1]
+xNumOfOverflows         0x20001628     0x4  Data  Lc  tasks.o [1]
+xPendingReadyList       0x20001580    0x14  Data  Lc  tasks.o [1]
+xPortStartScheduler     0x08000ffb    0xe8  Code  Gb  port.o [1]
+xQueueGenericCreate     0x080017bb    0x4a  Code  Gb  queue.o [1]
+xQueueGenericReset      0x08001725    0x96  Code  Gb  queue.o [1]
+xQueueGenericSend       0x08001827   0x196  Code  Gb  queue.o [1]
 xQueueGenericSendFromISR
-                        0x080019b5    0xdc  Code  Gb  queue.o [1]
-xQueueGiveFromISR       0x08001a91    0xb4  Code  Gb  queue.o [1]
-xQueueReceive           0x08001b45   0x15a  Code  Gb  queue.o [1]
-xQueueRegistry          0x20001474    0x40  Data  Gb  queue.o [1]
-xSchedulerRunning       0x200015dc     0x4  Data  Lc  tasks.o [1]
-xStart                  0x200015a4     0x8  Data  Lc  heap_4.o [1]
-xSuspendedTaskList      0x20001568    0x14  Data  Lc  tasks.o [1]
+                        0x080019bd    0xdc  Code  Gb  queue.o [1]
+xQueueGiveFromISR       0x08001a99    0xb4  Code  Gb  queue.o [1]
+xQueueReceive           0x08001b4d   0x15a  Code  Gb  queue.o [1]
+xQueueRegistry          0x200014cc    0x40  Data  Gb  queue.o [1]
+xSchedulerRunning       0x2000161c     0x4  Data  Lc  tasks.o [1]
+xStart                  0x200015e4     0x8  Data  Lc  heap_4.o [1]
+xSuspendedTaskList      0x200015a8    0x14  Data  Lc  tasks.o [1]
 xTaskCheckForTimeOut    0x080008f5    0x82  Code  Gb  tasks.o [1]
 xTaskCreate             0x080001ad    0x6a  Code  Gb  tasks.o [1]
 xTaskGetSchedulerState  0x08000a89    0x20  Code  Gb  tasks.o [1]
@@ -627,13 +1421,13 @@ xTaskRemoveFromEventList
                         0x08000849    0x84  Code  Gb  tasks.o [1]
 xTaskResumeAll          0x08000545    0xfa  Code  Gb  tasks.o [1]
 xTasksWaitingTermination
-                        0x20001554    0x14  Data  Lc  tasks.o [1]
-xTickCount              0x200015d4     0x4  Data  Lc  tasks.o [1]
-xTimerCreateTimerTask   0x08001225    0x48  Code  Gb  timers.o [1]
-xTimerGenericCommand    0x0800126d    0x74  Code  Gb  timers.o [1]
-xTimerQueue             0x20001604     0x4  Data  Lc  timers.o [1]
-xTimerTaskHandle        0x20001608     0x4  Data  Lc  timers.o [1]
-xYieldPending           0x200015e4     0x4  Data  Lc  tasks.o [1]
+                        0x20001594    0x14  Data  Lc  tasks.o [1]
+xTickCount              0x20001614     0x4  Data  Lc  tasks.o [1]
+xTimerCreateTimerTask   0x0800122d    0x48  Code  Gb  timers.o [1]
+xTimerGenericCommand    0x08001275    0x74  Code  Gb  timers.o [1]
+xTimerQueue             0x20001644     0x4  Data  Lc  timers.o [1]
+xTimerTaskHandle        0x20001648     0x4  Data  Lc  timers.o [1]
+xYieldPending           0x20001624     0x4  Data  Lc  tasks.o [1]
 
 
 [1] = C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\projects\iar\STM32F427_Debug\Obj
@@ -643,9 +1437,9 @@ xYieldPending           0x200015e4     0x4  Data  Lc  tasks.o [1]
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  12 478 bytes of readonly  code memory
-   4 374 bytes of readonly  data memory
-  13 842 bytes of readwrite data memory
+  14 910 bytes of readonly  code memory
+  20 874 bytes of readonly  data memory
+  13 911 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
