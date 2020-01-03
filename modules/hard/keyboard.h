@@ -3,10 +3,15 @@
 
 #include "Drivers/button.h"
 
+typedef enum {
+    KeyboardButton_DRY = 0,
+    KeyboardButton_SOLDER,
+    KeyboardButton_ENCODER,
+    KeyboardButton_COUNT
+}KeyboardKey_t;
+
 typedef struct {
-    Button_t dryButton;
-    Button_t solderButton;
-    Button_t encoderButton;
+    Button_t buttons[KeyboardButton_COUNT];
 }Keyboard_t;
 
 extern Keyboard_t keyboard;

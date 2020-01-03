@@ -60,33 +60,31 @@ __task void mainTsk(void) {
 
 
     while(1){
-    
+        UI_MainWindowUpdate();
         
         /*=========== Key handling ==========*/
         if (keyboardScan() > 0) {
-            if ((ButtonPressed_LONG == keyboard.dryButton.pressState) &&
-                (ButtonPressed_LONG == keyboard.solderButton.pressState)) {
+            if ((ButtonPressed_LONG == keyboard.buttons[KeyboardButton_DRY].pressState) &&
+                (ButtonPressed_LONG == keyboard.buttons[KeyboardButton_SOLDER].pressState)) {
                 //--- GOTO MENU ---//
-                keyboard.dryButton.pressState = ButtonPressed_NO;
-                keyboard.solderButton.pressState = ButtonPressed_NO;
-                BUTTON_MARK_PROCESSED(keyboard.dryButton);
-                BUTTON_MARK_PROCESSED(keyboard.solderButton);
+                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_DRY]);
+                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_SOLDER]);
             }
-            if (ButtonPressed_SHORT == keyboard.dryButton.pressState) {
+            if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_DRY].pressState) {
                 //--- enable/disable DRY ---//
-                BUTTON_MARK_PROCESSED(keyboard.dryButton);
+                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_DRY]);
             }
-            if (ButtonPressed_SHORT == keyboard.solderButton.pressState) {
+            if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_SOLDER].pressState) {
                 //--- enable/disable SOLDER ---//
-                BUTTON_MARK_PROCESSED(keyboard.solderButton);
+                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_SOLDER]);
             }
-            if (ButtonPressed_SHORT == keyboard.encoderButton.pressState) {
+            if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_ENCODER].pressState) {
                 //--- switching selected for encoder ---//
                 mainTskEncoderSelected++;
                 if (mainTskEncoderSelected >= mainTskEncoderSelected_END) {
                     mainTskEncoderSelected = (mainTskEncoderSelected_t)0;
                 }
-                BUTTON_MARK_PROCESSED(keyboard.encoderButton);
+                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_ENCODER]);
             }
         }
         /*=========== Encoder update ==========*/

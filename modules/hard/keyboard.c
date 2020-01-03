@@ -1,31 +1,33 @@
 #include "hard/keyboard.h"
 
-Keyboard_t keyboard;
+Keyboard_t keyboard = {
+    .buttons = {
+        //KeyboardButton_DRY
+        { GPIOD, 12},
+        //KeyboardButton_SOLDER
+        { GPIOD, 11},
+        //KeyboardButton_ENCODER
+        { GPIOC, 11}
+    }
+};
 
 void keyboardInit(void) {
-    keyboard.dryButton.port = GPIOD;
-    keyboard.dryButton.pin = 12;
-
-    keyboard.solderButton.port = GPIOD;
-    keyboard.solderButton.pin = 11;
-
-    keyboard.encoderButton.port = GPIOC;
-    keyboard.encoderButton.pin = 8;
-
-    buttonInit(&keyboard.dryButton);
-    buttonInit(&keyboard.solderButton);
-    buttonInit(&keyboard.encoderButton);
+    for (uint16_t i=0; i < KeyboardButton_COUNT; i++)
+    {
+        buttonInit(&keyboard.buttons[i]);
+    }
 }
 void keyboardClearAllPress(void) {
-    buttonClearPressed(&keyboard.dryButton);
-    buttonClearPressed(&keyboard.solderButton);
-    buttonClearPressed(&keyboard.encoderButton);
+    for (uint16_t i=0; i < KeyboardButton_COUNT; i++)
+    {
+        buttonClearPressed(&keyboard.buttons[i]);
+    }
 }
 uint8_t keyboardScan(void) {
-    int pressedButtonCount = 0;
-    pressedButtonCount += (buttonScan(&keyboard.dryButton) > 0);
-    pressedButtonCount += (buttonScan(&keyboard.dryButton) > 0);
-    pressedButtonCount += (buttonScan(&keyboard.dryButton) > 0);
+    uint16_t pressedButtonCount = 0;
+    for (uint16_t i=0; i < KeyboardButton_COUNT; i++)
+    {
+        pressedButtonCount += (buttonScan(&keyboard.buttons[i]) > 0);
+    }
     return pressedButtonCount;
-
 }
