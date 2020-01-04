@@ -18,7 +18,7 @@
         .background = LCD_COLOR_BLACK,
         .mainColor = LCD_COLOR_WHITE,
         .selectColor = LCD_COLOR_CYAN,
-        .disconnectedColor = LCD_COLOR_GRAY
+        .disconnectedColor = UI_DISABLED_VALUE_COLOR
      },
      .fonts = {
          .mainFont = &Arial,

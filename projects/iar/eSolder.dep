@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>2357611077</fileChecksum>
+    <fileChecksum>2396246511</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
@@ -1299,6 +1299,7 @@
             <file>$PROJ_DIR$\..\..\modules\UI\images\solderingIronDisconnected.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\images\solderingDry.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\images\solderingIron.c</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\ThermometerDark.c</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingIron.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDryDisconnected.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDryDisconnected.__cstat.et</file>
@@ -1307,6 +1308,13 @@
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDry.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingIron.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDry.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\FanFlow.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\FanFlowDark.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Thermometer.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\Thermometer.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\FanFlowDark.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\FanFlow.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\FanFlowDark.o</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_mainWindow.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_private.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\UI_private.h</file>
@@ -1326,6 +1334,10 @@
             <file>$PROJ_DIR$\..\..\modules\eSolder\eSolderConstants.h</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\eSolder.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\eSolder.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ThermometerDark.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\ThermometerDark.__cstat.et</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\Thermometer.c</file>
+            <file>$PROJ_DIR$\..\..\modules\UI\images\FanFlow.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\images\images.h</file>
             <file>$PROJ_DIR$\..\..\modules\UI\images\soldering-iron.c</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\soldering-iron.o</file>
@@ -1358,7 +1370,7 @@
                 </tool>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 196 207 188 22 218 215 198 201 202 222 214 199 205 194 37 19 189 225 212 213 6 252 253</file>
+                    <file> 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 196 207 188 22 218 215 198 201 202 222 214 199 205 194 37 19 189 225 212 213 6 260 261</file>
                 </tool>
             </inputs>
         </file>
@@ -2358,7 +2370,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 114 134 125 179 52 158 168 136 109 51 255 155 183 145 157 133 86 185 81 79 91 102 110 104 149 184 78 162 234 230 229 233 94 129 84 128 140 113 105 263 260 139 164 154 80 65</file>
+                    <file> 114 134 125 179 52 158 168 136 109 51 263 155 243 244 183 145 157 133 86 185 81 79 91 102 110 104 149 184 78 162 235 231 230 234 94 129 84 128 140 113 241 264 105 275 272 139 164 154 80 65</file>
                 </tool>
             </inputs>
         </file>
@@ -2399,17 +2411,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 233</file>
+                    <file> 234</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 232</file>
+                    <file> 233</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 190 209 50 204 191 220 256 48 0</file>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2418,7 +2430,26 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 234</file>
+                    <file> 235</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 237</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 268 190 209 50 204 191 220 48 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\solderingIron.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 230</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2428,26 +2459,45 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 256 190 209 50 204 191 220 48 0</file>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\modules\UI\images\solderingIron.c</name>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\ThermometerDark.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 229</file>
+                    <file> 264</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 235</file>
+                    <file> 265</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 190 209 50 204 191 220 256 48 0</file>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\FanFlowDark.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 244</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 242</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2456,17 +2506,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 263</file>
+                    <file> 275</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 261</file>
+                    <file> 273</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 165 209 50 204 191 220 188 239 6 240 0 48 190 246 256 252 14 13 195 203 197 206 61 216 187 253 194</file>
+                    <file> 165 209 50 204 191 220 188 247 6 248 0 48 190 254 268 260 14 13 195 203 197 206 61 216 187 261 194</file>
                 </tool>
             </inputs>
         </file>
@@ -2475,17 +2525,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 260</file>
+                    <file> 272</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 262</file>
+                    <file> 274</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 239 6 240 0 48 190 209 50 204 191 220 246 256</file>
+                    <file> 247 6 248 0 48 190 209 50 204 191 220 254 268</file>
                 </tool>
             </inputs>
         </file>
@@ -2514,6 +2564,12 @@
                     <file> 88</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 48 0</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\Fonts\specific_symbol.c</name>
@@ -2553,23 +2609,29 @@
                     <file> 147</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 48 0</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\images\dry.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 249</file>
+                    <file> 257</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 250</file>
+                    <file> 258</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 256 190 209 50 204 191 220 48 0</file>
+                    <file> 268 190 209 50 204 191 220 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2578,17 +2640,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 230</file>
+                    <file> 231</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 231</file>
+                    <file> 232</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 190 209 50 204 191 220 256 48 0</file>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2597,17 +2659,55 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 255</file>
+                    <file> 263</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 254</file>
+                    <file> 262</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 252 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 253</file>
+                    <file> 260 14 13 195 190 209 50 204 191 220 203 197 206 61 216 187 261</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\Thermometer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 241</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 240</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\UI\images\FanFlow.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 243</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 238</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>
@@ -2616,17 +2716,17 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 258</file>
+                    <file> 270</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 259</file>
+                    <file> 271</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 190 209 50 204 191 220 256 48 0</file>
+                    <file> 190 209 50 204 191 220 268 48 0</file>
                 </tool>
             </inputs>
         </file>

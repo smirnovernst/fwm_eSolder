@@ -32,6 +32,10 @@ extern const tImage16 solderingIron;
 extern const tImage16 solderingIronDisconnected;
 extern const tImage16 solderingDry;
 extern const tImage16 solderingDryDisconnected;
+extern const tImage16 Thermometer;
+extern const tImage16 FanFlow;
+extern const tImage16 ThermometerDark;
+extern const tImage16 FanFlowDark;
 /*!****************************************************************************
 * Macro functions
 */

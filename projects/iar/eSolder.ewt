@@ -2504,6 +2504,12 @@
         <group>
             <name>images</name>
             <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\FanFlow.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\FanFlowDark.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\..\modules\UI\images\images.h</name>
             </file>
             <file>
@@ -2517,6 +2523,12 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\modules\UI\images\solderingIronDisconnected.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\Thermometer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\UI\images\ThermometerDark.c</name>
             </file>
         </group>
         <file>
