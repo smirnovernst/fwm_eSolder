@@ -42,6 +42,7 @@ int buttonScan(Button_t *button){
     if (NULL == button) {
         return -1;
     }
+    
 
     uint8_t releasedLevel = (button->inverted >= ButtonInverted_YES); 
 
@@ -51,24 +52,29 @@ int buttonScan(Button_t *button){
             return 0;
         }
         button->pressCounter++;
+        if (button->pressCounter == BUTTON_LONG_PRESS_TRESHOLD)
+        {
+            button->pressState = ButtonPressed_LONG;
+            return 1;
+        }
         
         return 0;
     }
     else{
-        if ((0 == button->pressCounter)||
-            (button->pressCounter < BUTTON_SHOT_PRESS_TRESHOLD)) {
+        button->pressState = ButtonPressed_NO;
+        
+        if (button->pressCounter < BUTTON_SHOT_PRESS_TRESHOLD) {
             return 0;
         }
+
         uint8_t pressCounter = button->pressCounter;
         button->pressCounter = 0;
-        if (pressCounter > BUTTON_LONG_PRESS_TRESHOLD) {
-            button->pressState = ButtonPressed_LONG;
-            return 1;
-        }
-        else {
+
+        if (pressCounter < BUTTON_LONG_PRESS_TRESHOLD) {
             button->pressState = ButtonPressed_SHORT;
             return 1;
         }
+        return 0;
     }
 }
 
@@ -80,4 +86,3 @@ void buttonClearPressed(Button_t* button) {
     button->pressCounter = 0;
     button->pressState = ButtonPressed_NO;
 }
-

@@ -67,16 +67,16 @@ __task void mainTsk(void) {
             if ((ButtonPressed_LONG == keyboard.buttons[KeyboardButton_DRY].pressState) &&
                 (ButtonPressed_LONG == keyboard.buttons[KeyboardButton_SOLDER].pressState)) {
                 //--- GOTO MENU ---//
-                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_DRY]);
-                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_SOLDER]);
+                BUTTON_MARK_LONG_PRESS_PROCESSED(keyboard.buttons[KeyboardButton_DRY]);
+                BUTTON_MARK_LONG_PRESS_PROCESSED(keyboard.buttons[KeyboardButton_SOLDER]);
             }
             if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_DRY].pressState) {
                 //--- enable/disable DRY ---//
-                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_DRY]);
+                
             }
             if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_SOLDER].pressState) {
                 //--- enable/disable SOLDER ---//
-                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_SOLDER]);
+                
             }
             if (ButtonPressed_SHORT == keyboard.buttons[KeyboardButton_ENCODER].pressState) {
                 //--- switching selected for encoder ---//
@@ -84,7 +84,7 @@ __task void mainTsk(void) {
                 if (mainTskEncoderSelected >= mainTskEncoderSelected_END) {
                     mainTskEncoderSelected = (mainTskEncoderSelected_t)0;
                 }
-                BUTTON_MARK_PROCESSED(keyboard.buttons[KeyboardButton_ENCODER]);
+                
             }
         }
         /*=========== Encoder update ==========*/

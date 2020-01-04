@@ -15,8 +15,8 @@
 /*!****************************************************************************
 * User define
 */
-#define BUTTON_LONG_PRESS_TRESHOLD     5
-#define BUTTON_SHOT_PRESS_TRESHOLD     1
+#define BUTTON_LONG_PRESS_TRESHOLD     20
+#define BUTTON_SHOT_PRESS_TRESHOLD     5
 /*!****************************************************************************
 * User enum
 */
@@ -55,7 +55,7 @@ typedef struct
 /*!****************************************************************************
 * Macro functions
 */
-#define BUTTON_MARK_PROCESSED(button) { button.pressState = ButtonPressed_NO; }
+#define BUTTON_MARK_LONG_PRESS_PROCESSED(button) { button.pressState = ButtonPressed_NO; }
 /*!****************************************************************************
 * Prototypes for the functions
 */
