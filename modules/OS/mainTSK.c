@@ -44,7 +44,7 @@ EncoderControlled encControlledMain[mainTskEncoderSelected_END] = {
         .step = ESOLDER_FLOW_SET_STEP,
         .bigStep = ESOLDER_FLOW_SET_BIGSTEP,
         .mode = enNONCIRC,
-        .memtype = enU16
+        .memtype = enU8
     }
 };
 
