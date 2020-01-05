@@ -22,8 +22,8 @@ void encoderInit(Encoder* encoder){
     if (NULL == encoder) return;
 
     
-    gpioInit(encoder->gpioA, encoder->pinA, gpioMode_IN, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinA_AFnum, 1);
-    gpioInit(encoder->gpioB, encoder->pinB, gpioMode_IN, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinB_AFnum, 1);
+    gpioInit(encoder->gpioA, encoder->pinA, gpioMode_AF, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinA_AFnum, 1);
+    gpioInit(encoder->gpioB, encoder->pinB, gpioMode_AF, gpioPuPd_PULLUP, gpioType_PUSHPULL, (gpioAF)encoder->pinB_AFnum, 1);
     
     //Настройка таймера               
     encoder->tim->CCMR1  = TIM_CCMR1_CC2S_0 | TIM_CCMR1_CC1S_0;         //Полярность сигнала для каждого входа

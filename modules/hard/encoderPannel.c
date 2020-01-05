@@ -1,15 +1,16 @@
 #include "hard/encoderPannel.h"
 
-Encoder encoderPannel;
+Encoder encoderPannel = {
+    .gpioA = GPIOC,
+    .pinA = 6,
+    .pinA_AFnum = 3,
+    .gpioB = GPIOC,  
+    .pinB = 7,
+    .pinB_AFnum = 3,
+    .tim = TIM8
+};
 
 
 void EncoderPannelInit(void) {
-    encoderPannel.gpioA = GPIOC;
-    encoderPannel.pinA = 6;
-    encoderPannel.pinA_AFnum = 3;
-    encoderPannel.gpioB = GPIOC;
-    encoderPannel.pinB = 7;
-    encoderPannel.pinB_AFnum = 3;
-    encoderPannel.tim = TIM8;
     encoderInit(&encoderPannel);
 }
