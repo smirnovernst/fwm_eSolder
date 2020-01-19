@@ -23,7 +23,7 @@ static inline float movingAverageFilter(float *src, uint8_t with);
 /*!****************************************************************************
 * Functions
 */
-#if 0
+#if
 //<<TODO: need release for stm32f4
 void TIM6_IRQHandler(void)
 { 
@@ -156,7 +156,7 @@ static inline float movingAverageFilter(float *src, uint8_t with)
     }
 
     
-    while(src < dataEnd){   //Накопление
+    while(src < dataEnd){   //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         sum += *src++;
         sum += *src++;
         sum += *src++;
@@ -168,7 +168,7 @@ static inline float movingAverageFilter(float *src, uint8_t with)
     }
     return ((sum + (with>>1)) / with);
 }
-#endif //if 0
+
 
 __task void tempMeasTSK(void)
 {

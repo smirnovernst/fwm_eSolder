@@ -10,9 +10,7 @@
 /*!****************************************************************************
 * Include
 */
-#include "global_inc.h"
 
-#include "spi_f4.h"
 /*!****************************************************************************
 * User define
 */
@@ -22,12 +20,10 @@
 */
 typedef enum
 {
-    max31856State_NOINIT,
-    max31856State_INITED,
+    max31856State_NOINIT = 0,
+    max31856State_ERRINIT,
     max31856State_OK,
-    max31856State_FAIL,
-    max31856State_ERRCOMM,
-    max31856State_ERRINIT
+    max31856State_ERRCOMM
 }max31856State_t;
 typedef enum
 {
@@ -63,11 +59,10 @@ typedef struct
 * Prototypes for the functions
 */
 void max31856mud_init(max31856mud_t *max31856mud);
-void max31856mud_read(max31856mud_t *max31856mud, uint8_t addr, uint8_t *buffer, uint8_t size);
-void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data);
 void max31856mud_oneShot(max31856mud_t *max31856mud);
 void max31856mud_startConvMode(max31856mud_t *max31856mud);
 void max31856mud_stopConvMode(max31856mud_t *max31856mud);
 int16_t max31856mud_getColdJunctionTemp(max31856mud_t *max31856mud);
 int32_t max31856mud_getLinearizedTemp(max31856mud_t *max31856mud);
+uint8_t max31856mud_getStatus(void);
 #endif  //max31856mud_h

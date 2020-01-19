@@ -9,7 +9,7 @@
 * Include
 */
 #include "max31856mud.h"
-#include "GPIO.h"
+#include "Drivers/gpio.h"
 #include <string.h>
 /*!****************************************************************************
 * Define
@@ -37,30 +37,8 @@
 * Memory
 */
 /*!****************************************************************************
-* Functions
+* Private functions
 */
-void max31856mud_init(max31856mud_t *max31856mud)
-{
-    spi_disable(max31856mud->spi);  //for reboot max31856mud need set Hi-z on the spi pins
-    vTaskDelay((TickType_t)100/portTICK_PERIOD_MS);
-    spi_enable(max31856mud->spi);   // 
-    
-    max31856mud->state = max31856State_NOINIT;
-   //**********Check default param****************//
-    const uint8_t default_value[16] = {0x00, 0x03, 0xFF, 0x7F, 0xC0, 0x7F, 0xFF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-    uint8_t read_value[16];
-    max31856mud_read(max31856mud, MAX31856_ADDR_CR0, read_value, sizeof(default_value));
-    
-    if (memcmp(read_value, default_value, sizeof(default_value)) == 0)
-    {
-        max31856mud->state = max31856State_OK;
-    }
-    else
-    {
-        max31856mud->state = max31856State_ERRINIT;
-    }
-}
-
 void max31856mud_read(max31856mud_t *max31856mud, uint8_t addr, uint8_t *buffer, uint8_t size)
 {
     uint8_t readNull, ret = 0;
@@ -86,6 +64,32 @@ void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data)
     if (ret != 0) {max31856mud->state = max31856State_ERRCOMM;}
     //else { max31856mud->state = max31856State_OK; }
 }
+
+/*!****************************************************************************
+* Public functions
+*/
+void max31856mud_init(max31856mud_t *max31856mud)
+{
+    spi_disable(max31856mud->spi);  //for reboot max31856mud need set Hi-z on the spi pins
+    vTaskDelay((TickType_t)100/portTICK_PERIOD_MS);
+    spi_enable(max31856mud->spi);   // 
+    
+    max31856mud->state = max31856State_NOINIT;
+    //**********Check default param****************//
+    const uint8_t default_value[16] = {0x00, 0x03, 0xFF, 0x7F, 0xC0, 0x7F, 0xFF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    uint8_t read_value[16];
+    max31856mud_read(max31856mud, MAX31856_ADDR_CR0, read_value, sizeof(default_value));
+    
+    if (memcmp(read_value, default_value, sizeof(default_value)) == 0)
+    {
+        max31856mud->state = max31856State_OK;
+    }
+    else
+    {
+        max31856mud->state = max31856State_ERRINIT;
+    }
+}
+
 void max31856mud_oneShot(max31856mud_t *max31856mud)
 {
     uint8_t CR0 = 0;
@@ -122,4 +126,8 @@ int32_t max31856mud_getLinearizedTemp(max31856mud_t *max31856mud)
     int32_t LinearizedTemp = 0;
     LinearizedTemp = (*buffer << 24) | (*(buffer+1) << 16) | *(buffer + 3) << 8;
     return LinearizedTemp;
+}
+uint8_t max31856mud_getStatus(void)
+{
+    
 }

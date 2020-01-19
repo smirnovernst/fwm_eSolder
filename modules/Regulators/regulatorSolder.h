@@ -17,9 +17,17 @@
 /*!****************************************************************************
 * User enum
 */
+typedef enum {
+    solderState_OFF = 0,
+    solderState_RUN,
+    solderState_TEMP_MEASURE_REQUEST,
+    solderState_TEMP_MEASURE,
+    solderState_NONE
+}solderState_t
 /*!****************************************************************************
 * User typedef
 */
+typedef (void)(*solderTempMeasureReadyCb)(void);
 /*!****************************************************************************
 * Extern viriables
 */
@@ -30,5 +38,10 @@ extern regulator_t regulatorSolder;
 /*!****************************************************************************
 * Prototypes for the functions
 */
+
+void solderTempMeasureRequest(void);
+void solferTempMeasureSetReadyCb(solderTempMeasureReadyCb cb);
+void solderRun(void);
+void solderOff(void);
 
 #endif  //regulatorSolder_h

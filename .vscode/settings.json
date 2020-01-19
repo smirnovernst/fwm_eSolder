@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "task.h": "c",
-        "maintsk.h": "c"
+        "maintsk.h": "c",
+        "max31856mud.h": "c",
+        "thermocouples.h": "c"
     }
 }

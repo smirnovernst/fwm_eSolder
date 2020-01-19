@@ -1,115 +1,40 @@
-/*
-*@File      systemTSK.c 
-*@Author    EricMarina
-*@Version   
-*@Date      01.07.2017
-*@Breif     
-*/
-/*!****************************************************************************
-* Include
-*/
-#include "systemTSK.h"
-#include "OSInit.h"
-/*!****************************************************************************
-* Memory
-*/
+#include "stm32f4xx.h"
 
-/*!****************************************************************************
-* prototypes
-*/
-static void errorChecker (deviceParametrs_t *device);
-/*!****************************************************************************
-* Functions
-*/
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 
-__task void systemTSK(void)
+#include "hard/thermocouples.h"
+#include "eSolder/eSolder.h"
+
+
+void ThermocoupleInterrogate(Device_t *pDev, max31856State_t *pThermocouple, uint16_t *pTemp, uint16_t *pColdJunction)
 {
-
-    while(1)
+    if (pThermocouple->state == max31856State_OK)
     {
-        uint8_t i=0;
-        i++;
-    }
-    while(1)
-    {
-        
-        /************************SOLDER*********************/
-        if(stationState.solder.enable)
-        {
-             //--------- En/Disable regulator--------- 
-            if (stationState.solder.status != deviceStatus_Fail)
-            {
-                 //regulator_solderON; //@TODO: need release 
-            }
-            else
-            {
-                #if (DBG_FAILOUTOFF_DISABLE == 0)
-                    regulator_solderOFF;
-                #endif
-            }
-        }
-        else
-        {   
-             //--------- Disable regulator-------- 
-            regulator_solderOFF();
-        }
-        
-        
-        
-        
-        /*************************DRY*************************/
-        if (stationState.dry.enable == enable_ON)
-        {
-              //--------- En/Disable regulator-------- 
-            if (stationState.dry.status != deviceStatus_Fail)
-            {
-                //regulator_dryON; //@TODO: need release 
-            }
-            else
-            {
-                #if (DBG_FAILOUTOFF_DISABLE == 0)
-                    regulator_dryOFF;
-                #endif
-            }
-         //--------- Dry reed check -------- 
-        
-         //--------- PWM motor dry update -------- 
-            dryFan_setFlow(stationState.dryFlow);  
-        }
-        
-        else
-        {
-             //---------Disable regulator -------- 
-             regulator_dryOFF();
-             
-            //---------PWM motor dry off --------
-             dryFan_setFlow(0);
-        }
-           
-        
-             
-        /*=========== Status check ==========*/
-        if (stationState.dry.status == deviceStatus_Fail)
-        {
-            errorChecker(&stationState.dry);
-        }
-        if (stationState.solder.status == deviceStatus_Fail)
-        {
-            errorChecker(&stationState.solder);
-        }
-        
-        //------------------------------------
-        TickType_t xLastWakeTime;
-        xLastWakeTime = xTaskGetTickCount();
-        vTaskDelayUntil(&xLastWakeTime, (TickType_t)10/portTICK_PERIOD_MS); 
+        max31856mud_getLinearizedTemp(&pThermocouple);
     }
 }
 
-void errorChecker (deviceParametrs_t *device)
+
+
+__task void systemTsk(void)
 {
-    if(device->connection == 0) return;
-   
-    //-------------
-    device->status = deviceStatus_Ok;
-    return;
+
+    
+    if (thermocoupleDry.state != max31856State_OK)
+    {
+        // TODO: view error!
+        
+    }
+    max31856mud_init(&thermocoupleSolder);
+
+    while(1)
+    {
+        if (thermocoupleDry.state == max31856State_OK)
+        {
+            
+        }
+    }
 }

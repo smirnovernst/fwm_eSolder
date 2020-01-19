@@ -92,7 +92,11 @@ __task void mainTsk(void) {
         
 
 
+
     }
+    
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+    
 }
 
 mainTskEncoderSelected_t mainTsk_GetEncoderSelected(void)

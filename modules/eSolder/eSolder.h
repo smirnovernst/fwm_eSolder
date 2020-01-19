@@ -4,28 +4,37 @@
 #include "stm32f4xx.h"
 #include "eSolderConstants.h"
 
+
+typedef struct Device_t
+{
+    uint8_t enabled;
+    uint8_t connected;
+    uint8_t criticalError;
+}Device_t;
+
 typedef struct solder_t
 {
-    uint16_t tempSet;
-    uint16_t tempReal;
-    uint8_t  enabled;
-    uint8_t  connected;
+    uint32_t tempSet;
+    uint32_t tempReal;
+    uint16_t coldJunctionTemp;
+    Device_t devParam;
 }solder_t;
 
 typedef struct dry_t
 {
-    uint16_t tempSet;
-    uint16_t tempReal;
+    uint32_t tempSet;
+    uint32_t tempReal;
+    uint16_t coldJunctionTemp;
     uint8_t  flowSet;
-    uint8_t  enabled;
-    uint8_t  connected;
+    Device_t devParam;
 }dry_t;
 
 
 typedef struct eSolder_t
 {
     solder_t solder;
-    dry_t   dry;
+    dry_t    dry;
+    uint16_t internalTemp;
 }eSolder_t;
 
 typedef struct eSolderStoreParam_t

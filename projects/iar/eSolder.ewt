@@ -2456,6 +2456,12 @@
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\keyboard.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\thermocouples.c</name>
+        </file>
     </group>
     <group>
         <name>IQ</name>
@@ -2473,6 +2479,15 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\OS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\solderControlTsk.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\soundTsk.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\systemTsk.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\taskPriority.h</name>

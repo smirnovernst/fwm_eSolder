@@ -163,7 +163,7 @@ void UI_MainWindowUpdate(void)
 {
     // ======== Icons ========
     const tImage16 *pSolderIcon, *pDryIcon, *pSolderThermometer, *pDryThermometer, *pFanFlow;
-    if (eSolder.dry.connected)
+    if (eSolder.dry.devParam.connected)
     {
         pDryIcon = &solderingDry;
         pDryThermometer = &Thermometer;
@@ -175,7 +175,7 @@ void UI_MainWindowUpdate(void)
        pDryThermometer = &ThermometerDark;
        pFanFlow = &FanFlowDark;
     }
-    if (eSolder.solder.connected)
+    if (eSolder.solder.devParam.connected)
     {
         pSolderIcon = &solderingIron;
         pSolderThermometer = &Thermometer;
@@ -215,32 +215,32 @@ void UI_MainWindowUpdate(void)
 
     drawTempSet(UI_MAIN_WINDOW_DRY_START_Y, 
                 eSolder.dry.tempSet,
-                eSolder.dry.enabled,
-                eSolder.dry.connected,
+                eSolder.dry.devParam.enabled,
+                eSolder.dry.devParam.connected,
                 (encSelected == mainTskEncoderSelected_DRY_TEMP)  
                 );
 
     drawTempSet(UI_MAIN_WINDOW_SOLDER_START_Y, 
                 eSolder.solder.tempSet, 
-                eSolder.solder.enabled, 
-                eSolder.solder.connected, 
+                eSolder.solder.devParam.enabled, 
+                eSolder.solder.devParam.connected, 
                 (encSelected == mainTskEncoderSelected_SOLDER_TEMP)
                 );
 
     drawTempReal(UI_MAIN_WINDOW_SOLDER_START_Y,
                 eSolder.solder.tempReal,
-                eSolder.solder.enabled,
-                eSolder.solder.connected
+                eSolder.solder.devParam.enabled,
+                eSolder.solder.devParam.connected
                 );
 
     drawTempReal(UI_MAIN_WINDOW_DRY_START_Y,
                 eSolder.dry.tempReal,
-                eSolder.dry.enabled,
-                eSolder.dry.connected
+                eSolder.dry.devParam.enabled,
+                eSolder.dry.devParam.connected
                 );
 
     drawTempFlow(eSolder.dry.flowSet,
-                eSolder.dry.enabled,
-                eSolder.dry.connected);
+                eSolder.dry.devParam.enabled,
+                eSolder.dry.devParam.connected);
     
 }
