@@ -28,11 +28,11 @@ SpiStatus_t SpiTxRxDma(Spi_t *pSpi,uint8_t *pSrc, uint8_t *pDst, uint8_t len, ui
 
     if (xSemaphoreTake(pSpi->semaphoreHoldTask, timeout_ms / portTICK_PERIOD_MS) != pdTRUE) 
     {
-        SPI_RXDMA_IRQ_DISABLE(pSpiHard);
+        SPI_RXDMA_IRQ_DISABLE(pSpi);
         xSemaphoreGive(pSpi->semaphoreBusy);
         return SPI_STATUS_TIMEOUT;
     }
-    SPI_RXDMA_IRQ_DISABLE(pSpiHard);
+    SPI_RXDMA_IRQ_DISABLE(pSpi);
     xSemaphoreGive(pSpi->semaphoreBusy);
     return SPI_STATUS_OK;
 }
@@ -123,7 +123,7 @@ SpiStatus_t SpiTxRxByte(Spi_t *pSpi, uint8_t sendByte, uint8_t *pReceiveByte, ui
 
     if (xSemaphoreTake(pSpi->semaphoreHoldTask, timeout_ms / portTICK_PERIOD_MS) != pdTRUE) 
     {
-        SPI_RXNE_IRQ_DISABLE(pSpi->pSpiHard);
+        SPI_RXNE_IRQ_DISABLE(pSpi);
         xSemaphoreGive(pSpi->semaphoreBusy);
         return SPI_STATUS_TIMEOUT;
     }

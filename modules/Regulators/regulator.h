@@ -10,8 +10,7 @@
 /*!****************************************************************************
 * Include
 */
-#include "global_inc.h"
-#include "stationState.h"
+
 /*!****************************************************************************
 * User define
 */
@@ -45,8 +44,7 @@ typedef struct
 /*!****************************************************************************
 * Macro functions
 */
-#define regulatorOn(regulator)   regulator->hardCntrlReg |=  regulator->enableMask; regulator->state = regulatorState_RUN;
-#define regulatorOff(regulator)  regulator->state = regulatorState_WAITOFF; 
+
 /*!****************************************************************************
 * Prototypes for the functions
 */

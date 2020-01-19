@@ -30,9 +30,13 @@ void SpiIrqHandler(Spi_t *pSpi)
         pSpi->state = SPI_STATE_HARD_ERROR;
         pSpi->pSpiHard->SR &= (~SPI_SR_OVR) & (~SPI_SR_MODF) & (~SPI_SR_UDR);
         pSpi->pSpiHard->DR;
-        pSpi->pSpiHard->CR &= ~DMA_SxCR_EN;
-        pSpi->pSpiHard->CR &= ~DMA_SxCR_EN;
-
+        pSpi->pDmaStreamRx->CR &= ~DMA_SxCR_EN;
+        pSpi->pDmaStreamTx->CR &= ~DMA_SxCR_EN;
+        
+        SPI_RXNE_IRQ_DISABLE(pSpi);
+        SPI_RXDMA_IRQ_DISABLE(pSpi);
+        SPI_TXDMA_IRQ_DISABLE(pSpi);
+        
         SpiUnblockTask(pSpi);
     }
 

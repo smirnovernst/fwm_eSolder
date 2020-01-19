@@ -14,7 +14,8 @@
 /*!****************************************************************************
 * User define
 */
-#define MAX31856MUD_TIMEOUT     (1000)//[mS]
+#define MAX31856_SPI_SEND_BUFFER()
+
 /*!****************************************************************************
 * User enum
 */
@@ -44,7 +45,6 @@ typedef enum
 */
 typedef struct
 {
-    spi_t               *spi;
     GPIO_TypeDef        *portCS;
     uint8_t             pinCS;
     max31856State_t     state;

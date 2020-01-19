@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>1347837797</fileChecksum>
+    <fileChecksum>934231859</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
@@ -1382,6 +1382,17 @@
             <file>$PROJ_DIR$\..\..\modules\OS\solderControlTsk.c</file>
             <file>$PROJ_DIR$\..\..\modules\OS\systemTsk.c</file>
             <file>$PROJ_DIR$\..\..\modules\OS\soundTsk.c</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spi1.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spi.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spi.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spi1.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spiPrivate.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spiPrivate.pbi</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\spi.o</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spiPrivate.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spiPrivate.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spi.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\images\FanFlowDark.c</name>
@@ -1561,6 +1572,12 @@
                     <file> 92</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 250 60 68 243 16 253 57 19</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\Fonts\Courier_New.c</name>
@@ -1578,6 +1595,12 @@
                     <file> 80</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 250 60 68 243 16 253 57 19</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\UI\Fonts\DS_Digital.c</name>
@@ -1649,6 +1672,12 @@
                     <file> 90</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 253 19 16 60 57 243 250 68</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\lcd\lcd_backlight.c</name>
@@ -2886,15 +2915,15 @@
             <name>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.c</name>
             <outputs>
                 <tool>
-                    <name>ICCARM</name>
-                    <file> 299</file>
-                </tool>
-                <tool>
                     <name>BICOMP</name>
                     <file> 300</file>
                 </tool>
             </outputs>
             <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 298 301</file>
+                </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 298 301</file>
@@ -2904,10 +2933,6 @@
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
             <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 302</file>
-                </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 303</file>
@@ -2927,10 +2952,6 @@
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\thermocouples.c</name>
             <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 304</file>
-                </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 305</file>
@@ -2969,10 +2990,6 @@
         <file>
             <name>$PROJ_DIR$\..\..\modules\OS\solderControlTsk.c</name>
             <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 296</file>
-                </tool>
                 <tool>
                     <name>BICOMP</name>
                     <file> 290</file>
@@ -3025,6 +3042,75 @@
                 </tool>
             </outputs>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spiPrivate.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 316</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 317</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 320 314 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 102 103 105 247 250 243 60 253 314 50 71 59 49 248 101 54 68 249 67 242 99 100 320 57 58 65 26 55 104 64</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 318</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 313</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 320 314 102 65 242 26 67 55 104 99 100 71 64 105 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 249 253 243 49 248 101 54 68 105 60 320 247 103 250 102 67 242 99 100 50 57 58 314 71 59 65 26 55 104 64</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 312</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 315</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 320 314 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 59 49 314 50 243 103 71 248 250 60 253 102 105 247 101 54 68 249 67 242 99 100 320 57 58 65 26 55 104 64</file>
+                </tool>
+            </inputs>
+        </file>
         <forcedrebuild>
             <name>$PROJ_DIR$\..\..\modules\hard\lcd\ili9341_spi_discovery.c</name>
             <tool>ICCARM</tool>
@@ -3055,6 +3141,14 @@
         </forcedrebuild>
         <forcedrebuild>
             <name>$PROJ_DIR$\..\..\modules\SPL\src\stm32f4xx_fsmc.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.c</name>
+            <tool>C-STAT</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
             <tool>C-STAT</tool>
         </forcedrebuild>
     </configuration>

@@ -2330,6 +2330,18 @@
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>spi</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\modules\Drivers\spi\spiPrivate.c</name>
+            </file>
+        </group>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\button.c</name>
         </file>
@@ -2347,9 +2359,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\Drivers\mcu.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\Drivers\spiF4.c</name>
         </file>
     </group>
     <group>

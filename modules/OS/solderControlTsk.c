@@ -49,9 +49,9 @@ __task void solderControlTsk(void)
         {
             solderTempMeasureRequest();
             
-            if (pdTRUE != xSemaphoreTake(tempMeasureReadySemaph, ESOLDER_TEMP_MEASURE_INACTIVITY_MS);)
+            if (pdTRUE != xSemaphoreTake(tempMeasureReadySemaph, ESOLDER_TEMP_MEASURE_INACTIVITY_MS))
             {
-                //fail case!
+                // Bad line between mcu and max31856
                 break;
             }
             ////
@@ -67,6 +67,7 @@ __task void solderControlTsk(void)
 
             eSolder.solder.tempReal = max31856mud_getLinearizedTemp(&thermocoupleSolder);
             eSolder.solder.coldJunctionTemp = max31856mud_getColdJunctionTemp(&thermocoupleSolder);
+            
             if (eSolder.solder.devParam.enabled)
             {
                 solderRun();
