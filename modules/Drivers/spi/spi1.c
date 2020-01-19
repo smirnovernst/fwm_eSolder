@@ -1,4 +1,5 @@
 #include "spiPrivate.h"
+#include "Drivers/gpio.h"
 
 Spi_t spi1 = 
 {
@@ -17,14 +18,14 @@ Spi_t spi1 =
 
 __irq void SPI1_IRQHandler(void) 
 {
-    spi_IrqHandler(&spi1);
+    SpiIrqHandler(&spi1);
 }
 __irq void DMA2_Stream3_IRQHandler(void) 
 {
     if (DMA2->LISR & DMA_LISR_TCIF3)
     {
         DMA2->LIFCR |= DMA_LIFCR_CTCIF3;
-        spi_DmaTxIrqHandler(&spi1);
+        SpiDmaTxIrqHandler(&spi1);
     }
 }
 __irq void DMA2_Stream0_IRQHandler(void) 
@@ -32,13 +33,16 @@ __irq void DMA2_Stream0_IRQHandler(void)
     if (DMA2->LISR & DMA_LISR_TCIF0)
     {
         DMA2->LIFCR |= DMA_LIFCR_CTCIF0;
-        spi_DmaRxIrqHandler(&spi1);
+        SpiDmaRxIrqHandler(&spi1);
     }
 }
 
 
 void Spi1_Init(void)
 {
+    //TODO: gpioInit need to another file!
+
+
     // ====== INIT MEMORY  ====== //
     spi1.semaphoreBusy = xSemaphoreCreateBinary();
     if (NULL == spi1.semaphoreBusy)

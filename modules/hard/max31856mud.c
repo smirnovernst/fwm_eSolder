@@ -43,14 +43,17 @@
 */
 void max31856mud_read(max31856mud_t *max31856mud, uint8_t addr, uint8_t *buffer, uint8_t size)
 {
-    uint8_t readNull, ret = 0;
     GPIO_PIN_RESET(max31856mud->portCS, max31856mud->pinCS);
-    ret += spiTxDma(&spi1, &addr, size+1, MAX31856MUD_TIMEOUT);
-    ret += spiTxRxDma(&spi1, &readNull, 1, MAX31856MUD_TIMEOUT); //first byte receive - not valid
-    ret += spiTxRxDma(&spi1, buffer, size, MAX31856MUD_TIMEOUT);
-    GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);
-    if (ret != 0) {max31856mud->state = max31856State_ERRCOMM;}
-    //else { max31856mud->state = max31856State_OK; }     
+    if (SPI_STATUS_OK != SpiTxByte(max31856mud->pSpi, addr, MAX31856MUD_TIMEOUT_MS))
+    {
+        return; 
+    }
+
+    if (SPI_STATUS_OK != SpiTxRxDma(max31856mud->pSpi, NULL, buffer, size, MAX31856MUD_TIMEOUT_MS) )
+    {
+        return;
+    } 
+    GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);  
 }
 
 void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data)
@@ -61,20 +64,19 @@ void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data)
     buffer[1] = data; 
     
     GPIO_PIN_RESET(max31856mud->portCS, max31856mud->pinCS);
-    uint8_t ret = spiTxDma(&spi1, buffer, 2, MAX31856MUD_TIMEOUT);
+    if (SPI_STATUS_OK !=  SpiTxDma(max31856mud->pSpi, buffer, sizeof(buffer),   MAX31856MUD_TIMEOUT_MS))
+    {
+        return;
+    }
     GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);
-    if (ret != 0) {max31856mud->state = max31856State_ERRCOMM;}
-    //else { max31856mud->state = max31856State_OK; }
+    
 }
 
 /*!****************************************************************************
 * Public functions
 */
 void max31856mud_init(max31856mud_t *max31856mud)
-{
-    spi_disable(max31856mud->spi);  //for reboot max31856mud need set Hi-z on the spi pins
-    vTaskDelay((TickType_t)100/portTICK_PERIOD_MS);
-    spi_enable(max31856mud->spi);   // 
+{ 
     
     max31856mud->state = max31856State_NOINIT;
     //**********Check default param****************//

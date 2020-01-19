@@ -5,13 +5,24 @@
 
 SpiStatus_t SpiTxRxDma(Spi_t *pSpi,uint8_t *pSrc, uint8_t *pDst, uint8_t len, uint16_t timeout_ms)
 {
-    if ((NULL == pSpi) || (NULL == pSrc) || (NULL == pDst))
+    if ((NULL == pSpi) || (NULL == pDst))
     {
         return SPI_STATUS_INVALID_PARAM;
     }
     if (xSemaphoreTake(pSpi->semaphoreBusy, timeout_ms / portTICK_PERIOD_MS) != pdTRUE) 
     {
         return SPI_STATUS_TIMEOUT;
+    }
+
+    if (NULL == pSrc)
+    {
+        static uint8_t nullValue = 0;
+        pSrc = &nullValue;
+        pSpi->pDmaStreamTx->CR &= ~DMA_SxCR_MINC;
+    }
+    else 
+    {
+        pSpi->pDmaStreamTx->CR |= DMA_SxCR_MINC;
     }
 
     SPI_RXDMA_IRQ_ENABLE(pSpi);
@@ -52,6 +63,7 @@ SpiStatus_t SpiTxDma(Spi_t *pSpi, uint8_t *pSrc, uint8_t len,  uint16_t timeout_
     pSpi->pDmaStreamTx->CR &= ~DMA_SxCR_EN;
     pSpi->pDmaStreamTx->M0AR = (uint32_t)pSrc;
     pSpi->pDmaStreamTx->NDTR = len;
+    pSpi->pDmaStreamTx->CR |= DMA_SxCR_MINC;
     pSpi->pDmaStreamTx->CR |= DMA_SxCR_EN;
 
     if (xSemaphoreTake(pSpi->semaphoreHoldTask, timeout_ms / portTICK_PERIOD_MS) != pdTRUE) 

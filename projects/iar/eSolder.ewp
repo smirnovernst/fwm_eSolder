@@ -2209,9 +2209,6 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
-            <excluded>
-                <configuration>STM32F427_Debug</configuration>
-            </excluded>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\modules\hard\thermocouples.c</name>

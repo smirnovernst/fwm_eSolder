@@ -55,7 +55,7 @@ __task void solderControlTsk(void)
                 break;
             }
             ////
-            eSolder.solder.devParam.connected
+            //eSolder.solder.devParam.connected
             ////
 
             max31856mud_oneShot(&thermocoupleSolder);

@@ -10,12 +10,12 @@
 /*!****************************************************************************
 * Include
 */
-
+#include "Drivers/spi/spi.h"
 /*!****************************************************************************
 * User define
 */
-#define MAX31856_SPI_SEND_BUFFER()
 
+#define MAX31856MUD_TIMEOUT_MS  1000
 /*!****************************************************************************
 * User enum
 */
@@ -45,6 +45,7 @@ typedef enum
 */
 typedef struct
 {
+    Spi_t               *pSpi;
     GPIO_TypeDef        *portCS;
     uint8_t             pinCS;
     max31856State_t     state;
