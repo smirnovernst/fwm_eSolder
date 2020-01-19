@@ -42,7 +42,10 @@ void Spi1_Init(void)
 {
     //TODO: gpioInit need to another file!
 
-
+    gpioInit(GPIOA, 5,  gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_5, 0);
+    gpioInit(GPIOA, 6,  gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_5, 0);
+    gpioInit(GPIOA, 7,  gpioMode_AF, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_5, 0);
+    gpioInit(GPIOA, 4,  gpioMode_OUT, gpioPuPd_NOPULL, gpioType_PUSHPULL, gpioAF_5, 0);
     // ====== INIT MEMORY  ====== //
     spi1.semaphoreBusy = xSemaphoreCreateBinary();
     if (NULL == spi1.semaphoreBusy)
@@ -68,7 +71,7 @@ void Spi1_Init(void)
     spi1.pSpiHard->CR1 |= SPI_CR1_SSM;
     spi1.pSpiHard->CR1 |= SPI_CR1_MSTR;
 
-
+    
     
     //DMA SPI TX
     spi1.pDmaStreamTx->CR |= (uint32_t)((spi1.dmaChannelTx & 0x03) << 25);    //Channel selection
@@ -104,7 +107,7 @@ void Spi1_Init(void)
     
     // ====== SPI ENABLE  ====== //
     spi1.pSpiHard->CR1 |= SPI_CR1_SPE;
-    
+    xSemaphoreGive(spi1.semaphoreBusy);
     spi1.state = SPI_STATE_OK;
 }
 

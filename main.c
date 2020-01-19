@@ -4,6 +4,7 @@
 
 #include "hard/hard.h"
 #include "OS/mainTSK.h"
+#include "OS/solderControlTsk.h"
 #include "OS/taskPriority.h"
 #include "Drivers/gpio.h"
 
@@ -19,6 +20,9 @@ void initTsk(void){
 
     hard_init();
     xTaskCreate((TaskFunction_t)mainTsk, "mainTSK", 128, NULL, MAIN_TSK_PRIORITY, NULL);
+    xTaskCreate((TaskFunction_t)solderControlTsk, "solderControlTsk", 128, NULL, MAIN_TSK_PRIORITY, NULL);
+
+    
     vTaskDelete( NULL );
 }
 

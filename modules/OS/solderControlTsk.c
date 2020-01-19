@@ -5,12 +5,13 @@
 #include "queue.h"
 #include "semphr.h"
 
+#include "Regulators/regulatorSolder.h"
 #include "hard/thermocouples.h"
 #include "eSolder/eSolder.h"
 
 void solderTempMeasureReady(void)
 {
-
+    
 }
 
 SemaphoreHandle_t tempMeasureReadySemaph = NULL, tempMeasureCompleteSemaph = NULL;

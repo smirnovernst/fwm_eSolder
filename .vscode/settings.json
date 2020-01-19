@@ -3,6 +3,8 @@
         "task.h": "c",
         "maintsk.h": "c",
         "max31856mud.h": "c",
-        "thermocouples.h": "c"
+        "thermocouples.h": "c",
+        "soldercontroltsk.h": "c",
+        "stm32f4xx.h": "c"
     }
 }

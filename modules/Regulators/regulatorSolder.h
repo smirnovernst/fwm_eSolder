@@ -23,11 +23,11 @@ typedef enum {
     solderState_TEMP_MEASURE_REQUEST,
     solderState_TEMP_MEASURE,
     solderState_NONE
-}solderState_t
+}solderState_t;
 /*!****************************************************************************
 * User typedef
 */
-typedef (void)(*solderTempMeasureReadyCb)(void);
+typedef void (*solderTempMeasureReadyCb)(void);
 /*!****************************************************************************
 * Extern viriables
 */
@@ -40,7 +40,7 @@ extern regulator_t regulatorSolder;
 */
 
 void solderTempMeasureRequest(void);
-void solferTempMeasureSetReadyCb(solderTempMeasureReadyCb cb);
+void solderTempMeasureSetReadyCb(solderTempMeasureReadyCb cb);
 void solderRun(void);
 void solderOff(void);
 

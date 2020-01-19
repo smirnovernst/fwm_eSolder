@@ -16,4 +16,16 @@
 /*!****************************************************************************
 * Functions
 */
+void solderTempMeasureRequest(void)
+{
+}
+void solderTempMeasureSetReadyCb(solderTempMeasureReadyCb cb)
+{
+}
+void solderRun(void)
+{
+}
+void solderOff(void)
+{
+}
 
