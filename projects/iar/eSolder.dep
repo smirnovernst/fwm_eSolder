@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>617703563</fileChecksum>
+    <fileChecksum>1347837797</fileChecksum>
     <configuration>
         <name>Release</name>
         <outputs>
@@ -1345,6 +1345,7 @@
             <file>$PROJ_DIR$\..\..\modules\Fonts\specific_symbol.c</file>
             <file>$PROJ_DIR$\..\..\modules\UI\images\Thermometer.c</file>
             <file>$PROJ_DIR$\..\..\modules\Fonts\DS_Digital.c</file>
+            <file>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.c</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\FanFlowDark.pbi</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingDry.pbi</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderingIron.pbi</file>
@@ -1367,6 +1368,10 @@
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\soundTsk.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\solderControlTsk.o</file>
             <file>$PROJ_DIR$\..\..\modules\OS\menuTSK.h</file>
+            <file>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.h</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\regulatorSolder.o</file>
+            <file>$PROJ_DIR$\STM32F427_Debug\Obj\regulatorSolder.pbi</file>
+            <file>$PROJ_DIR$\..\..\modules\Regulators\regulator.h</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\max31856mud.o</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\max31856mud.pbi</file>
             <file>$PROJ_DIR$\STM32F427_Debug\Obj\thermocouples.o</file>
@@ -1387,7 +1392,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 275</file>
+                    <file> 276</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -1414,7 +1419,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 281</file>
+                    <file> 282</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -1789,7 +1794,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 280</file>
+                    <file> 281</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2481,7 +2486,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 276</file>
+                    <file> 277</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2535,7 +2540,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 282</file>
+                    <file> 283</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2616,7 +2621,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 283</file>
+                    <file> 284</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2643,7 +2648,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 278</file>
+                    <file> 279</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2670,7 +2675,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 279</file>
+                    <file> 280</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2724,7 +2729,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 277</file>
+                    <file> 278</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2778,7 +2783,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 284</file>
+                    <file> 285</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2832,7 +2837,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 285</file>
+                    <file> 286</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -2878,27 +2883,12 @@
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
+            <name>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.c</name>
             <outputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 298</file>
-                </tool>
-            </outputs>
-            <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 286 25 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 69 242 70</file>
+                    <file> 299</file>
                 </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 247 250 253 69 103 25 50 49 248 243 101 54 68 249 60 286 57 58 242 70</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\hard\thermocouples.c</name>
-            <outputs>
                 <tool>
                     <name>BICOMP</name>
                     <file> 300</file>
@@ -2906,12 +2896,54 @@
             </outputs>
             <inputs>
                 <tool>
+                    <name>BICOMP</name>
+                    <file> 298 301</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\max31856mud.c</name>
+            <outputs>
+                <tool>
                     <name>ICCARM</name>
-                    <file> 286</file>
+                    <file> 302</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 286</file>
+                    <file> 303</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 287 25 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 69 242 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 247 250 253 69 103 25 50 49 248 243 101 54 68 249 60 287 57 58 242 70</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\hard\thermocouples.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 304</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 305</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 287</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 287</file>
                 </tool>
             </inputs>
         </file>
@@ -2920,17 +2952,17 @@
             <outputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 292</file>
+                    <file> 293</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 296</file>
+                    <file> 297</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 296 246</file>
+                    <file> 297 246</file>
                 </tool>
             </inputs>
         </file>
@@ -2938,24 +2970,9 @@
             <name>$PROJ_DIR$\..\..\modules\OS\solderControlTsk.c</name>
             <outputs>
                 <tool>
-                    <name>BICOMP</name>
-                    <file> 289</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
                     <name>ICCARM</name>
-                    <file> 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59 293 286 24 30</file>
+                    <file> 296</file>
                 </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 250 60 59 243 249 71 24 247 54 253 68 67 104 105 102 293 49 248 101 103 57 58 242 30 50 65 26 55 99 100 64 286</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\modules\OS\systemTsk.c</name>
-            <outputs>
                 <tool>
                     <name>BICOMP</name>
                     <file> 290</file>
@@ -2964,11 +2981,34 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59 293 286 24 30</file>
+                    <file> 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59 294 287 24 30</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 243 60 59 250 249 71 24 247 54 253 68 67 104 105 102 293 49 248 101 103 57 58 242 30 50 65 26 55 99 100 64 286</file>
+                    <file> 250 60 59 243 249 71 24 247 54 253 68 67 104 105 102 294 49 248 101 103 57 58 242 30 50 65 26 55 99 100 64 287</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\OS\systemTsk.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 289</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 291</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50 49 248 243 60 253 57 250 68 101 103 58 249 54 247 102 65 242 26 67 55 104 99 100 71 64 105 59 294 287 24 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 243 60 59 250 249 71 24 247 54 253 68 67 104 105 102 294 49 248 101 103 57 58 242 30 50 65 26 55 99 100 64 287</file>
                 </tool>
             </inputs>
         </file>
@@ -2977,11 +3017,11 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 294</file>
+                    <file> 295</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 291</file>
+                    <file> 292</file>
                 </tool>
             </outputs>
         </file>

@@ -2494,6 +2494,12 @@
         </file>
     </group>
     <group>
+        <name>Regulators</name>
+        <file>
+            <name>$PROJ_DIR$\..\..\modules\Regulators\regulatorSolder.c</name>
+        </file>
+    </group>
+    <group>
         <name>UI</name>
         <group>
             <name>Fonts</name>
