@@ -65,13 +65,16 @@ void Spi1_Init(void)
     RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
 
     // ====== INIT SPI PARAMS  ====== //
-    //spi1.pSpiHard->CR1 |= SPI1_BR;
+    spi1.pSpiHard->CR1 |= SPI_CR1_BR_2 | SPI_CR1_BR_1;
+    
+    spi1.pSpiHard->CR1 |= SPI_CR1_CPHA;
 
     spi1.pSpiHard->CR1 |= SPI_CR1_SSI;
     spi1.pSpiHard->CR1 |= SPI_CR1_SSM;
     spi1.pSpiHard->CR1 |= SPI_CR1_MSTR;
 
-    
+    spi1.pSpiHard->CR2 |= SPI_CR2_TXDMAEN;
+    spi1.pSpiHard->CR2 |= SPI_CR2_RXDMAEN;
     
     //DMA SPI TX
     spi1.pDmaStreamTx->CR |= (uint32_t)((spi1.dmaChannelTx & 0x03) << 25);    //Channel selection

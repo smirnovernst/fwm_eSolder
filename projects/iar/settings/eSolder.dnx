@@ -20,7 +20,7 @@
         <Sort>4 0</Sort>
     </SfrWindow>
     <DebugChecksum>
-        <Checksum>415195308</Checksum>
+        <Checksum>3065360654</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -142,17 +142,6 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\OS\solderControlTsk.c}.47.19" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\hard\max31856mud.c}.85.5" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c}.33.5" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c}.25.5" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c}.21.5" 0 0 1 "" 0 "" 0</Bp4>
-        <Count>5</Count>
-    </Breakpoints2>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -162,13 +151,6 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <Aliases>
-        <A0>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\Core\stm32f427\iar\startup_stm32f427xx.s" ""</A0>
-        <A1>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\FreeRTOS\tasks.c" ""</A1>
-        <A2>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\hard\keyboard.c" "C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\hard\keyboard.c"</A2>
-        <Count>3</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>1</Mode>
@@ -187,4 +169,22 @@
         <Probe0>I0</Probe0>
         <ProbeSetup0>2 1 1 2 0 0</ProbeSetup0>
     </PowerProbe>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\hard\max31856mud.c}.85.5" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c}.25.5" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi1.c}.21.5" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\hard\max31856mud.c}.95.1" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\..\modules\Drivers\spi\spi.c}.42.9" 0 0 1 "" 0 "" 0</Bp4>
+        <Count>5</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\Core\stm32f427\iar\startup_stm32f427xx.s" ""</A0>
+        <A1>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\FreeRTOS\tasks.c" ""</A1>
+        <A2>_ "C:\Users\User\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\hard\keyboard.c" "C:\Users\Ernst\Documents\Repositories\eSolder\Fwm\fwm_eSolder\modules\hard\keyboard.c"</A2>
+        <Count>3</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>

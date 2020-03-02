@@ -77,7 +77,7 @@ void max31856mud_write(max31856mud_t *max31856mud, uint8_t addr, uint8_t data)
 */
 void max31856mud_init(max31856mud_t *max31856mud)
 { 
-    
+    GPIO_PIN_SET(max31856mud->portCS, max31856mud->pinCS);  
     max31856mud->state = max31856State_NOINIT;
     //**********Check default param****************//
     const uint8_t default_value[16] = {0x00, 0x03, 0xFF, 0x7F, 0xC0, 0x7F, 0xFF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
